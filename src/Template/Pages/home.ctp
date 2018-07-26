@@ -22,7 +22,7 @@ $this->layout = false;
         <div class="container">
             <div class="row">
                 <div class="col-lg-2">
-                    <?=$this->Html->image('pete.png', ['alt' => 'Image of Pete'])?>
+                    <?=$this->Html->image('example.jpg', ['alt' => 'Image of Pete'])?>
                 </div>
                 <div class="col-lg-10">
                     <h1>My name is <?=h($personName)?></h1>

@@ -35,12 +35,12 @@ class PagesController extends AppController
      */
     public function index()
     {
-        $this->set('personName', 'Pete');
-        $this->set('favouriteColour', 'Green');
-        $this->set('favouriteColourValue', '#009900');
+        $this->set('personName', 'Swee');
+        $this->set('favouriteColour', 'Red');
+        $this->set('favouriteColourValue', '#ff0000');
 
-        $goalForUnit = 'for students and staff to have fun, ' .
-            'while students learn as much as possible about working as a professional IT team.';
+        $goalForUnit = 'for students to learn as much as 
+            possible about working as a professional IT team.';
 
         $this->set('goalForUnit', $goalForUnit);
         $this->render('home');
