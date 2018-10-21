@@ -26,6 +26,10 @@ $this->layout = false;
         div.site-heading.home {
             text-align: center
         }
+        div#homepage_col {
+            padding: 20px;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
