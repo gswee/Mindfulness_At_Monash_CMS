@@ -34,6 +34,9 @@ $this->layout = false;
 </head>
 <body>
     
+    <!-- Navigation-->
+    <?php echo $this->element('top-menu') ?>
+    
     <!-- Page Header -->
     <?php echo $this->element('home_welcome') ?>
 
@@ -51,6 +54,10 @@ $this->layout = false;
     <br>
     
     <?php echo $this->element('home_whoAreWe') ?>
+    
+    <footer>
+        <?php echo $this->element('footer') ?>
+    </footer>
     
 </body>
 </html>

@@ -12,7 +12,12 @@ use App\Controller\AppController;
  */
 class CategoryController extends AppController
 {
-
+    public function initialize()
+    {
+        parent::initialize();        
+        $this->viewBuilder()->setLayout('admin');
+    }
+    
     /**
      * Index method
      *
@@ -23,7 +28,6 @@ class CategoryController extends AppController
         $category = $this->paginate($this->Category);
 
         $this->set(compact('category'));
-        $this->viewBuilder()->setLayout('admin');
     }
 
     /**

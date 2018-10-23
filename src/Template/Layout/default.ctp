@@ -37,7 +37,8 @@ $cakeDescription = 'Mindfulness At Monash';
 </head>
 <body>
     <!-- Navigation-->
-    
+    <?php echo $this->element('top-menu') ?>
+    <!--
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
@@ -51,7 +52,7 @@ $cakeDescription = 'Mindfulness At Monash';
             </ul>
         </div>
     </nav>
-
+    -->
     <?= $this->Flash->render() ?>
     <div class="container clearfix">
         <?= $this->fetch('content') ?>

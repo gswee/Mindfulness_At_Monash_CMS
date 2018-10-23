@@ -29,6 +29,11 @@ use Cake\View\Exception\MissingTemplateException;
 class PagesController extends AppController
 {
 
+    public function initialize()
+    {
+        parent::initialize();        
+        $this->viewBuilder()->setLayout('default');
+    }
     /**
      * Show a basic page with a persons name, and a short description of themselves.
      * The information to be rendered is passed to the template from this action.

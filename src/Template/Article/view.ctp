@@ -4,6 +4,7 @@
  * @var \App\Model\Entity\Article $article
  */
 ?>
+<!--
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -15,8 +16,11 @@
         <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
+-->
 <div class="article view large-9 medium-8 columns content">
-    <h3><?= h($article->title) ?></h3>
+    <!-- Page Header -->
+    <?php echo $this->element('article\article-header') ?>
+    <!--<h3><?= h($article->title) ?></h3>
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Title') ?></th>
@@ -30,21 +34,9 @@
             <th scope="row"><?= __('Id') ?></th>
             <td><?= $this->Number->format($article->id) ?></td>
         </tr>
-        <tr>
-            <th scope="row"><?= __('Created') ?></th>
-            <td><?= h($article->created) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Modified') ?></th>
-            <td><?= h($article->modified) ?></td>
-        </tr>
-    </table>
+    </table>-->
+    
     <div class="row">
-        <h4><?= __('Description') ?></h4>
-        <?= $this->Text->autoParagraph(h($article->description)); ?>
-    </div>
-    <div class="row">
-        <h4><?= __('Body') ?></h4>
-        <?= $this->Text->autoParagraph(h($article->body)); ?>
+        <?php echo $this->element('article\article-body') ?>
     </div>
 </div>
