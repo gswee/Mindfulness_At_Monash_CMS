@@ -23,6 +23,7 @@ class CategoryController extends AppController
         $category = $this->paginate($this->Category);
 
         $this->set(compact('category'));
+        $this->viewBuilder()->setLayout('admin');
     }
 
     /**

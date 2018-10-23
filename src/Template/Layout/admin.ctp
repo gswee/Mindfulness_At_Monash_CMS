@@ -13,7 +13,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'Mindfulness At Monash';
+$cakeDescription = 'Mindfulness At Monash - Admin';
 ?>
 <!DOCTYPE html>
 <html>
@@ -25,11 +25,11 @@ $cakeDescription = 'Mindfulness At Monash';
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
-    <!-- Replaced default .css with clean-blog template -->
-    <?= $this->Html->css('clean-blog.css') ?>
-    <?= $this->Html->css('clean-blog.min.css') ?>
+    
+    <?= $this->Html->css('admin.css') ?>
+    <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('bootstrap.min.css') ?>
-    <?= $this->Html->css('all.min.css') ?>
+    
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

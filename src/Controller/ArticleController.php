@@ -12,7 +12,12 @@ use App\Controller\AppController;
  */
 class ArticleController extends AppController
 {
-
+    
+    public function initialize()
+    {
+        parent::initialize();        
+        $this->viewBuilder()->setLayout('admin');
+    }
     /**
      * Index method
      *
@@ -42,6 +47,7 @@ class ArticleController extends AppController
         ]);
 
         $this->set('article', $article);
+        $this->viewBuilder()->setLayout('default');
     }
 
     /**
