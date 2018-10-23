@@ -25,11 +25,11 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         <?= $this->fetch('title') ?>
     </title>
     <?= $this->Html->meta('icon') ?>
-    <!-- Replaced default cake css with Clean Blog css -->
-    <?= $this->Html->css('clean-blog.css') ?>
-    <?= $this->Html->css('clean-blog.min.css') ?>
+    
+    <?= $this->Html->css('home.css') ?>
+    <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('bootstrap.min.css') ?>
-    <?= $this->Html->css('all.min.css') ?>
+    
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -37,7 +37,6 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
 </head>
 <body>
     <!-- Navigation-->
-    <?php echo $this->element('top-menu'); ?>
     
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
