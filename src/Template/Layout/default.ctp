@@ -27,7 +27,7 @@ $cakeDescription = 'Mindfulness At Monash';
     <?= $this->Html->meta('icon') ?>
     <!-- Replaced default .css with clean-blog template -->
     <?= $this->Html->css('clean-blog.css') ?>
-    <?= $this->Html->css('clean-blog.min.css') ?>
+    
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('all.min.css') ?>
     

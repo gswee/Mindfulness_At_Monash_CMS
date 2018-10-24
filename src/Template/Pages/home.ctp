@@ -16,7 +16,7 @@ $this->layout = false;
     <?= $this->Html->meta('icon') ?>
     <!-- Replaced default cake css with Clean Blog css -->
     <?= $this->Html->css('clean-blog.css') ?>
-    <?= $this->Html->css('clean-blog.min.css') ?>
+    
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('all.min.css') ?>
     
@@ -38,22 +38,22 @@ $this->layout = false;
     <?php echo $this->element('top-menu') ?>
     
     <!-- Page Header -->
-    <?php echo $this->element('home_welcome') ?>
+    <?php echo $this->element('home/home_welcome') ?>
 
     <!-- Main Content -->
     <div class="container">
         <!-- Sandwich rows between 2 columns? -->
         <div class="row">
-        <?php echo $this->element('home_forStudents') ?> 
+        <?php echo $this->element('home/home_forStudents') ?> 
         
-        <?php echo $this->element('home_forEducators') ?>    
+        <?php echo $this->element('home/home_forEducators') ?>    
         </div>
         
     </div>
     <br>
     <br>
     
-    <?php echo $this->element('home_whoAreWe') ?>
+    <?php echo $this->element('home/home_whoAreWe') ?>
     
     <footer>
         <?php echo $this->element('footer') ?>
