@@ -29,7 +29,7 @@
                 </a>
               </li>
             </ul>
-            <p class="copyright text-muted">Copyright &copy; Your Website 2018</p>
+            <p class="copyright text-muted">Copyright &copy; Mindfulness at Monash 2018</p>
           </div>
         </div>
       </div>

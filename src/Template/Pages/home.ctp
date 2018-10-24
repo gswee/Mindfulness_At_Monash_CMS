@@ -10,7 +10,7 @@ $this->layout = false;
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
-        Welcome to UGIE!
+        Mindfulness At Monash - Welcome
     </title>
 
     <?= $this->Html->meta('icon') ?>

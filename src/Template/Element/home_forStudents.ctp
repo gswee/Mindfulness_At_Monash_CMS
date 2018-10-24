@@ -12,6 +12,7 @@
   <br>
   <!-- Pager -->
   <div class="clearfix">
-    <a class="btn btn-primary" href="#">Find out more &rarr;</a>
+      <?= $this->Html->link('Find out more', '../article/view/1', ['class'=>'btn btn-primary']) ?>
+    <!--<a class="btn btn-primary" href="#">Find out more &rarr;</a>-->
   </div>
 </div>
