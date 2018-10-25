@@ -19,6 +19,7 @@ $this->layout = false;
     
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('all.min.css') ?>
+    <?= $this->Html->css('custom_classes.css') ?>
     
     <!--<link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->

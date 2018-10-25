@@ -1,0 +1,25 @@
+/*
+This class is meant for 
+
+*/
+
+/* Title for Home Page */
+a#title_home {
+    
+}
+
+/* Subtitle for Home Page */
+a#subtitle_home {
+    display: block;
+    font-size: 1.75rem;
+    
+    font-weight: 300;
+    text-decoration: none;
+    
+    color: #212529;
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
+a#subtitle_home:focus, a#subtitle_home:hover {
+  color: #0085A1;
+}
