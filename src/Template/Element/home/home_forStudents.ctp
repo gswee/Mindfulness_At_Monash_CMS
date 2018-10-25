@@ -5,7 +5,7 @@
         For Students
       </h2>
       <h3 class="post-subtitle">
-        <?= $this->Html->link('Mindfulness helps to improve mental health, improve academic performance and best of all - it\'s easy! Find out how you can get back in touch with your mind.', ['controller' => 'Article', 'action' => 'view', '2'], ['id'=>'subtitle_home']) ?>
+        <?= $this->Html->link('Mindfulness helps to improve mental health, improve academic performance and best of all - it\'s easy! Find out how you can get back in touch with your mind.', ['controller' => 'Article', 'action' => 'view', '1'], ['id'=>'subtitle_home']) ?>
           
       </h3>
     </a>
