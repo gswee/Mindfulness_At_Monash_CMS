@@ -1,4 +1,4 @@
-<header class="masthead" style="background-image: url('img/contact-us.jpg')">
+<header class="masthead" style="background-image: url('img/contact-us.jpg')" id="contact">
       <div class="overlay"></div>
       <div class="container">
         <div class="row">

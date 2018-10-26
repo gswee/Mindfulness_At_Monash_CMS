@@ -1,9 +1,8 @@
 <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light fixed-top" id="mainNav">
       <div class="container">
-          <!--<?= $this->Html->link('Mindfulness At Monash', ['controller' => 'Pages', 'action' => 'home']) ?>
-          -->
-        <a class="navbar-brand" href="index.html">Mindfulness At Monash</a>
+          <!-- Change if Home Page becomes dynamic -->
+          <?= $this->Html->link('Mindfulness At Monash', ['controller' => 'Pages', 'action' => 'display', 'home'], ['class' => 'navbar-brand']) ?>
         <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
           Menu
           <i class="fas fa-bars"></i>
@@ -11,20 +10,28 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a class="nav-link" href="about.html">Students</a>
+              <!-- To link when static Students page is created
+<?= $this->Html->link('Students', ['controller' => 'Pages', 'action' => 'display', 'students'], ['class'=>'nav-link']) ?>
+-->
+                <!-- Students Top bar link -->
+                <?= $this->Html->link('Students', ['controller' => 'Article', 'action' => 'view', '1'], ['class'=>'nav-link']) ?>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="post.html">Educators</a>
+              <!-- To link when static Educators page is created
+<?= $this->Html->link('Educators', ['controller' => 'Pages', 'action' => 'display', 'educators'], ['class'=>'nav-link']) ?>
+-->
+                <!-- Educators Top bar link -->
+                <?= $this->Html->link('Educators', ['controller' => 'Article', 'action' => 'view', '2'], ['class'=>'nav-link']) ?>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact Us</a>
+              <a class="nav-link" href="#contact">Contact Us</a>
             </li>
           </ul>
         </div>
       </div>
     </nav>
 
-<!-- Bootstrap core JavaScript -->
+    <!-- Bootstrap core JavaScript -->
     <?= $this->Html->script('jquery.min') ?>
     <?= $this->Html->script('bootstrap.bundle.min') ?>
 
