@@ -26,10 +26,10 @@ $cakeDescription = 'Mindfulness At Monash';
     </title>
     <?= $this->Html->meta('icon') ?>
     <!-- Replaced default .css with clean-blog template -->
-    <?= $this->Html->css('clean-blog.css') ?>
+    <?= $this->Html->css('clean-blog.min') ?>
     
-    <?= $this->Html->css('bootstrap.min.css') ?>
-    <?= $this->Html->css('all.min.css') ?>
+    <?= $this->Html->css('bootstrap.min') ?>
+    <?= $this->Html->css('all.min') ?>
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -60,5 +60,7 @@ $cakeDescription = 'Mindfulness At Monash';
     <footer>
         <?php echo $this->element('footer') ?>
     </footer>
+    
+    
 </body>
 </html>

@@ -2,7 +2,7 @@
   <div class="post-preview">
     <a href="post.html">
       <h2 class="post-title">
-        For Educators
+        <?= $this->Html->link('For Educators', ['controller' => 'Article', 'action' => 'view', '2'], ['id'=>'title_home']) ?>
       </h2>
       <h3 class="post-subtitle">
         <?= $this->Html->link('Mindfulness is beneficial for your students\' wellbeing - as well as yours. Find out how you can impart the benefits of mindfulness to your students.', ['controller' => 'Article', 'action' => 'view', '2'], ['id'=>'subtitle_home']) ?>
