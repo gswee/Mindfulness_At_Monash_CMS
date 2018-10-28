@@ -1,5 +1,7 @@
-<header class="masthead" style="background-image: url('img/contact-us.jpg')" id="contact">
-      <div class="overlay"></div>
+<header class="masthead" id="banner">
+    <div class="overlay">
+        <?= $this->Html->image('contact-us.jpg', ['alt' => 'A serene water droplet ripple, captured in mid splash']); ?>
+    </div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">

@@ -31,6 +31,19 @@ $this->layout = false;
             padding: 20px;
             text-align: center;
         }
+        img {
+            max-width:150%;
+            max-height:150%;
+        }
+        header#banner {
+            overflow:hidden;
+        }
+        div#banner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
     </style>
 </head>
 <body>
