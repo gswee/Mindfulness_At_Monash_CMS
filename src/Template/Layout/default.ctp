@@ -30,6 +30,7 @@ $cakeDescription = 'Mindfulness At Monash';
     
     <?= $this->Html->css('bootstrap.min') ?>
     <?= $this->Html->css('all.min') ?>
+    <?= $this->Html->css('custom_classes.css') ?>
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>

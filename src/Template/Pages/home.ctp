@@ -24,26 +24,7 @@ $this->layout = false;
     <!--<link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
     <style>
-        div.site-heading.home {
-            text-align: center
-        }
-        div#homepage_col {
-            padding: 20px;
-            text-align: center;
-        }
-        img {
-            max-width:150%;
-            max-height:150%;
-        }
-        header#banner {
-            overflow:hidden;
-        }
-        div#banner {
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            margin-bottom: 50px;
-        }
+        
     </style>
 </head>
 <body>

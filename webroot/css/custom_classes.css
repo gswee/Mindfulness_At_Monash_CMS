@@ -3,6 +3,27 @@ This class is meant for
 
 */
 
+div.site-heading.home {
+            text-align: center
+        }
+        div#homepage_col {
+            padding: 20px;
+            text-align: center;
+        }
+        img {
+            max-width:150%;
+            max-height:150%;
+        }
+        header#banner {
+            overflow:hidden;
+        }
+        div#banner {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 50px;
+        }
+
 /* Title for Home Page */
 a#title_home {
     font-size: 30px;
@@ -35,3 +56,28 @@ a#subtitle_home {
 a#subtitle_home:focus, a#subtitle_home:hover {
   color: #0085A1;
 }
+
+/*container for article pages - no margin, sidebar on the right*/
+container#article_masthead {
+    width: 100%;
+}
+.sidebar {
+  background-color: #3a4651;
+  width: 240px;
+  padding-top: 60px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  -webkit-transition: left 0.3s ease;
+  transition: left 0.3s ease;
+  z-index: 20; }
+.sidebar .sidebar-container {
+    background-color: #3a4651;
+    position: relative;
+    top: 0;
+    bottom: 51px;
+    width: 100%;
+    right: 0;
+    overflow-y: auto;
+    overflow-x: hidden; }
