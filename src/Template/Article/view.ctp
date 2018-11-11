@@ -18,10 +18,15 @@
     </ul>
 </nav>
 -->
+<!-- Page Sidebar -->
 <?= $this->element('article/article-sidebar') ?>
-<div class="article view large-9 medium-8 columns content">
-    <!-- Page Header -->
-    <?php echo $this->element('article\article-header') ?>
+
+<!-- Article Page -->
+<div class="container" id="article">
+    
+<!-- Page Header -->
+<?php echo $this->element('article\article-header') ?>
+    
     <!--<h3><?= h($article->title) ?></h3>
     <table class="vertical-table">
         <tr>
@@ -38,7 +43,9 @@
         </tr>
     </table>-->
     
-    <div class="row">
-        <?php echo $this->element('article\article-body') ?>
-    </div>
+<!-- Page Body -->
+<div class="row">
+    <?php echo $this->element('article\article-body') ?>
+</div>
+    
 </div>

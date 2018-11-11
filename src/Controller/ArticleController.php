@@ -47,7 +47,7 @@ class ArticleController extends AppController
         ]);
 
         $this->set('article', $article);
-        $this->viewBuilder()->setLayout('default');
+        $this->viewBuilder()->setLayout('article');
     }
 
     /**

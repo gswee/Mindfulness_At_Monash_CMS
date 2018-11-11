@@ -1,6 +1,7 @@
 <header class="masthead" id="banner">
   <div class="overlay">
-      <?= $this->Html->image('for_students.jpg', ['class' => 'img-responsive'], ['alt' => 'A student hard at work on the bed.']); ?>
+      <?= 
+    $this->Html->image('for_students.jpg', ['class' => 'img-responsive'], ['alt' => 'A student hard at work on the bed.']); ?>
     </div>
   <div class="container">
     <div class="row">

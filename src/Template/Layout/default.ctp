@@ -36,7 +36,7 @@ $cakeDescription = 'Mindfulness At Monash';
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body>
+<body style="margin-left: 0px;">
     <!-- Navigation-->
     <?php echo $this->element('top-menu') ?>
     <!--
