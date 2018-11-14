@@ -94,6 +94,8 @@ class ArticleController extends AppController
         }
         $category = $this->Article->Category->find('list', ['limit' => 200]);
         $this->set(compact('article', 'category'));
+        // TinyMCE Helper
+        //$this->helpers = array('TinyMCE.TinyMCE');
     }
 
     /**

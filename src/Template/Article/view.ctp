@@ -43,9 +43,15 @@
         </tr>
     </table>-->
     
-<!-- Page Body -->
-<div class="row">
-    <?php echo $this->element('article\article-body') ?>
-</div>
+    <!-- Page Body -->
+    <div class="row">
+        <?php echo $this->element('article\article-body') ?>
+    </div>
+    
+        <?php echo $this->element('article\article-more') ?>
+    
+    <footer>
+        <?php echo $this->element('footer') ?>
+    </footer>
     
 </div>

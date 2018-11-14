@@ -4,6 +4,14 @@
  * @var \App\Model\Entity\Article $article
  */
 ?>
+<?= 
+$this->Html->script('tiny_mce/tiny_mce.js', array(
+	'inline' => false
+));
+/*$this->Html->script('/yourapp/TinyMCE/js/tiny_mce/tiny_mce.js', array(
+	'inline' => false
+));*/
+?>
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -32,3 +40,4 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
 </div>
+<?= $this->Html->script('tiny_mce/tiny_mce.js') ?>

@@ -36,5 +36,6 @@ class AppView extends View
      */
     public function initialize()
     {
+        //$this->TinyMCE->editor(array('theme' => 'advanced', 'mode' => 'textareas'));
     }
 }

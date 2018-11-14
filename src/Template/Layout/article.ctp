@@ -31,9 +31,6 @@ $cakeDescription = 'Mindfulness At Monash';
     <div>
         <?= $this->fetch('content') ?>
     </div>
-    <footer>
-        <?php echo $this->element('footer') ?>
-    </footer>
     
     
 </body>
