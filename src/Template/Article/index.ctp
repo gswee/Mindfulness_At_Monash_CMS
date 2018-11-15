@@ -4,7 +4,7 @@
  * @var \App\Model\Entity\Article[]|\Cake\Collection\CollectionInterface $article
  */
 ?>
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
+<nav class="sidebar" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></li>
@@ -12,6 +12,7 @@
         <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
     </ul>
 </nav>
+<!--
 <div class="article index large-9 medium-8 columns content">
     <h3><?= __('Article') ?></h3>
     <table cellpadding="0" cellspacing="0">
@@ -53,3 +54,4 @@
         <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
     </div>
 </div>
+-->

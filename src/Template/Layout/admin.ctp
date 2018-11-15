@@ -26,10 +26,9 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
     </title>
     <?= $this->Html->meta('icon') ?>
     
-    <?= $this->Html->css('admin.css') ?>
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('bootstrap.min.css') ?>
-    
+    <?= $this->Html->css('admin.css') ?>
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -41,7 +40,7 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul class="title-area large-3 medium-4 columns">
             <li class="name">
-                <h1><a href=""><?= $this->fetch('title') ?></a></h1>
+                <h1><a href="">Mindfulness At Monash Admin </a></h1>
             </li>
         </ul>
         <div class="top-bar-section">
@@ -53,8 +52,9 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
     </nav>
 
     <?= $this->Flash->render() ?>
+    <?= $this->fetch('content') ?>
     <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+        
     </div>
     <footer>
         <?php echo $this->element('footer') ?>
