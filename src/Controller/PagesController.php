@@ -43,6 +43,7 @@ class PagesController extends AppController
     {
         $this->render('home');
     }
+    
     // Display students page
     public function students() {
         $this->render('students');

@@ -1,3 +1,8 @@
+body {
+    background-color: burlywood;
+}
+
+/* Main Title Masthead */
 div.site-heading.home 
 {
     text-align: center
@@ -21,7 +26,7 @@ div#banner {
     margin-bottom: 50px;
 }
 
-/* Title for Home Page */
+/* For Students, For Educators */
 a#title_home {
     font-size: 30px;
     margin-top: 30px;
@@ -30,12 +35,12 @@ a#title_home {
     font-weight: 500;
     text-decoration: none;
     
-    color: #212529;
+    color: #297729;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 a#title_home:focus, a#title_home:hover {
-    color: #0085A1;
+    color: #3ca035;
 }
 
 /* Subtitle for Home Page */
@@ -46,12 +51,19 @@ a#subtitle_home {
     font-weight: 300;
     text-decoration: none;
     
-    color: #212529;
+    color: #297729;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 a#subtitle_home:focus, a#subtitle_home:hover {
-  color: #0085A1;
+  color: #3ca035;
+}
+.btn-primary {
+    border:none;
+    background-color: #297729;
+}
+.btn-primary:hover {
+    background-color: #3ca035;
 }
 
 /*container for article pages - no margin, sidebar on the right*/
@@ -108,4 +120,12 @@ a#subtitle_home:focus, a#subtitle_home:hover {
     .sidebar-wrapper {
         display:none;
     }
+}
+
+/* Footer - ask how to make it change color on hover. No answer online. */
+.fas {
+    color: green;
+}
+.fas:hover {
+    color: darkgreen;
 }

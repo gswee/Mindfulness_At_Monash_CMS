@@ -51,7 +51,7 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
         </div>
     </nav>
     
-    <nav class="sidebar" id="actions-sidebar">
+    <nav class="sidebar">
         <ul class="side-nav">
             <!-- Remove  "#",  when the respective Page's function is created -->
             <li><?= $this->Html->link(__('Edit Page'),  "#", ['action' => 'add']) ?></li>
@@ -78,11 +78,11 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
         </ul>
     </nav>
     
-    <?= $this->Flash->render() ?>
-    <?= $this->fetch('content') ?>
-    <div class="container clearfix">
-        
+    <div class="admin">
+        <?= $this->Flash->render() ?>
+        <?= $this->fetch('content') ?>
     </div>
+    
     <footer>
         <?php echo $this->element('footer') ?>
     </footer>

@@ -15,7 +15,10 @@
               </li>
               
             </ul>
+              <br>
             <p class="copyright text-muted">Copyright &copy; Mindfulness at Monash 2018</p>
+              <br>
+              <p class="copyright text-muted">Made with blood, sweat and tears by Gideon Swee</p>
           </div>
         </div>
       </div>

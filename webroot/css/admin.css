@@ -1,0 +1,61 @@
+/* Sidebar */
+a {
+    -webkit-transition: top 0.3s ease, opacity 0.3s ease;
+    transition: all 0.3s;
+}
+.sidebar {
+    width: 20%;
+    position: fixed;
+    background-color: lavender; /* temp */
+    top: 60px;
+    bottom: 0px;
+    left: 0px;   
+    opacity: 1;
+}
+
+.side-nav li {
+    margin-bottom: 0px;
+    border-bottom: 1px;
+    border-bottom-color: black;
+}
+/**/
+.side-nav li a {
+    text-decoration: none;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.side-nav li a:hover {
+    background-color: lavender;
+}
+.side-nav li ul {
+    padding:0px;
+}
+.side-nav li ul li {
+    background-color: lavenderblush;   
+}
+.side-nav li ul li a {
+    font-weight: 100;
+    font-size: 1em;
+}
+
+
+/* Top Bar */
+nav.top-bar.expanded {
+    height:60px;
+    line-height: 60px;
+}
+
+/* Flash message */
+.message-info success {
+    
+}
+
+/* Main Section */
+.admin {
+    width: 80%;
+    
+    margin-left:20%;
+    top: 60px;
+    
+    background-color: blue; /*temp*/
+}

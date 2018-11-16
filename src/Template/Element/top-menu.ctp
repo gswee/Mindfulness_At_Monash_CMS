@@ -24,7 +24,7 @@
                 <?= $this->Html->link('Educators', ['controller' => 'Article', 'action' => 'view', '2'], ['class'=>'nav-link']) ?>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#contact">Contact Us</a>
+                <?= $this->Html->link('Contact Us', ['controller' => 'Pages', 'action' => 'index', "#" => "contact_us"], ['class'=>'nav-link']) ?>
             </li>
           </ul>
         </div>
