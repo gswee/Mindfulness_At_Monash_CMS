@@ -4,17 +4,16 @@
  * @var \App\Model\Entity\Article[]|\Cake\Collection\CollectionInterface $article
  */
 ?>
-<nav class="sidebar" id="actions-sidebar">
-    <ul class="side-nav">
+
+<!--
+<div class="article index large-9 medium-8 columns content">
+    <h3><?= __('Article') ?></h3>
+    <ul class="">
         <li class="heading"><?= __('Actions') ?></li>
         <li><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></li>
         <li><?= $this->Html->link(__('List Category'), ['controller' => 'Category', 'action' => 'index']) ?></li>
         <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
     </ul>
-</nav>
-<!--
-<div class="article index large-9 medium-8 columns content">
-    <h3><?= __('Article') ?></h3>
     <table cellpadding="0" cellspacing="0">
         <thead>
             <tr>

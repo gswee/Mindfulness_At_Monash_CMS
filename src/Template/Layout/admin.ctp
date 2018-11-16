@@ -50,7 +50,34 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
             </ul>
         </div>
     </nav>
-
+    
+    <nav class="sidebar" id="actions-sidebar">
+        <ul class="side-nav">
+            <!-- Remove  "#",  when the respective Page's function is created -->
+            <li><?= $this->Html->link(__('Edit Page'),  "#", ['action' => 'add']) ?></li>
+            <li>
+                <ul class="side-nav sub-menu">
+                    <li><?= $this->Html->link(__('Home Page'), "#", ['controller' => 'Pages', 'action' => 'edit_home']) ?></li>
+                    <li><?= $this->Html->link(__('For Students'), "#", ['controller' => 'Pages', 'action' => 'edit_students']) ?></li>
+                    <li><?= $this->Html->link(__('For Educators'), "#", ['controller' => 'Pages', 'action' => 'edit_educators']) ?></li>
+                </ul>
+            </li>
+            
+            <li><?= $this->Html->link(__('Articles'), ['action' => 'index']) ?></li>
+            <li>
+                <ul class="side-nav sub-menu">
+                    <li><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></li>
+                </ul>
+            </li>
+            <li><?= $this->Html->link(__('Categories'), ['Category' => 'index']) ?></li>
+            <li>
+                <ul class="side-nav sub-menu">
+                    <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
+                </ul>
+            </li>
+        </ul>
+    </nav>
+    
     <?= $this->Flash->render() ?>
     <?= $this->fetch('content') ?>
     <div class="container clearfix">

@@ -38,19 +38,29 @@ class PagesController extends AppController
      * Show a basic page with a persons name, and a short description of themselves.
      * The information to be rendered is passed to the template from this action.
      */
+    
     public function index()
     {
-        $this->set('personName', 'Swee');
-        $this->set('favouriteColour', 'Red');
-        $this->set('favouriteColourValue', '#ff0000');
-
-        $goalForUnit = 'for students to learn as much as 
-            possible about working as a professional IT team.';
-
-        $this->set('goalForUnit', $goalForUnit);
         $this->render('home');
     }
-
+    // Display students page
+    public function students() {
+        $this->render('students');
+    }
+    // Display educators page
+    public function educators() {
+        $this->render('educators');
+    }
+    
+    // Display edit students page
+    public function edit_students() {
+        $this->render('students');
+    }
+    // Display edit educators page
+    public function edit_educators() {
+        $this->render('educators');
+    }
+    
     /**
      * Displays a view
      *
@@ -87,5 +97,18 @@ class PagesController extends AppController
             }
             throw new NotFoundException();
         }
+    }
+    // Edit static pages
+    public function edit_contact()
+    {
+         //retrieve file's contents and output to view
+         $file = fopen('/path/to/contact.ctp', w);
+         $file_contents = file_get_contents($file);
+         $this->set('contents', $file_contents);
+         if($this->request->is('post'))
+         {
+            fwrite($file, $this->request->data['contents']);
+         }
+        fclose($file);
     }
 }
