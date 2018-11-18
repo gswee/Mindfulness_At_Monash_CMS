@@ -18,6 +18,8 @@ $cakeDescription = 'Mindfulness At Monash';
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patrick+Hand" rel="stylesheet">
+
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -58,9 +60,9 @@ $cakeDescription = 'Mindfulness At Monash';
     <div class="container clearfix">
         <?= $this->fetch('content') ?>
     </div>
-    <footer>
-        <?php echo $this->element('footer') ?>
-    </footer>
+    
+    <?php echo $this->element('footer') ?>
+    
     
     
 </body>

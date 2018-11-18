@@ -4,6 +4,8 @@ $this->layout = false;
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patrick+Hand" rel="stylesheet">
+    
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -48,9 +50,7 @@ $this->layout = false;
         <?php echo $this->element('home/home_whoAreWe') ?>
     </div>
     
-    <footer>
-        <?php echo $this->element('footer') ?>
-    </footer>
+    <?php echo $this->element('footer') ?>
     
 </body>
 </html>

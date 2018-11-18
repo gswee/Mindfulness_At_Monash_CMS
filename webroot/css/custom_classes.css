@@ -1,5 +1,17 @@
 body {
     background-color: burlywood;
+    font-family: 'Patrick Hand', cursive;
+}
+h2.post-title {
+    font-size: 3em;
+    font-family: 'Gloria Hallelujah', cursive;
+}
+.nav-link {
+    color:white;
+}
+.nav-link:hover {
+    color:white;
+    opacity: 0.8;
 }
 
 /* Main Title Masthead */
@@ -61,9 +73,7 @@ a#subtitle_home:focus, a#subtitle_home:hover {
 .btn-primary {
     border:none;
     background-color: #297729;
-}
-.btn-primary:hover {
-    background-color: #3ca035;
+    font-family: 'Patrick Hand', cursive;
 }
 
 /*container for article pages - no margin, sidebar on the right*/
@@ -84,10 +94,18 @@ a#subtitle_home:focus, a#subtitle_home:hover {
         
     }
 }
+a#category {
+    color: white;
+    font-style: italic;
+}
+a#category:hover {
+    text-decoration: none;
+    opacity:0.8;
+}
 
-/* Sidebar */
+/* Client-side Sidebar */
 .sidebar-wrapper {
-  background-color: #3a4651;
+  background-color: saddlebrown;
     height: 100%;
     width: 22%;
     padding-top: 60px;
@@ -99,22 +117,24 @@ a#subtitle_home:focus, a#subtitle_home:hover {
     transition: left 0.3s ease;
     z-index: 1;
     overflow-x: hidden;
+    font-family: 'Gloria Hallelujah', cursive;
+
 }
 .sidebar-wrapper a {
     color: white;
-}
-.sidebar-wrapper a:hover {
-    color: lightgray;
+    padding: 0.8rem 2rem 0.8rem 2rem;
     -webkit-transition: left 0.3s ease;
     transition: left 0.3s ease;
 }
-#sidebar-nav {
-    
+.sidebar-wrapper a:hover {
+    opacity: 0.8;
+    background-color:#96572a;
 }
 #sidebar-list {
     list-style-type: none;
-    
+    padding:0px;
 }
+
 
 @media only screen and (max-width: 768px) {
     .sidebar-wrapper {
@@ -126,6 +146,9 @@ a#subtitle_home:focus, a#subtitle_home:hover {
 .fas {
     color: green;
 }
-.fas:hover {
-    color: darkgreen;
+.fas.fa-bars {
+    color: white;
+}
+.fas.fa-bars:hover {
+    opacity: 0.8;
 }

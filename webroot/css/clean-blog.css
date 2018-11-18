@@ -36,7 +36,8 @@ a {
 }
 
 a:focus, a:hover {
-  color: #0085A1;
+    opacity: inherit;
+    text-decoration: none;
 }
 
 blockquote {
@@ -90,16 +91,17 @@ img::-moz-selection {
 
 #mainNav {
   position: absolute;  
-  background-color: burlywood;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  background-color: saddlebrown;
+  font-family: 'Gloria Hallelujah', cursive;
 }
 
 #mainNav .navbar-brand {
   font-weight: 800;
-  color: green;
+    font-family: 'Gloria Hallelujah', cursive;
+  color: white;
 }
 #mainNav .navbar-brand:hover {
-  color: rgba(67, 187, 79, 1);
+  opacity: 0.8;
 }
 
 #mainNav .navbar-toggler {
@@ -107,13 +109,13 @@ img::-moz-selection {
   font-weight: 800;
   padding: 13px;
   text-transform: uppercase;
-  color: green;
+  color: white;
     -webkit-transition: all 0.2s;
   transition: all 0.2s;
     
 }
 #mainNav .navbar-toggler:hover {
-  color: rgba(67, 187, 79, 1);
+  opacity: 0.8;
 }
 
 #mainNav .navbar-nav > li.nav-item > a {
@@ -121,6 +123,7 @@ img::-moz-selection {
   font-weight: 800;
   letter-spacing: 1px;
   text-transform: uppercase;
+    color:white;
 }
 
 @media only screen and (min-width: 992px) {
@@ -130,17 +133,19 @@ img::-moz-selection {
   }
   #mainNav .navbar-brand {
     padding: 10px 20px;
-    color: green;
+    color: white;
   }
   #mainNav .navbar-brand:focus, #mainNav .navbar-brand:hover {
-    color: rgba(67, 187, 79, 1);
+    color: white;
+      opacity: 0.8;
   }
   #mainNav .navbar-nav > li.nav-item > a {
     padding: 10px 20px;
-    color: green;
+    color: white;
   }
   #mainNav .navbar-nav > li.nav-item > a:focus, #mainNav .navbar-nav > li.nav-item > a:hover {
-    color: rgba(67, 187, 79, 1);
+    color: white;
+      opacity: 0.8;
   }
 }
 
@@ -161,19 +166,21 @@ img::-moz-selection {
     transition: -webkit-transform 0.2s;
     transition: transform 0.2s;
     transition: transform 0.2s, -webkit-transform 0.2s;
-    background-color: rgba(209, 168, 126, 0.8);/*burlywood*/
+    background-color: saddlebrown;
   }
   #mainNav.is-fixed .navbar-brand {
-    color: green;
+    color: white;
   }
   #mainNav.is-fixed .navbar-brand:focus, #mainNav.is-fixed .navbar-brand:hover {
-    color: rgba(67, 187, 79, 1);
+    color: white;
+      opacity: 0.8;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a {
-    color: green;
+    color: white;
   }
   #mainNav.is-fixed .navbar-nav > li.nav-item > a:focus, #mainNav.is-fixed .navbar-nav > li.nav-item > a:hover {
-    color: rgba(67, 187, 79, 1);
+        color: white;
+      opacity: 0.8;
   }
   #mainNav.is-visible {
     /* if the user changes the scrolling direction, we show the header */
@@ -225,6 +232,7 @@ header.masthead .page-heading h1,
 header.masthead .site-heading h1 {
   font-size: 50px;
   margin-top: 0;
+    font-family: 'Gloria Hallelujah', cursive;
 }
 
 header.masthead .page-heading .subheading,
@@ -234,13 +242,15 @@ header.masthead .site-heading .subheading {
   line-height: 1.1;
   display: block;
   margin: 10px 0 0;
-  font-family: 'Open Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: 'Patrick Hand', cursive;
+
 }
 
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading h1,
   header.masthead .site-heading h1 {
     font-size: 80px;
+      font-family: 'Gloria Hallelujah', cursive;
   }
 }
 
@@ -415,9 +425,9 @@ footer .copyright {
   border-color: #0085A1;
 }
 
-.btn-primary:hover, .btn-primary:focus, .btn-primary:active {
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active {-
   color: #fff;
-  background-color: #00657b !important;
+  background-color: darkgreen!important;
   border-color: #00657b !important;
 }
 

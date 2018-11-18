@@ -13,7 +13,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'Mindfulness At Monash - Admin';
+$cakeDescription = 'Mindfulness At Monash Admin'
 ?>
 <!DOCTYPE html>
 <html>
@@ -29,6 +29,7 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('admin.css') ?>
+    <?= $this->Html->css('custom_classes_admin.css') ?>
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -38,17 +39,19 @@ $cakeDescription = 'Mindfulness At Monash - Admin';
     <!-- Navigation-->
     
     <nav class="top-bar expanded" data-topbar role="navigation">
-        <ul class="title-area large-3 medium-4 columns">
+        <ul>
             <li class="name">
                 <h1><a href="">Mindfulness At Monash Admin </a></h1>
             </li>
         </ul>
+        <!--
         <div class="top-bar-section">
             <ul class="right">
                 <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
                 <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
             </ul>
         </div>
+-->
     </nav>
     
     <nav class="sidebar">

@@ -50,8 +50,7 @@
     
         <?php echo $this->element('article\article-more') ?>
     
-    <footer>
-        <?php echo $this->element('footer') ?>
-    </footer>
+    
+    <?php echo $this->element('footer') ?>
     
 </div>
