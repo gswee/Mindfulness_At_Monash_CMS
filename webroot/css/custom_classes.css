@@ -149,6 +149,24 @@ a#category:hover {
     }
 }
 
+
+/*Who Are We*/
+
+/* Cropped rounded image */
+.image-cropper {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 50%;
+}
+img#whoAreWe {
+    display: inline;
+    margin: 10 auto;
+    height: 100%;
+    width: auto;
+}
+
 /* Footer - ask how to make it change color on hover. No answer online. */
 .fas {
     color: green;
