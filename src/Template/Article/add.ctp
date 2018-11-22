@@ -22,14 +22,15 @@
             echo $this->Form->control('title');
             echo $this->Form->control('description');
             echo $this->Form->control('body');
-            echo $this->Form->control('category_id', ['options' => $category, 'empty' => true]);
+            echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
     
-    <div id="editor" class="trumbowyg-box trumbowyg-editor-visible trumbowyg-en trumbowyg">
-    </div>
+    <!--
+<div id="editor" class="trumbowyg-box trumbowyg-editor-visible trumbowyg-en trumbowyg">
+    </div>-->
 </div>
 
 

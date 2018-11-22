@@ -20,8 +20,8 @@ $cakeDescription = 'Mindfulness At Monash Admin'
 <head>
     <!-- Enable if Trumbowyg is used over TinyMCE
         <?= $this->Html->css('ui/trumbowyg.min.css') ?>
-    -->
-    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+    
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>-->
     
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -46,7 +46,7 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     <nav class="top-bar expanded" data-topbar role="navigation">
         <ul>
             <li class="name">
-                <h1><a href="">Mindfulness At Monash Admin </a></h1>
+                <h1> <?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Article', 'action'=>'index', '?' => ['direction'=>'asc', 'sort'=>'id']]); ?></h1>
             </li>
         </ul>
         <!--
@@ -71,7 +71,7 @@ $cakeDescription = 'Mindfulness At Monash Admin'
                 </ul>
             </li>
             -->
-            <li><?= $this->Html->link(__('Articles'), ['', 'action' => 'index']) ?></li>
+            <li><?= $this->Html->link(__('Articles'), ['controller'=>'Article', 'action' => 'index']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
                     <li><?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?></li>

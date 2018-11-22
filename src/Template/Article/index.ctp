@@ -50,12 +50,8 @@
         <div class="btn-group mr-2">
             <button type="button" class="btn btn-outline-primary"><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></button>
         </div>
-        <div class="btn-group mr-2">
-            <button type="button" class="btn btn-outline-primary"><?= $this->Html->link(__('List Category'), ['controller' => 'Category', 'action' => 'index']) ?></button>
-        </div>
-        <div class="btn-group">
-            <button type="button" class="btn btn-outline-primary"><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></button>
-        </div>
     </div>
+    <br> 
+    <?= $this->element('admin/sortBarArticle') ?>
 </div>
 

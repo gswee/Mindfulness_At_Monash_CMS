@@ -151,7 +151,9 @@ a#category:hover {
 
 
 /*Who Are We*/
-
+.class#desc {
+    font-size: 10; line-height: 1;
+}
 /* Cropped rounded image */
 .image-cropper {
     width: 200px;
