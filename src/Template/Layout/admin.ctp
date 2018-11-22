@@ -18,6 +18,11 @@ $cakeDescription = 'Mindfulness At Monash Admin'
 <!DOCTYPE html>
 <html>
 <head>
+    <!-- Enable if Trumbowyg is used over TinyMCE
+        <?= $this->Html->css('ui/trumbowyg.min.css') ?>
+    -->
+    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>
+    
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -56,7 +61,7 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     
     <nav class="sidebar">
         <ul class="side-nav">
-            <!-- Remove  "#",  when the respective Page's function is created -->
+            <!-- Remove  "#",  when the respective Page's function is created 
             <li><?= $this->Html->link(__('Edit Page'),  "#", ['action' => 'add']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
@@ -65,19 +70,23 @@ $cakeDescription = 'Mindfulness At Monash Admin'
                     <li><?= $this->Html->link(__('For Educators'), "#", ['controller' => 'Pages', 'action' => 'edit_educators']) ?></li>
                 </ul>
             </li>
-            
-            <li><?= $this->Html->link(__('Articles'), ['action' => 'index']) ?></li>
+            -->
+            <li><?= $this->Html->link(__('Articles'), ['', 'action' => 'index']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
-                    <li><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></li>
+                    <li><?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?></li>
+                    <li><?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1']) ?></li>
+                    <li><?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2']) ?></li>
                 </ul>
             </li>
-            <li><?= $this->Html->link(__('Categories'), ['Category' => 'index']) ?></li>
+            <!--
+            <li><?= $this->Html->link(__('Categories'), ['controller' => 'Category', 'action' => 'index']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
                     <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
                 </ul>
             </li>
+            -->
         </ul>
     </nav>
     
@@ -89,5 +98,10 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     <footer>
         <?php echo $this->element('footer') ?>
     </footer>
+    <!-- Trumbowyg text editor - implement later if TinyMCE does not allow free use
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <?= $this->Html->script('jquery-3.2.1.min.js') ?>
+    <?= $this->Html->script('trumbowyg.min.js') ?>
+    -->
 </body>
 </html>

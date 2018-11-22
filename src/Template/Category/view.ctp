@@ -3,7 +3,8 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Category $category
  */
-?>
+?>  
+<!--
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -15,8 +16,10 @@
         <li><?= $this->Html->link(__('New Article'), ['controller' => 'Article', 'action' => 'add']) ?> </li>
     </ul>
 </nav>
+-->
 <div class="category view large-9 medium-8 columns content">
-    <h3><?= h($category->id) ?></h3>
+    <h3><?= h($category->category) ?> Articles</h3>
+    <!--
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Category') ?></th>
@@ -27,6 +30,8 @@
             <td><?= $this->Number->format($category->id) ?></td>
         </tr>
     </table>
+    -->
+    <br>
     <div class="related">
         <h4><?= __('Related Article') ?></h4>
         <?php if (!empty($category->article)): ?>
@@ -35,7 +40,6 @@
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
                 <th scope="col"><?= __('Description') ?></th>
-                <th scope="col"><?= __('Body') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col"><?= __('Category Id') ?></th>
@@ -46,7 +50,6 @@
                 <td><?= h($article->id) ?></td>
                 <td><?= h($article->title) ?></td>
                 <td><?= h($article->description) ?></td>
-                <td><?= h($article->body) ?></td>
                 <td><?= h($article->created) ?></td>
                 <td><?= h($article->modified) ?></td>
                 <td><?= h($article->category_id) ?></td>
@@ -58,6 +61,7 @@
             </tr>
             <?php endforeach; ?>
         </table>
+        <?= $this->Html->link(__('New Article'), ['controller' => 'Article', 'action' => 'add']) ?>
         <?php endif; ?>
     </div>
 </div>

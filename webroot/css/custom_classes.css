@@ -134,6 +134,13 @@ a#category:hover {
     list-style-type: none;
     padding:0px;
 }
+.sidebar-list.submenu {
+    background-color: rosybrown;
+    list-style-type: none;
+}
+#expand {
+    float:right;
+}
 
 
 @media only screen and (max-width: 768px) {

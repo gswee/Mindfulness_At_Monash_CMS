@@ -2,3 +2,12 @@
 .top-bar .name h1 a {
     font-size: 2em;
 }
+
+/* Sidebar */
+.side-nav li a {
+    padding-left: 2rem !important;
+}
+
+/*Uncomment when Trumbowyg is implemented over TinyMCE
+$('#editor').trumbowyg();
+*/

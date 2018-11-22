@@ -49,6 +49,19 @@ class ArticleController extends AppController
         $this->set('article', $article);
         $this->viewBuilder()->setLayout('article');
     }
+    public function viewArticleIndex($id = null)
+    {
+        $article = $this->Article->get($id, [
+            'contain' => ['Category']
+        ]);
+        $articles = $this->Article->find();
+        $category_id = $article->category_id;
+        
+        $this->set('article', $article);
+        $this->set('articles', $articles);
+        $this->set('category_id', $category_id);
+        $this->viewBuilder()->setLayout('article');
+    }
 
     /**
      * Add method

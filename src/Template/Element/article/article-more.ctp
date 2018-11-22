@@ -1,16 +1,10 @@
 <?php
 /**
- * @var \App\Model\Entity\Article[]|\Cake\Collection\CollectionInterface $article
+ * @var \App\Model\Entity\Article $article
  */
 ?>
 <div>
-    <nav>
-        <ul>
-            <?php foreach ($article as $article): ?>
-            <li>
-                <?php echo $this->Html->link($article->fetch('title'), array('controller' => 'Article', 'action' => 'view') ); ?>
-            </li>
-            <?php endforeach; ?>
-        </ul>
-    </nav>
+    <a href="<?= $this->Url->build(['controller' => 'Article', 'action' => 'view', $article->slug]); ?>">
+        <?= h($article->title) ?>
+    </a>
 </div>

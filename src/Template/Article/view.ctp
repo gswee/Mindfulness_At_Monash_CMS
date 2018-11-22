@@ -1,7 +1,7 @@
 <?php
 /**
  * @var \App\View\AppView $this
- * @var \App\Model\Entity\Article $article
+ * @var \App\Model\Entity\Article[] $articles
  */
 ?>
 
@@ -48,8 +48,14 @@
         <?php echo $this->element('article\article-body') ?>
     </div>
     
-        <?php echo $this->element('article\article-more') ?>
-    
+    <!-- To be added if custom 'Related Articles' list creation is implemented
+    <h2>More Articles</h2>
+    <?php 
+    foreach ($articles as $article) { 
+        echo $this->element('article\article-more', ['article'=>$article]); 
+    }
+    ?>
+    -->
     
     <?php echo $this->element('footer') ?>
     

@@ -31,7 +31,8 @@ a {
     padding:0px;
 }
 .side-nav li ul li {
-    background-color: lavenderblush;   
+    background-color: lavenderblush;
+    
 }
 .side-nav li ul li a {
     font-weight: 100;
@@ -43,6 +44,8 @@ a {
 nav.top-bar.expanded {
     height:60px;
     line-height: 60px;
+    padding-top: 6px;
+    width:auto;
 }
 
 /* Flash message */
@@ -51,11 +54,11 @@ nav.top-bar.expanded {
 }
 
 /* Main Section */
-.admin {
+div.admin {
     width: 80%;
     
     margin-left:20%;
     top: 60px;
     
-    background-color: blue; /*temp*/
+    /*background-color: blue; temp*/
 }

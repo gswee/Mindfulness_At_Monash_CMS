@@ -1,19 +1,26 @@
 <div class="sidebar-wrapper">
     <nav id="sidebar-nav">
         <ul id="sidebar-list">
-            <li>
-                <!-- To link when static Students page is created
-                <?= $this->Html->link('Students', ['controller' => 'Pages', 'action' => 'display', 'students'], ['class'=>'nav-link']) ?>
-                -->
+            <div>
                 <!-- Students Top bar link -->
-                <?= $this->Html->link('Students', ['controller' => 'Article', 'action' => 'view', '1'], ['class'=>'nav-link', ]) ?>
-            </li>
-            <li>
-                <!-- To link when static Educators page is created
-                <?= $this->Html->link('Educators', ['controller' => 'Pages', 'action' => 'display', 'educators'], ['class'=>'nav-link']) ?>
+                <!-- Fix later (cannot close)
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" id="expand">
+                    <i class="fas fa-bars"></i>
+                </button> 
                 -->
+                <?= $this->Html->link('Students', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1'], ['class'=>'nav-link', ]) ?>
+                <!--
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item">Example</li>
+                        <li class="nav-item">Example</li>
+                    </ul>
+                </div>
+-->
+            </div>
+            <li>
                 <!-- Educators Top bar link -->
-                <?= $this->Html->link('Educators', ['controller' => 'Article', 'action' => 'view', '2'], ['class'=>'nav-link']) ?>
+                <?= $this->Html->link('Educators', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['class'=>'nav-link']) ?>
             </li>
             <li>
                 <!-- Contact Us Top bar link -->
@@ -22,3 +29,9 @@
         </ul>
     </nav>
 </div>
+<!-- Bootstrap core JavaScript -->
+    <?= $this->Html->script('jquery.min') ?>
+    <?= $this->Html->script('bootstrap.bundle.min') ?>
+
+    <!-- Custom scripts for this template -->
+    <?= $this->Html->script('clean-blog.min') ?>
