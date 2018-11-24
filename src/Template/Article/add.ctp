@@ -20,8 +20,8 @@
         <legend><?= __('Add Article') ?></legend>
         <?php
             echo $this->Form->control('title');
-            echo $this->Form->control('description');
-            echo $this->Form->control('body');
+            echo $this->Form->control('description', ['required'=>true]);
+            echo $this->Form->control('body', ['required'=>true]);
             echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
         ?>
     </fieldset>

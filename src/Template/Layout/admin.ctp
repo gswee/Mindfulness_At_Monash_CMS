@@ -22,6 +22,12 @@ $cakeDescription = 'Mindfulness At Monash Admin'
         <?= $this->Html->css('ui/trumbowyg.min.css') ?>
     
     <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>-->
+    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=l643p9n8np1rq983pof3em9eyakffgalqxrhckxl0bnuidpc"></script>
+    <script>
+      tinymce.init({
+        selector: '#description, #body'
+      });
+    </script>
     
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">

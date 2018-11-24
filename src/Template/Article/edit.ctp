@@ -12,6 +12,7 @@ $this->Html->script('tiny_mce/tiny_mce.js', array(
 	'inline' => false
 ));*/
 ?>
+<!--
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
         <li class="heading"><?= __('Actions') ?></li>
@@ -26,6 +27,7 @@ $this->Html->script('tiny_mce/tiny_mce.js', array(
         <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
     </ul>
 </nav>
+-->
 <div class="article form large-9 medium-8 columns content">
     <?= $this->Form->create($article) ?>
     <fieldset>
@@ -34,7 +36,7 @@ $this->Html->script('tiny_mce/tiny_mce.js', array(
             echo $this->Form->control('title');
             echo $this->Form->control('description');
             echo $this->Form->control('body');
-            echo $this->Form->control('category_id', ['options' => $category, 'empty' => true]);
+            echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>
