@@ -15,7 +15,7 @@
 </nav>
 -->
 <div class="article form large-9 medium-8 columns content">
-    <?= $this->Form->create($article) ?>
+    <?= $this->Form->create($article, ['novalidate'=>true]) ?>
     <fieldset>
         <legend><?= __('Add Article') ?></legend>
         <?php
@@ -28,9 +28,6 @@
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>
     
-    <!--
-<div id="editor" class="trumbowyg-box trumbowyg-editor-visible trumbowyg-en trumbowyg">
-    </div>-->
 </div>
 
 

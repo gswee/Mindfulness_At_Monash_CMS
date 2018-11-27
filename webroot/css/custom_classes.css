@@ -13,6 +13,9 @@ h2.post-title {
     color:white;
     opacity: 0.8;
 }
+.overlay img {
+    opacity:0.6
+}
 
 /* Main Title Masthead */
 div.site-heading.home 
@@ -39,6 +42,10 @@ div#banner {
 }
 
 /* For Students, For Educators */
+a {
+    -webkit-transition: all 0.2s;
+    transition: all 0.2s;
+}
 a#title_home {
     font-size: 30px;
     margin-top: 30px;
@@ -48,8 +55,6 @@ a#title_home {
     text-decoration: none;
     
     color: #297729;
-    -webkit-transition: all 0.2s;
-    transition: all 0.2s;
 }
 a#title_home:focus, a#title_home:hover {
     color: #3ca035;
@@ -91,7 +96,6 @@ a#subtitle_home:focus, a#subtitle_home:hover {
         padding: 0px;
         width: 100%;
         margin-left:0px;
-        
     }
 }
 a#category {
@@ -153,6 +157,14 @@ a#category:hover {
 /*Who Are We*/
 .class#desc {
     font-size: 10; line-height: 1;
+}
+
+a#email {
+    color:white;
+}
+a#email:hover {
+    color:gainsboro;
+    text-decoration: none
 }
 /* Cropped rounded image */
 .image-cropper {

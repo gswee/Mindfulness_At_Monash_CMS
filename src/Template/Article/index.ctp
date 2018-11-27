@@ -52,7 +52,7 @@
     </div>
     <div class="btn-toolbar">
         <div class="btn-group mr-2">
-            <button type="button" class="btn btn-outline-primary"><?= $this->Html->link(__('New Article'), ['action' => 'add']) ?></button>
+            <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
         </div>
     </div>
     <br> 

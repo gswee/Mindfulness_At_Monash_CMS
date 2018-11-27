@@ -20,7 +20,7 @@
                         <span class="subheading" style="text-align: left; line-height: 1.5">
                             Dr. Richard Chambers <br>
                             Facilitator <br>
-                            <a href="mailto:richard.chambers@monash.edu">richard.chambers@monash.edu</a><br>
+                            <a href="mailto:richard.chambers@monash.edu" id="email">richard.chambers@monash.edu</a><br>
                             <!--<span class="subheading" id="desc">
                                 Richard is a clinical psychologist specialising in mindfulness-based therapies. He is involved in mindfulness research, has published peer-reviewed journal articles and is co-author of Mindful Learning along with Dr Craig Hassed. Also, Richard was involved in the development of Smiling Mind, a free mindfulness app and not-for-profit aiming to get mindfulness into the Australian school curriculum by 2020. He works with a number of educational institutions and businesses interested in using mindfulness to improve wellbeing and performance.
                             </span>-->

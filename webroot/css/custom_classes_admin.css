@@ -1,6 +1,13 @@
 /* Top Bar */
-.top-bar .name h1 a {
-    font-size: 2em;
+a#home {
+    color: white;
+}
+
+#body-row {
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top: 100px;
+    max-width: none;
 }
 
 /* Sidebar */
@@ -8,6 +15,7 @@
     padding-left: 2rem !important;
 }
 
-/*Uncomment when Trumbowyg is implemented over TinyMCE
-$('#editor').trumbowyg();
-*/
+/* Links */
+button:hover {
+    color:white;
+}
