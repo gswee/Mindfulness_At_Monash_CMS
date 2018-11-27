@@ -20,7 +20,10 @@
             </tr>
         </thead>
         <tbody>
-            <?php foreach ($article as $article): ?>
+            <?php foreach ($article as $article): 
+                if ($article->id == '1' or $article->id == '2'): 
+                else: ?>
+            
             <tr>
                 <td><?= $this->Number->format($article->id) ?></td>
                 <td><?= h($article->title) ?></td>
@@ -33,6 +36,7 @@
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $article->id], ['confirm' => __('Are you sure you want to delete # {0}?', $article->id)]) ?>
                 </td>
             </tr>
+            <?php endif; ?>
             <?php endforeach; ?>
         </tbody>
     </table>

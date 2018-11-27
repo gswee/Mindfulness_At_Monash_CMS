@@ -22,12 +22,13 @@ $cakeDescription = 'Mindfulness At Monash Admin'
         <?= $this->Html->css('ui/trumbowyg.min.css') ?>
     
     <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>-->
-    <script src="https://cloud.tinymce.com/stable/tinymce.min.js?apiKey=l643p9n8np1rq983pof3em9eyakffgalqxrhckxl0bnuidpc"></script>
-    <script>
+    <?= $this->Html->script("tinymce/tinymce.min.js") ?>
+    <!--<script type="text/javascript">
       tinymce.init({
-        selector: '#description, #body'
+        selector: '#description, #body',
+          invalid_elements: 'br'
       });
-    </script>
+    </script>-->
     
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -67,16 +68,15 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     
     <nav class="sidebar">
         <ul class="side-nav">
-            <!-- Remove  "#",  when the respective Page's function is created 
-            <li><?= $this->Html->link(__('Edit Page'),  "#", ['action' => 'add']) ?></li>
+            <li><?= $this->Html->link(__('Edit Pages'),  "#", ['action' => 'add']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
-                    <li><?= $this->Html->link(__('Home Page'), "#", ['controller' => 'Pages', 'action' => 'edit_home']) ?></li>
-                    <li><?= $this->Html->link(__('For Students'), "#", ['controller' => 'Pages', 'action' => 'edit_students']) ?></li>
-                    <li><?= $this->Html->link(__('For Educators'), "#", ['controller' => 'Pages', 'action' => 'edit_educators']) ?></li>
+                    <li><?= $this->Html->link(__('Home Page'), "#", ['controller' => 'Article', 'action' => 'edit_home']) ?></li>
+                    <li><?= $this->Html->link(__('For Students'), "#", ['controller' => 'Article', 'action' => 'edit_students']) ?></li>
+                    <li><?= $this->Html->link(__('For Educators'), "#", ['controller' => 'Article', 'action' => 'edit_educators']) ?></li>
                 </ul>
             </li>
-            -->
+            
             <li><?= $this->Html->link(__('Articles'), ['controller'=>'Article', 'action' => 'index']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">

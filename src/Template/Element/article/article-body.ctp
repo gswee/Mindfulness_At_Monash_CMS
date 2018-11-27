@@ -1,6 +1,5 @@
 <div class="overlay"></div>
-  <div class="container"<!-- Navigation -->
-
+  <div class="container"><!-- Navigation -->
     <div class="row">
       <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
