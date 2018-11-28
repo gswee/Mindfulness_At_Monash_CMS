@@ -6,7 +6,7 @@
             <ul class="list-inline text-center">
               
               <li class="list-inline-item">
-                <a href="https://www.facebook.com/pg/drrichardchambers/events/?ref=page_internal">
+                <a href="https://www.facebook.com/pg/drrichardchambers/events/?ref=page_internal" id="footlink">
                   <span class="fa-stack fa-lg">
                     <i class="fas fa-circle fa-stack-2x"></i>
                     <i class="fab fa-facebook-f fa-stack-1x fa-inverse"></i>

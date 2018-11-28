@@ -6,8 +6,8 @@ a {
 .sidebar {
     width: 20%;
     position: fixed;
-    background-color: lavender; /* temp */
-    top: 70px;
+    background-color: dimgray; /* temp */
+    top: 64px;
     bottom: 0px;
     left: 0px;   
     opacity: 1;
@@ -15,28 +15,27 @@ a {
 
 .side-nav li {
     margin-bottom: 0px;
-    border-bottom: 1px;
-    border-bottom-color: black;
 }
 /**/
-.side-nav li a {
+.side-nav li a:not(.button) {
     text-decoration: none;
     font-size: 1.5em;
     font-weight: 600;
+    color: white
 }
-.side-nav li a:hover {
-    background-color: lavender;
-}
+
 .side-nav li ul {
     padding:0px;
 }
 .side-nav li ul li {
-    background-color: lavenderblush;
+    background-color: gray;
+    
     
 }
-.side-nav li ul li a {
+.side-nav li ul li a:not(.button) {
     font-weight: 100;
     font-size: 1em;
+    color: white
 }
 
 
@@ -56,7 +55,7 @@ nav.top-bar.expanded {
 /* Main Section */
 div.admin {
     width: 80%;
-    
+    padding-top: 10px;
     margin-left:20%;
     top: 60px;
     

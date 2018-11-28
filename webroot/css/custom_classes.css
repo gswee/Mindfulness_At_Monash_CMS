@@ -155,12 +155,13 @@ a#category:hover {
 
 
 /*Who Are We*/
-.class#desc {
-    font-size: 10; line-height: 1;
+span#desc {
+    font-size: 1rem; line-height: 1;
 }
 
 a#email {
     color:white;
+    font-style: italic
 }
 a#email:hover {
     color:gainsboro;
@@ -188,6 +189,6 @@ img#whoAreWe {
 .fas.fa-bars {
     color: white;
 }
-.fas.fa-bars:hover {
+a#footlink:hover {
     opacity: 0.8;
 }

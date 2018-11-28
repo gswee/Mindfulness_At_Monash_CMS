@@ -52,23 +52,6 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     <nav class="navbar navbar-expand-md fixed-top bg-dark">
         <h1><?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Article', 'action'=>'index', '?' => ['direction'=>'asc', 'sort'=>'id']], ['id'=>'home']); ?></h1>
     </nav>
-    <!--<nav class="top-bar expanded" data-topbar role="navigation">
-        <div>
-        <ul>
-            <li class="name">
-                <h1> <?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Article', 'action'=>'index', '?' => ['direction'=>'asc', 'sort'=>'id']]); ?></h1>
-            </li>
-        </ul>
-            </div>-->
-        <!--
-        <div class="top-bar-section">
-            <ul class="right">
-                <li><a target="_blank" href="https://book.cakephp.org/3.0/">Documentation</a></li>
-                <li><a target="_blank" href="https://api.cakephp.org/3.0/">API</a></li>
-            </ul>
-        </div>
--->
-    <!--</nav>-->
     <div class="row" id="body-row">
     <nav class="sidebar">
         <ul class="side-nav">
