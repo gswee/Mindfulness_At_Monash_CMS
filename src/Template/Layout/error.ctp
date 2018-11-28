@@ -16,6 +16,8 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <link href="https://fonts.googleapis.com/css?family=Gloria+Hallelujah|Patrick+Hand" rel="stylesheet">
+    
     <?= $this->Html->charset() ?>
     <title>
         <?= $this->fetch('title') ?>
@@ -24,6 +26,8 @@
 
     <?= $this->Html->css('base.css') ?>
     <?= $this->Html->css('cake.css') ?>
+    <?= $this->Html->css('bootstrap.min.css') ?>
+    <?= $this->Html->css('custom_classes.css') ?>
 
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
@@ -32,7 +36,7 @@
 <body>
     <div id="container">
         <div id="header">
-            <h1><?= __('Error') ?></h1>
+            <h1 id="message"><?= __('Oh No!') ?></h1>
         </div>
         <div id="content">
             <?= $this->Flash->render() ?>
@@ -40,7 +44,7 @@
             <?= $this->fetch('content') ?>
         </div>
         <div id="footer">
-            <?= $this->Html->link(__('Back'), 'javascript:history.back()') ?>
+            <?= $this->Html->link(__('Back'), 'javascript:history.back()', ['class' => 'btn btn-success']) ?>
         </div>
     </div>
 </body>
