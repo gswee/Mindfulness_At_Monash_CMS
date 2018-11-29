@@ -71,7 +71,7 @@ class ArticleTable extends Table
             ->scalar('body')
             ->requirePresence('body', 'create')
             ->notEmpty('body');
-
+        
         return $validator;
     }
 

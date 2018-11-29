@@ -34,6 +34,7 @@ class Article extends Entity
         'body' => true,
         'created' => true,
         'modified' => true,
+        'status' => true,
         'category_id' => true,
         'category' => true
     ];

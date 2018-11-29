@@ -4,7 +4,7 @@
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <ul class="list-inline text-center">
-              
+              <p>Find our events on Facebook:</p>
               <li class="list-inline-item">
                 <a href="https://www.facebook.com/pg/drrichardchambers/events/?ref=page_internal" id="footlink">
                   <span class="fa-stack fa-lg">
