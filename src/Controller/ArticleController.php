@@ -130,4 +130,67 @@ class ArticleController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    
+    /**
+    * Publish method
+    * 
+    * @param string|null $id Article id.
+    * @return \Cake\Http\Response|null Redirects to index.
+    * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+    */
+    public function publish($id = null) 
+    {
+        $article = $this->Article->get($id);
+        $article->status = "published";
+        
+        if ($this->Article->save($article)) {
+            $this->Flash->success(__('The article has been published.'));
+        } else {
+            $this->Flash->error(__('The article could not be published. Please, try again.'));
+        }
+        
+        return $this->redirect(['action' => 'index']);
+    }
+    
+    /**
+    * Save as Draft method
+    * 
+    * @param string|null $id Article id.
+    * @return \Cake\Http\Response|null Redirects to index.
+    * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+    */
+    public function saveAsDraft($id = null) 
+    {
+        $article = $this->Article->get($id);
+        $article->status = "draft";
+        
+        if ($this->Article->save($article)) {
+            $this->Flash->success(__('The article has been saved as a draft.'));
+        } else {
+            $this->Flash->error(__('The article could not be saved as a draft. Please, try again.'));
+        }
+        
+        return $this->redirect(['action' => 'index']);
+    }
+    
+    /**
+    * Archive method
+    * 
+    * @param string|null $id Article id.
+    * @return \Cake\Http\Response|null Redirects to index.
+    * @throws \Cake\Datasource\Exception\RecordNotFoundException When record not found.
+    */
+    public function archive($id = null) 
+    {
+        $article = $this->Article->get($id);
+        $article->status = "archived";
+        
+        if ($this->Article->save($article)) {
+            $this->Flash->success(__('The article has been archived.'));
+        } else {
+            $this->Flash->error(__('The article could not be archived. Please, try again.'));
+        }
+        
+        return $this->redirect(['action' => 'index']);
+    }
 }

@@ -48,8 +48,8 @@ nav.top-bar.expanded {
 }
 
 /* Flash message */
-.message-info success {
-    
+div#success {
+    padding-left: 15px;
 }
 
 /* Main Section */

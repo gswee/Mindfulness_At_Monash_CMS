@@ -35,6 +35,23 @@
                 <?= $this->Html->link(__('View'), ['action' => 'view', $article->id]) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id]) ?>
                 <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $article->id], ['confirm' => __('Are you sure you want to delete # {0}?', $article->id)]) ?>
+                <?php if ($article->status == 'published') 
+                { 
+                    echo $this->Html->link(__('Un-Publish '), ['action' => 'saveAsDraft', $article->id], ['confirm' => __('Are you sure you want to un-publish # {0}?', $article->id)]);
+                } 
+                else 
+                {
+                    echo $this->Html->link(__('Publish '), ['action' => 'publish', $article->id], ['confirm' => __('Are you sure you want to publish # {0}?', $article->id)]);
+                } 
+                if ($article->status != 'archived') 
+                { 
+                    echo $this->Html->link(__('Archive'), ['action' => 'archive', $article->id], ['confirm' => __('Are you sure you want to archive # {0}?', $article->id)]);
+                }
+                else 
+                {
+                    echo $this->Html->link(__('Save As Draft '), ['action' => 'saveAsDraft', $article->id], ['confirm' => __('Are you sure you want to un-publish # {0}?', $article->id)]);
+                }
+                ?> 
             </td>
         </tr>
         <?php endif; ?>

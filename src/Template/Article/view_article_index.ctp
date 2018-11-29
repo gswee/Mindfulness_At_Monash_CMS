@@ -62,7 +62,7 @@
         <h2>More Articles</h2>
         <?php 
         foreach ($articles as $article) { 
-            if ($article->id == 1 or $article->id == 2){
+            if ($article->id == 1 or $article->id == 2 or $article->status != 'published'){
 
             }
             else {
