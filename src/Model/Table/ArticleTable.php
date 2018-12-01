@@ -72,6 +72,11 @@ class ArticleTable extends Table
             ->requirePresence('body', 'create')
             ->notEmpty('body');
         
+        $validator
+            ->scalar('status')
+            ->inList('status', ['published','draft','archived'])
+            ->notEmpty('status');
+        
         return $validator;
     }
 

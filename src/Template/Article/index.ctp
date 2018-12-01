@@ -32,12 +32,12 @@
             <td><?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Category', 'action' => 'view', $article->category->id]) : '' ?></td>
             <td><?= h($article->status) ?></td>
             <td class="actions">
-                <?= $this->Html->link(__('View'), ['action' => 'view', $article->id]) ?>
-                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id]) ?>
-                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $article->id], ['confirm' => __('Are you sure you want to delete # {0}?', $article->id)]) ?>
+                <?= $this->Html->link(__('View'), ['action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
+                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
+                <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $article->id], ['class'=>'btn btn-danger btn-sm'],['confirm' => __('Are you sure you want to delete # {0}?', $article->id)]) ?>
                 <?php if ($article->status == 'published') 
                 { 
-                    echo $this->Html->link(__('Un-Publish '), ['action' => 'saveAsDraft', $article->id], ['confirm' => __('Are you sure you want to un-publish # {0}?', $article->id)]);
+                    echo $this->Html->link(__('Un-Publish '), ['action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm'], ['confirm' => __('Are you sure you want to un-publish # {0}?', $article->id)]);
                 } 
                 else 
                 {

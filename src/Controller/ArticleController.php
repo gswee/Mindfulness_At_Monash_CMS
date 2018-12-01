@@ -62,6 +62,7 @@ class ArticleController extends AppController
         $this->set('category_id', $category_id);
         $this->viewBuilder()->setLayout('article');
     }
+    
 
     /**
      * Add method

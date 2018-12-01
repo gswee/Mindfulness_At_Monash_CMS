@@ -48,9 +48,10 @@ nav.top-bar.expanded {
 }
 
 /* Flash message */
-div#success {
+div#success, div#error {
     padding-left: 15px;
 }
+
 
 /* Main Section */
 div.admin {

@@ -4,14 +4,6 @@
  * @var \App\Model\Entity\Article $article
  */
 ?>
-<?= 
-$this->Html->script('tiny_mce/tiny_mce.js', array(
-	'inline' => false
-));
-/*$this->Html->script('/yourapp/TinyMCE/js/tiny_mce/tiny_mce.js', array(
-	'inline' => false
-));*/
-?>
 <!--
 <nav class="large-3 medium-4 columns" id="actions-sidebar">
     <ul class="side-nav">
@@ -29,17 +21,20 @@ $this->Html->script('tiny_mce/tiny_mce.js', array(
 </nav>
 -->
 <div class="article form large-9 medium-8 columns content">
-    <?= $this->Form->create($article) ?>
+    <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"button.disabled = true; return true;"]) ?>
     <fieldset>
         <legend><?= __('Edit Article') ?></legend>
         <?php
             echo $this->Form->control('title');
             echo $this->Form->control('description');
+echo "<br>";
             echo $this->Form->control('body');
+echo "<br>";
             echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <br>
+    <?= $this->Form->button(__('Submit'), ['name'=>'button']) ?>
     <?= $this->Form->end() ?>
 </div>
-<?= $this->Html->script('tiny_mce/tiny_mce.js') ?>
+

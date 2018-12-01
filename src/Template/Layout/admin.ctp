@@ -24,9 +24,14 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>-->
     <?= $this->Html->script("tinymce/tinymce.min.js") ?>
     <script type="text/javascript">
-      tinymce.init({
-        selector: '#description, #body',
-          invalid_elements: 'br'
+        tinymce.init({
+        selector: '#body',
+          plugins: ["advlist autolink lists link image charmap print preview anchor",
+        "searchreplace visualblocks code fullscreen",
+        "insertdatetime media table contextmenu paste"],
+          //invalid_elements: 'br'
+          toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            file_picker_types: 'file image media'
       });
     </script>
     
@@ -70,16 +75,9 @@ $cakeDescription = 'Mindfulness At Monash Admin'
                     <li><?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?></li>
                     <li><?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1']) ?></li>
                     <li><?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2']) ?></li>
+                    <li><?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'index', '?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
                 </ul>
             </li>
-            <!--
-            <li><?= $this->Html->link(__('Categories'), ['controller' => 'Category', 'action' => 'index']) ?></li>
-            <li>
-                <ul class="side-nav sub-menu">
-                    <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
-                </ul>
-            </li>
-            -->
         </ul>
     </nav>
     
