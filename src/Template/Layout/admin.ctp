@@ -28,10 +28,12 @@ $cakeDescription = 'Mindfulness At Monash Admin'
         selector: '#body',
           plugins: ["advlist autolink lists link image charmap print preview anchor",
         "searchreplace visualblocks code fullscreen",
-        "insertdatetime media table contextmenu paste"],
+        "insertdatetime media table contextmenu paste autoresize"],
           //invalid_elements: 'br'
           toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
-            file_picker_types: 'file image media'
+            file_picker_types: 'file image media',
+            forced_root_block: '',
+            invalid_elements:"div"
       });
     </script>
     

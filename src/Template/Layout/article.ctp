@@ -29,6 +29,13 @@ $cakeDescription = 'Mindfulness At Monash';
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
+    
+    <style>
+        div.site-heading img {
+            max-width:100%;
+        }
+        
+    </style>
 </head>
 <body style="margin-left: 0px;">
     <!-- Navigation-->
