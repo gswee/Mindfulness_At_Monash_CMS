@@ -73,7 +73,7 @@ class PagesController extends AppController
         
         $content = $this->loadModel('Settings');
         $welcomeTitle=$content->get(1)->settingsValue;
-        $welcomeSubtitle=$content->get(2)->settingsValue;
+        /*$welcomeSubtitle=$content->get(2)->settingsValue;
         $welcomeBg=$content->get(3)->settingsValue;
         $contactusTitle=$content->get(4)->settingsValue;
         $contactusSubtitle=$content->get(5)->settingsValue;
@@ -81,9 +81,9 @@ class PagesController extends AppController
         $contactusStaff1_name=$content->get(7)->settingsValue;
         $contactusStaff1_email=$content->get(8)->settingsValue;
         $contactusStaff1_desc=$content->get(9)->settingsValue;
-        $contactusStaff1_photo=$content->get(10)->settingsValue;
+        $contactusStaff1_photo=$content->get(10)->settingsValue;*/
         
-        $this->set(compact('page', 'subpage','welcomeTitle','welcomeSubtitle','welcomeBg','contactusTitle','contactusSubtitle','contactusBg','contactusStaff1_name','contactusStaff1_email','contactusStaff1_desc','contactusStaff1_photo'));
+        $this->set(compact('page', 'subpage','welcomeTitle'));//,'welcomeSubtitle','welcomeBg','contactusTitle','contactusSubtitle','contactusBg','contactusStaff1_name','contactusStaff1_email','contactusStaff1_desc','contactusStaff1_photo'));
 
         try {
             $this->render(implode('/', $path));
@@ -95,7 +95,7 @@ class PagesController extends AppController
         }
     }
     
-    // Edit static pages
+    /* Edit static pages
     public function editHome()
     {
         
@@ -110,5 +110,5 @@ class PagesController extends AppController
         $this->viewBuilder()->setLayout('admin');
         $this->set(compact('homeElements'));
         $this->render('editHome');
-    }
+    }*/
 }

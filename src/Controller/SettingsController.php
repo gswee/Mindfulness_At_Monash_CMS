@@ -13,6 +13,12 @@ use App\Controller\AppController;
 class SettingsController extends AppController
 {
 
+    public function initialize()
+    {
+        parent::initialize();
+        $this->viewBuilder()->setLayout('admin');
+    }
+
     /**
      * Index method
      *
@@ -39,6 +45,7 @@ class SettingsController extends AppController
         ]);
 
         $this->set('setting', $setting);
+
     }
 
     /**
@@ -73,6 +80,7 @@ class SettingsController extends AppController
         $setting = $this->Settings->get($id, [
             'contain' => []
         ]);
+        $settings = $this->Settings->find()->where(['Settings.id >=' => 1, 'Settings.id <=' => 10]);
         if ($this->request->is(['patch', 'post', 'put'])) {
             $setting = $this->Settings->patchEntity($setting, $this->request->getData());
             if ($this->Settings->save($setting)) {
@@ -83,6 +91,7 @@ class SettingsController extends AppController
             $this->Flash->error(__('The setting could not be saved. Please, try again.'));
         }
         $this->set(compact('setting'));
+        $this->set(compact('settings'));
     }
 
     /**
