@@ -95,20 +95,11 @@ class PagesController extends AppController
         }
     }
     
-    /* Edit static pages
-    public function editHome()
+    // Edit static pages
+    public function adminHome()
     {
-        
-        
-        $content = $this->loadModel('Settings');
-        $welcomeTitle="this";//$content->get(1)->settingsValue;
-        $welcomeSubtitle="whis";//$content->get(2)->settingsValue;
-        $welcomeBg="etc";//$content->get(3)->settingsValue;
-        
-        $homeElements = array($welcomeTitle, $welcomeSubtitle, $welcomeBg);
-        
         $this->viewBuilder()->setLayout('admin');
-        $this->set(compact('homeElements'));
-        $this->render('editHome');
-    }*/
+        //$this->set(compact('homeElements'));
+        $this->render('adminHome');
+    }
 }
