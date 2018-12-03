@@ -32,6 +32,8 @@ $cakeDescription = 'Mindfulness At Monash Admin'
           //invalid_elements: 'br'
           toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
             file_picker_types: 'file image media',
+              force_br_newlines : false,
+              force_p_newlines : false,
             forced_root_block: '',
             invalid_elements:"div"
       });
@@ -77,7 +79,9 @@ $cakeDescription = 'Mindfulness At Monash Admin'
                     <li><?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?></li>
                     <li><?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1']) ?></li>
                     <li><?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2']) ?></li>
-                    <li><?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'index', '?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
+                    <li><?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived','?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
+                    <li><?= $this->Html->link(__('View Published Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'published','?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
+                    <li><?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft','?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
                 </ul>
             </li>
         </ul>
@@ -89,8 +93,6 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     </div>
     
     </div>
-    <footer>
-        <?php echo $this->element('footer') ?>
-    </footer>
+    
 </body>
 </html>

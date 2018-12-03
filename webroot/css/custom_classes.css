@@ -107,6 +107,15 @@ a#category:hover {
     opacity:0.8;
 }
 
+/* Article */
+span#desc{
+    color: gray;
+    font-size: 2rem;
+    text-align: center;
+    font-style: italic;
+}
+
+
 /* Client-side Sidebar */
 .sidebar-wrapper {
   background-color: saddlebrown;
@@ -155,7 +164,7 @@ a#category:hover {
 
 
 /*Who Are We*/
-span#desc {
+span#contactdesc {
     font-size: 1rem; line-height: 1;
 }
 

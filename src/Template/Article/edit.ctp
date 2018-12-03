@@ -34,7 +34,7 @@ echo "<br>";
         ?>
     </fieldset>
     <br>
-    <?= $this->Form->button(__('Submit'), ['name'=>'button']) ?>
+    <?= $this->Form->button(__('Save As Draft')) ?>
     <?= $this->Form->end() ?>
 </div>
 

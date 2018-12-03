@@ -32,6 +32,15 @@ class ArticleController extends AppController
 
         $this->set(compact('article'));
     }
+    public function searchByStatus($status = null) 
+    {
+        $articles = $this->Article->find()->where(['Article.status'=>$status]);
+        //debug($articles->toArray());
+        //toArray() is used to execute sql query. Ususally you don't need this since set(compact) will do it for you. 
+        //exit; //forcably stop the code right here so we can see the debug information. 
+        $articles = $this->paginate($articles);
+        $this->set(compact('articles'));
+    }
 
     /**
      * View method
