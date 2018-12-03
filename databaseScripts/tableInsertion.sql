@@ -25,9 +25,14 @@ create index article_category_id_fk
   on article (category_id)
 ;
 
-CREATE TABLE settingsWelcome
+create table settings
 (
-    title varchar(100) NOT NULL,
-    subtitle varchar(200) NOT NULL,
-    imageLink varchar(200) NOT NULL
-);
+	id int auto_increment
+		primary key,
+	settingsKey varchar(50) not null,
+	value text not null,
+	constraint settings_settingsKey_uindex
+		unique (settingsKey)
+)
+;
+

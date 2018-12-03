@@ -31,7 +31,7 @@ class SettingsTable extends Table
         parent::initialize($config);
 
         $this->setTable('settings');
-        $this->setDisplayField('id');
+        $this->setDisplayField('settingsValue');
         $this->setPrimaryKey('id');
     }
 
@@ -55,9 +55,9 @@ class SettingsTable extends Table
             ->add('settingsKey', 'unique', ['rule' => 'validateUnique', 'provider' => 'table']);
 
         $validator
-            ->scalar('value')
-            ->requirePresence('value', 'create')
-            ->notEmpty('value');
+            ->scalar('settingsValue')
+            ->requirePresence('settingsValue', 'create')
+            ->notEmpty('settingsValue');
 
         return $validator;
     }

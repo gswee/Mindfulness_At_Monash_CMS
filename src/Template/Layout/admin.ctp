@@ -67,9 +67,9 @@ $cakeDescription = 'Mindfulness At Monash Admin'
             <li><?= $this->Html->link(__('Edit Pages'),  "#", ['action' => 'add']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
-                    <li><?= $this->Html->link(__('Home Page'), "#", ['controller' => 'Article', 'action' => 'edit_home']) ?></li>
-                    <li><?= $this->Html->link(__('For Students'), "#", ['controller' => 'Article', 'action' => 'edit_students']) ?></li>
-                    <li><?= $this->Html->link(__('For Educators'), "#", ['controller' => 'Article', 'action' => 'edit_educators']) ?></li>
+                    <li><?= $this->Html->link(__('Home Page'), '#', ['controller' => 'Pages', 'action' => 'editHome']) ?></li>
+                    <li><?= $this->Html->link(__('For Students'), ['controller' => 'Article', 'action' => 'edit', '1']) ?></li>
+                    <li><?= $this->Html->link(__('For Educators'), ['controller' => 'Article', 'action' => 'edit', '2']) ?></li>
                 </ul>
             </li>
             

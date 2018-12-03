@@ -22,7 +22,7 @@
         <legend><?= __('Edit Setting') ?></legend>
         <?php
             echo $this->Form->control('settingsKey');
-            echo $this->Form->control('value');
+            echo $this->Form->control('settingsValue');
         ?>
     </fieldset>
     <?= $this->Form->button(__('Submit')) ?>

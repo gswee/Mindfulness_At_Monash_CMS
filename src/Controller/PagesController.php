@@ -44,24 +44,6 @@ class PagesController extends AppController
         $this->render('home');
     }
     
-    // Display students page
-    public function students() {
-        $this->render('students');
-    }
-    // Display educators page
-    public function educators() {
-        $this->render('educators');
-    }
-    
-    // Display edit students page
-    public function edit_students() {
-        $this->render('students');
-    }
-    // Display edit educators page
-    public function edit_educators() {
-        $this->render('educators');
-    }
-    
     /**
      * Displays a view
      *
@@ -88,7 +70,20 @@ class PagesController extends AppController
         if (!empty($path[1])) {
             $subpage = $path[1];
         }
-        $this->set(compact('page', 'subpage'));
+        
+        $content = $this->loadModel('Settings');
+        $welcomeTitle=$content->get(1)->settingsValue;
+        $welcomeSubtitle=$content->get(2)->settingsValue;
+        $welcomeBg=$content->get(3)->settingsValue;
+        $contactusTitle=$content->get(4)->settingsValue;
+        $contactusSubtitle=$content->get(5)->settingsValue;
+        $contactusBg=$content->get(6)->settingsValue;
+        $contactusStaff1_name=$content->get(7)->settingsValue;
+        $contactusStaff1_email=$content->get(8)->settingsValue;
+        $contactusStaff1_desc=$content->get(9)->settingsValue;
+        $contactusStaff1_photo=$content->get(10)->settingsValue;
+        
+        $this->set(compact('page', 'subpage','welcomeTitle','welcomeSubtitle','welcomeBg','contactusTitle','contactusSubtitle','contactusBg','contactusStaff1_name','contactusStaff1_email','contactusStaff1_desc','contactusStaff1_photo'));
 
         try {
             $this->render(implode('/', $path));
@@ -99,17 +94,21 @@ class PagesController extends AppController
             throw new NotFoundException();
         }
     }
+    
     // Edit static pages
-    public function edit_contact()
+    public function editHome()
     {
-         //retrieve file's contents and output to view
-         $file = fopen('/path/to/contact.ctp', w);
-         $file_contents = file_get_contents($file);
-         $this->set('contents', $file_contents);
-         if($this->request->is('post'))
-         {
-            fwrite($file, $this->request->data['contents']);
-         }
-        fclose($file);
+        
+        
+        $content = $this->loadModel('Settings');
+        $welcomeTitle="this";//$content->get(1)->settingsValue;
+        $welcomeSubtitle="whis";//$content->get(2)->settingsValue;
+        $welcomeBg="etc";//$content->get(3)->settingsValue;
+        
+        $homeElements = array($welcomeTitle, $welcomeSubtitle, $welcomeBg);
+        
+        $this->viewBuilder()->setLayout('admin');
+        $this->set(compact('homeElements'));
+        $this->render('editHome');
     }
 }
