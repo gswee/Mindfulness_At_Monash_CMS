@@ -67,8 +67,7 @@
             }
             else {
                 if ($article->category_id == $category_id){
-                    echo $this->Html->link(h($article->title), ['controller'=>'article', 'action'=>'view', $article->id]); echo "<br>";
-                    echo $this->Html->link(h($article->description), ['controller'=>'article', 'action'=>'view', $article->id]);
+                    echo $this->Html->link($article->title . '<br>' . $article->description, ['controller'=>'article', 'action'=>'view', $article->id], ['escape' => false]); echo "<br>";
                     echo "<br>";
                     echo "<br>";
                 }

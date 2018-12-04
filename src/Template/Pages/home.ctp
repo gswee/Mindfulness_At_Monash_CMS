@@ -1,5 +1,6 @@
 <?php
 $this->layout = false;
+//debug($homePageSettings);
 ?>
 <!DOCTYPE html>
 <html>

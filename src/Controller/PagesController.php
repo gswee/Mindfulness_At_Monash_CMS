@@ -41,7 +41,15 @@ class PagesController extends AppController
     
     public function index()
     {
-        $this->render('home');
+        $homePageSettings = array();
+        $content = $this->loadModel('Settings');
+        $homePageSettings[$content->get(1)->settingsKey]=$content->get(1)->settingsValue;
+        $homePageSettings[$content->get(2)->settingsKey]=$content->get(2)->settingsValue;
+        $homePageSettings[$content->get(3)->settingsKey]=$content->get(3)->settingsValue;
+        //debug($homePageSettings);
+        $this->set('homePageSettings', $homePageSettings);
+
+        $this->render('home'); //It seems you have to render after you passed parameters.
     }
     
     /**
@@ -70,20 +78,8 @@ class PagesController extends AppController
         if (!empty($path[1])) {
             $subpage = $path[1];
         }
-        
-        $content = $this->loadModel('Settings');
-        $welcomeTitle=$content->get(1)->settingsValue;
-        /*$welcomeSubtitle=$content->get(2)->settingsValue;
-        $welcomeBg=$content->get(3)->settingsValue;
-        $contactusTitle=$content->get(4)->settingsValue;
-        $contactusSubtitle=$content->get(5)->settingsValue;
-        $contactusBg=$content->get(6)->settingsValue;
-        $contactusStaff1_name=$content->get(7)->settingsValue;
-        $contactusStaff1_email=$content->get(8)->settingsValue;
-        $contactusStaff1_desc=$content->get(9)->settingsValue;
-        $contactusStaff1_photo=$content->get(10)->settingsValue;*/
-        
-        $this->set(compact('page', 'subpage','welcomeTitle'));//,'welcomeSubtitle','welcomeBg','contactusTitle','contactusSubtitle','contactusBg','contactusStaff1_name','contactusStaff1_email','contactusStaff1_desc','contactusStaff1_photo'));
+
+        $this->set(compact('page', 'subpage'));
 
         try {
             $this->render(implode('/', $path));
