@@ -65,6 +65,7 @@ class ArticleTable extends Table
 
         $validator
             ->scalar('description')
+            ->maxLength('description', 200)
             ->allowEmpty('description');
 
         $validator

@@ -6,7 +6,10 @@
 ?>
 
 <div class="category view large-9 medium-8 columns content">
-<h2><?= __('Article') ?></h2>
+<h2><?= __('Articles') ?></h2>
+    <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
+    <br>
+    <br>
 <table cellpadding="0" cellspacing="0">
     <thead>
         <tr>
@@ -33,7 +36,7 @@
             <td><?= h($article->status) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
-                <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
+
 
                 <?php if ($article->status == 'published')
                 { 
@@ -41,6 +44,7 @@
                 }
                 elseif ($article->status != 'archived')
                 {
+                    echo $this->Html->link(__('Edit'), ['action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']);
                     echo " ".$this->Html->link(__('Publish '), ['action' => 'publish', $article->id], ['class'=>'btn btn-success btn-sm', 'confirm' => __('Are you sure you want to publish article "'. $article->title).'"?']);
                     echo " ".$this->Html->link(__('Archive'), ['action' => 'archive', $article->id], ['class'=>'btn btn-info btn-sm', 'confirm' => __('Are you sure you want to archive article "'. $article->title).'"?']);
                 }
@@ -68,7 +72,7 @@
 </div>
 <div class="btn-toolbar">
     <div class="btn-group mr-2">
-        <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
+
     </div>
 </div>
 <br> 
