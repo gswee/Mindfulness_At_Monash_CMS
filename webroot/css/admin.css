@@ -61,5 +61,7 @@ div.admin {
     margin-left:20%;
     top: 60px;
     
-    /*background-color: blue; temp*/
+}
+div.admin div.category.view.large-9.medium-8.columns.content{
+    width: 100%;
 }

@@ -19,6 +19,8 @@
 -->
 <div class="category view large-9 medium-8 columns content">
     <h3><?= h($category->category) ?> Articles</h3>
+    <br>
+    <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
     <!--
     <table class="vertical-table">
         <tr>
@@ -32,8 +34,8 @@
     </table>
     -->
     <br>
+    <br>
     <div class="related">
-        <h4><?= __('Related Article') ?></h4>
         <?php if (!empty($category->article)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
@@ -42,7 +44,7 @@
                 <th scope="col"><?= __('Description') ?></th>
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
-                <th scope="col"><?= __('Category Id') ?></th>
+                <th scope="col"><?= __('Status') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
             <?php foreach ($category->article as $article): ?>
@@ -52,16 +54,32 @@
                 <td><?= h($article->description) ?></td>
                 <td><?= h($article->created) ?></td>
                 <td><?= h($article->modified) ?></td>
-                <td><?= h($article->category_id) ?></td>
+                <td><?= h($article->status) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['controller' => 'Article', 'action' => 'view', $article->id]) ?>
-                    <?= $this->Html->link(__('Edit'), ['controller' => 'Article', 'action' => 'edit', $article->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['controller' => 'Article', 'action' => 'delete', $article->id], ['confirm' => __('Are you sure you want to delete # {0}?', $article->id)]) ?>
+                    <?= $this->Html->link(__('View'), ['action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
+
+
+                    <?php if ($article->status == 'published')
+                    {
+                        echo $this->Html->link(__('Un-Publish '), ['action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-publish article "'. $article->title).'"?']);
+                    }
+                    elseif ($article->status != 'archived')
+                    {
+                        echo $this->Html->link(__('Edit'), ['action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']);
+                        echo " ".$this->Html->link(__('Publish '), ['action' => 'publish', $article->id], ['class'=>'btn btn-success btn-sm', 'confirm' => __('Are you sure you want to publish article "'. $article->title).'"?']);
+                        echo " ".$this->Html->link(__('Archive'), ['action' => 'archive', $article->id], ['class'=>'btn btn-info btn-sm', 'confirm' => __('Are you sure you want to archive article "'. $article->title).'"?']);
+                    }
+                    else
+                    {
+                        echo $this->Html->link(__('Save As Draft '), ['action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-archive article "'. $article->title).'"?']);
+                        echo " ".$this->Html->link(__('Delete'), ['action' => 'delete', $article->id], ['class'=>'btn btn-danger btn-sm', 'confirm' => __('Are you sure you want to delete article "'. $article->title).'"?']);
+                    }
+                    ?>
                 </td>
             </tr>
             <?php endforeach; ?>
         </table>
-        <?= $this->Html->link(__('New Article'), ['controller' => 'Article', 'action' => 'add']) ?>
+
         <?php endif; ?>
     </div>
 </div>
