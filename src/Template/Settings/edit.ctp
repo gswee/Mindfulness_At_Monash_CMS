@@ -8,9 +8,8 @@
     <?php foreach($settings as $setting) { ?>
     <?= $this->Form->create($setting) ?>
     <fieldset>
-        <legend><?= __('Edit Setting') ?></legend>
+        <legend><?= __($setting->settingsKey) ?></legend>
         <?php
-            echo $this->Form->control('settingsKey');
             echo $this->Form->control('settingsValue');
 
         ?>
