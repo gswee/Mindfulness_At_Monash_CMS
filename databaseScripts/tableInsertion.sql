@@ -30,7 +30,7 @@ create table settings
 	id int auto_increment
 		primary key,
 	settingsKey varchar(50) not null,
-	value text not null,
+	settingsValue text not null,
 	constraint settings_settingsKey_uindex
 		unique (settingsKey)
 )

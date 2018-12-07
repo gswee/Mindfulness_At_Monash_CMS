@@ -46,6 +46,13 @@ class PagesController extends AppController
         $homePageSettings[$content->get(1)->settingsKey]=$content->get(1)->settingsValue;
         $homePageSettings[$content->get(2)->settingsKey]=$content->get(2)->settingsValue;
         $homePageSettings[$content->get(3)->settingsKey]=$content->get(3)->settingsValue;
+        $homePageSettings[$content->get(4)->settingsKey]=$content->get(4)->settingsValue;
+        $homePageSettings[$content->get(5)->settingsKey]=$content->get(5)->settingsValue;
+        $homePageSettings[$content->get(6)->settingsKey]=$content->get(6)->settingsValue;
+        $homePageSettings[$content->get(7)->settingsKey]=$content->get(7)->settingsValue;
+        $homePageSettings[$content->get(8)->settingsKey]=$content->get(8)->settingsValue;
+        $homePageSettings[$content->get(9)->settingsKey]=$content->get(9)->settingsValue;
+        $homePageSettings[$content->get(10)->settingsKey]=$content->get(10)->settingsValue;
         //debug($homePageSettings);
         $this->set('homePageSettings', $homePageSettings);
 

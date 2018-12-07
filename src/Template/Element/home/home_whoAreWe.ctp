@@ -1,29 +1,29 @@
 <header class="masthead" id="banner">
     <div class="overlay">
-        <?= $this->Html->image('contact-us.jpg', ['alt' => 'A serene water droplet ripple, captured in mid splash']); ?>
+        <?= $this->Html->image($homePageSettings['contactusBg'], ['alt' => 'A serene water droplet ripple, captured in mid splash']); ?>
     </div>
       <div class="container">
         <div class="row">
           <div class="col-lg-8 col-md-10 mx-auto">
             <div class="site-heading">
-              <h1>Who Are We?</h1>
+              <h1><?= $homePageSettings['contactusTitle'] ?></h1>
                 <span class="subheading">
-                    We are a professionally and academically-experienced team of Mindfulness experts & researchers willing to help you understand better how your brain works.<br><br>Give us a call or send us an email if you have any queries about Mindfulness at Monash.
+                    <?= $homePageSettings['contactusSubtitle'] ?>
                 </span>
                 <br>
                 <div class="container">
                     <div class="row d-flex justify-content-center">
                         <div class="col-auto">
                             <div class="image-cropper">
-                              <?= $this->Html->image('richard.jpg', ['alt' => 'Dr Richard Chambers', 'id'=>'whoAreWe']) ?>
+                              <?= $this->Html->image($homePageSettings['contactusStaff1_photo'], ['alt' => 'Dr Richard Chambers', 'id'=>'whoAreWe']) ?>
                             </div>
                         </div>
                         <div class="col-md">
                             <span class="subheading" style="text-align: left; line-height: 1.5">
-                                Dr. Richard Chambers (Facilitator) <br>
-                                Email: <a href="mailto:richard.chambers@monash.edu" id="email">richard.chambers@monash.edu</a><br>
+                                <?= $homePageSettings['contactusStaff1_name'] ?> <br>
+                                Email: <a href=<?= $homePageSettings['contactusStaff1_email'] ?> id="email">richard.chambers@monash.edu</a><br>
                                 <span class="subheading" id="contactdesc">
-                                    Richard is a clinical psychologist specialising in mindfulness-based therapies. He is involved in mindfulness research, has published peer-reviewed journal articles and is co-author of Mindful Learning along with Dr Craig Hassed. Also, Richard was involved in the development of Smiling Mind, a free mindfulness app and not-for-profit aiming to get mindfulness into the Australian school curriculum by 2020. He works with a number of educational institutions and businesses interested in using mindfulness to improve wellbeing and performance.
+                                    <?= $homePageSettings['contactusStaff1_desc'] ?>
                                 </span>
                             </span>
                         </div>
