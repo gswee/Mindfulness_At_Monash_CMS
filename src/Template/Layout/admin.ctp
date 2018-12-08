@@ -18,10 +18,6 @@ $cakeDescription = 'Mindfulness At Monash Admin'
 <!DOCTYPE html>
 <html>
 <head>
-    <!-- Enable if Trumbowyg is used over TinyMCE
-        <?= $this->Html->css('ui/trumbowyg.min.css') ?>
-    
-    <script src='https://cloud.tinymce.com/stable/tinymce.min.js'></script>-->
     <?= $this->Html->script("tinymce/tinymce.min.js") ?>
     <script type="text/javascript">
         tinymce.init({
@@ -59,12 +55,12 @@ $cakeDescription = 'Mindfulness At Monash Admin'
 <body>
     <!-- Navigation-->
     <nav class="navbar navbar-expand-md fixed-top bg-dark">
-        <h1><?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Article', 'action'=>'index', '?' => ['direction'=>'asc', 'sort'=>'id']], ['id'=>'home']); ?></h1>
+        <h1><?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Pages', 'action'=>'admin_home'], ['id'=>'home']); ?></h1>
     </nav>
     <div class="row" id="body-row">
     <nav class="sidebar">
         <ul class="side-nav">
-            <li><?= $this->Html->link(__('Edit Pages'),  "#", ['action' => 'add']) ?></li>
+            <li><?= $this->Html->link(__('Edit Pages'), ['controller'=>'Settings', 'action' => 'index']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
                     <li><?= $this->Html->link(__('Home Page'), ['controller' => 'Settings', 'action' => 'edit', '1']) ?></li>

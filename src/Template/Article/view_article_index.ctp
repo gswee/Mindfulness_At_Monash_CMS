@@ -27,15 +27,17 @@
     
 <!-- Page Header -->
 <header class="masthead" id="banner">
+
     <div class="overlay">
-          <?= $this->Html->image('for_students.jpg', ['class' => 'img-responsive'], ['alt' => 'A student hard at work on the bed.']); ?>
+        <?php if($category_id == 1) {
+            echo $this->Html->image($articleIndexSettings['For Students Masthead'], ['class' => 'img-responsive'], ['alt' => 'For Students Masthead']);
+        } else if($category_id == 2) {
+            echo $this->Html->image($articleIndexSettings['For Educators Masthead'], ['class' => 'img-responsive'], ['alt' => 'For Educators Masthead']);
+        }?>
     </div>
     <div class="col-lg-8 col-md-10 mx-auto">
         <div class="site-heading">
             <h1><?= h($article->title) ?></h1>
-            <?php
-                //if ($article->article->)
-            ?>  
         </div>
     </div>
 </header>

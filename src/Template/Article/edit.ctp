@@ -27,10 +27,14 @@
         <?php
             echo $this->Form->control('title');
             echo $this->Form->control('description');
-echo "<br>";
+
             echo $this->Form->control('body');
 echo "<br>";
-            echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
+            if ($article->id != '1' or '2') {
+                echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
+
+            }
+        echo $article->id;
         ?>
     </fieldset>
     <br>

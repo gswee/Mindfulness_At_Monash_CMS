@@ -67,10 +67,15 @@ class ArticleController extends AppController
         ]);
         $articles = $this->Article->find();
         $category_id = $article->category_id;
+        $articleIndexSettings = array();
+        $content = $this->loadModel('Settings');
+        $articleIndexSettings [$content->get(11)->settingsKey]=$content->get(11)->settingsValue;
+        $articleIndexSettings [$content->get(12)->settingsKey]=$content->get(12)->settingsValue;
         
         $this->set('article', $article);
         $this->set('articles', $articles);
         $this->set('category_id', $category_id);
+        $this->set('articleIndexSettings', $articleIndexSettings);
         $this->viewBuilder()->setLayout('article');
     }
     
