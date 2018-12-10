@@ -34,11 +34,15 @@ echo "<br>";
                 echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
 
             }
-        echo $article->id;
+        //echo $article->id;
         ?>
     </fieldset>
     <br>
-    <?= $this->Form->button(__('Save Draft')) ?>
+    <?php if ($article->status == 'published' or $article->status == 'archived') { ?>
+        <?= $this->Form->button(__('Save')) ?>
+    <?php } else if ($article->status == 'draft') { ?>
+        <?= $this->Form->button(__('Save Draft')) ?>
+    <?php } ?>
     <?= $this->Form->end() ?>
 </div>
 

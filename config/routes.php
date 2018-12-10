@@ -73,7 +73,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * Alternate route for viewArticleIndex
     */
     $routes->connect('/view-article-index', ['controller' => 'Article', 'action' => 'viewArticleIndex']);
-
+    //$routes->get('');
 });
 
 /**

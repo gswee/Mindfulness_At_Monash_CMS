@@ -50,8 +50,21 @@ nav.top-bar.expanded {
 /* Flash message */
 div#success, div#error {
     padding-left: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
 }
-
+.success {
+    color: #067600;
+    background-color: #e3ffdf;
+}
+.error {
+    color: #b10000;
+    background-color: #ffdddd;
+}
+.warning {
+    color: #ffc000;
+    background-color: #ffebad;
+}
 
 /* Main Section */
 div.admin {

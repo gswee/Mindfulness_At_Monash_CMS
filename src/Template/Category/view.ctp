@@ -19,9 +19,9 @@
 -->
 <div class="category view large-9 medium-8 columns content">
     <h3><?= h($category->category) ?> Articles</h3>
-    <br>
-    <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
     <!--
+    <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
+
     <table class="vertical-table">
         <tr>
             <th scope="row"><?= __('Category') ?></th>
@@ -34,30 +34,30 @@
     </table>
     -->
     <br>
-    <br>
     <div class="related">
         <?php if (!empty($category->article)): ?>
         <table cellpadding="0" cellspacing="0">
             <tr>
                 <th scope="col"><?= __('Id') ?></th>
                 <th scope="col"><?= __('Title') ?></th>
-                <th scope="col"><?= __('Description') ?></th>
+
                 <th scope="col"><?= __('Created') ?></th>
                 <th scope="col"><?= __('Modified') ?></th>
                 <th scope="col"><?= __('Status') ?></th>
                 <th scope="col" class="actions"><?= __('Actions') ?></th>
             </tr>
-            <?php foreach ($category->article as $article): ?>
-            <tr>
+            <?php foreach ($category->article as $article):
+                if ($article->id == '1' or $article->id == '2'):
+                else: ?>
+                <tr>
                 <td><?= h($article->id) ?></td>
                 <td><?= h($article->title) ?></td>
-                <td><?= h($article->description) ?></td>
+
                 <td><?= h($article->created) ?></td>
                 <td><?= h($article->modified) ?></td>
                 <td><?= h($article->status) ?></td>
                 <td class="actions">
                     <?= $this->Html->link(__('View'), ['action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
-
 
                     <?php if ($article->status == 'published')
                     {
@@ -77,6 +77,7 @@
                     ?>
                 </td>
             </tr>
+            <?php endif; ?>
             <?php endforeach; ?>
         </table>
 
