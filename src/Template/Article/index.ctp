@@ -51,7 +51,7 @@
                 else 
                 {
                     echo $this->Html->link(__('Save As Draft '), ['action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-archive article "'. $article->title).'"?']);
-                    echo " ".$this->Html->link(__('Delete'), ['action' => 'delete', $article->id], ['class'=>'btn btn-danger btn-sm', 'confirm' => __('Are you sure you want to delete article "'. $article->title).'"?']);
+                    echo " ".$this->Form->postLink('Delete', ['action' => 'delete', $article->id], ['class'=>'btn btn-danger btn-sm', 'confirm' => __('Are you sure you want to delete article "'. $article->title).'"?']);
                 }
                 ?> 
             </td>
