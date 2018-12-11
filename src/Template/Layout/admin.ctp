@@ -53,10 +53,16 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     <?= $this->fetch('script') ?>
 </head>
 <body>
-    <!-- Navigation-->
+    <!-- Navigation -->
     <nav class="navbar navbar-expand-md fixed-top bg-dark">
         <h1><?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Pages', 'action'=>'admin_home'], ['id'=>'home']); ?></h1>
+        <div id="user_section">
+
+                <h1><?= $this->Html->link('Logout',['controller'=>'users','action'=>'logout'], ['id'=>'home']); ?></h1>
+
+        </div>
     </nav>
+
     <div class="row" id="body-row">
     <nav class="sidebar">
         <ul class="side-nav">

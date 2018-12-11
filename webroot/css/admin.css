@@ -46,6 +46,10 @@ nav.top-bar.expanded {
     padding-top: 6px;
     width:auto;
 }
+#user_section {
+    position:absolute;
+    right:0;
+}
 
 /* Flash message */
 div#success, div#error {
