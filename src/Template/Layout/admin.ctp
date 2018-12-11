@@ -80,6 +80,7 @@ $cakeDescription = 'Mindfulness At Monash Admin'
                     <li><?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft','?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
                 </ul>
             </li>
+            <li><?= $this->Html->link(__('Users'), ['controller'=>'Users', 'action' => 'index']) ?></li>
         </ul>
     </nav>
     
