@@ -74,6 +74,11 @@ Router::scope('/', function (RouteBuilder $routes) {
     */
     $routes->connect('/view-article-index', ['controller' => 'Article', 'action' => 'viewArticleIndex']);
     //$routes->get('');
+
+    /*
+     * Home page of admin
+     * */
+    $routes->connect('/admin', ['controller' => 'Pages', 'action' => 'admin_home']);
 });
 
 /**

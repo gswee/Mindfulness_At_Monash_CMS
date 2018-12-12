@@ -15,7 +15,8 @@ class ArticleController extends AppController
     
     public function initialize()
     {
-        parent::initialize();        
+        parent::initialize();
+        //$this->Auth->allow(['view','viewArticleIndex']);
         $this->viewBuilder()->setLayout('admin');
     }
     /**
@@ -93,7 +94,7 @@ class ArticleController extends AppController
             if ($this->Article->save($article)) {
                 $this->Flash->success(__('The article has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect($this->referer());
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
         }
@@ -118,14 +119,12 @@ class ArticleController extends AppController
             if ($this->Article->save($article)) {
                 $this->Flash->success(__('The article has been saved.'));
 
-                return $this->redirect(['action' => 'index']);
+                return $this->redirect($this->referer());
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
         }
         $category = $this->Article->Category->find('list', ['limit' => 200]);
         $this->set(compact('article', 'category'));
-        // TinyMCE Helper
-        //$this->helpers = array('TinyMCE.TinyMCE');
     }
 
     /**
@@ -145,7 +144,7 @@ class ArticleController extends AppController
             $this->Flash->error(__('The article could not be deleted. Please, try again.'));
         }
 
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect($this->referer());
     }
     
     /**
@@ -166,7 +165,7 @@ class ArticleController extends AppController
             $this->Flash->error(__('The article could not be published. Please, try again.'));
         }
         
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect($this->referer());
     }
     
     /**
@@ -187,7 +186,7 @@ class ArticleController extends AppController
             $this->Flash->error(__('The article could not be saved as a draft. Please, try again.'));
         }
         
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect($this->referer());
     }
     
     /**
@@ -208,6 +207,15 @@ class ArticleController extends AppController
             $this->Flash->error(__('The article could not be archived. Please, try again.'));
         }
         
-        return $this->redirect(['action' => 'index']);
+        return $this->redirect($this->referer());
+    }
+
+    public function isAuthorized($user)
+    {
+        $action = $this->request->getParam('action');
+        // The add and tags actions are always allowed to logged in users.
+        if (in_array($action, ['add', 'edit'])) {
+            return true;
+        }
     }
 }

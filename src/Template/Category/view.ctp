@@ -57,22 +57,22 @@
                 <td><?= h($article->modified) ?></td>
                 <td><?= h($article->status) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('View'), ['action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
+                    <?= $this->Html->link(__('View'), ['controller'=>'article', 'action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
 
                     <?php if ($article->status == 'published')
                     {
-                        echo $this->Html->link(__('Un-Publish '), ['action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-publish article "'. $article->title).'"?']);
+                        echo $this->Html->link(__('Un-Publish '), ['controller'=>'article','action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-publish article "'. $article->title).'"?']);
                     }
                     elseif ($article->status != 'archived')
                     {
-                        echo $this->Html->link(__('Edit'), ['action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']);
-                        echo " ".$this->Html->link(__('Publish '), ['action' => 'publish', $article->id], ['class'=>'btn btn-success btn-sm', 'confirm' => __('Are you sure you want to publish article "'. $article->title).'"?']);
-                        echo " ".$this->Html->link(__('Archive'), ['action' => 'archive', $article->id], ['class'=>'btn btn-info btn-sm', 'confirm' => __('Are you sure you want to archive article "'. $article->title).'"?']);
+                        echo $this->Html->link(__('Edit'), ['controller'=>'article', 'action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']);
+                        echo " ".$this->Html->link(__('Publish '), ['controller'=>'article', 'action' => 'publish', $article->id], ['class'=>'btn btn-success btn-sm', 'confirm' => __('Are you sure you want to publish article "'. $article->title).'"?']);
+                        echo " ".$this->Html->link(__('Archive'), ['controller'=>'article', 'action' => 'archive', $article->id], ['class'=>'btn btn-info btn-sm', 'confirm' => __('Are you sure you want to archive article "'. $article->title).'"?']);
                     }
                     else
                     {
-                        echo $this->Html->link(__('Save As Draft '), ['action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-archive article "'. $article->title).'"?']);
-                        echo " ".$this->Html->link(__('Delete'), ['action' => 'delete', $article->id], ['class'=>'btn btn-danger btn-sm', 'confirm' => __('Are you sure you want to delete article "'. $article->title).'"?']);
+                        echo $this->Html->link(__('Save As Draft '), ['controller'=>'article', 'action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-archive article "'. $article->title).'"?']);
+                        echo " ".$this->Html->link(__('Delete'), ['controller'=>'article', 'action' => 'delete', $article->id], ['class'=>'btn btn-danger btn-sm', 'confirm' => __('Are you sure you want to delete article "'. $article->title).'"?']);
                     }
                     ?>
                 </td>

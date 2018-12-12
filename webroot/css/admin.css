@@ -49,6 +49,7 @@ nav.top-bar.expanded {
 #user_section {
     position:absolute;
     right:0;
+    margin-right: 20px;
 }
 
 /* Flash message */
@@ -131,3 +132,7 @@ div.admin div.category.view.large-9.medium-8.columns.content{
     vertical-align: text-top; }
 .auth-container .checkbox span {
     color: #4f5f6f; }
+.text-center {
+    background: white;
+    padding: 20px 0px;
+}

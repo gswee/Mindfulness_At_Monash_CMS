@@ -45,6 +45,7 @@ class AppController extends Controller
         $this->loadComponent('Flash');
 
         $this->loadComponent('Auth', [
+            'authorized' => 'Controller',
             'authenticate' => [
                 'Form' => [
                     'fields' => [
@@ -56,11 +57,9 @@ class AppController extends Controller
             'loginAction' => [
                 'controller' => 'Users',
                 'action' => 'login'
-            ]/*,
-            //use isAuthorized in Controllers
-            'authorize' => ['Controller'],
+            ],
             // If unauthorized, return them to page they were just on
-            'unauthorizedRedirect' => $this->referer()*/
+            'unauthorizedRedirect' => $this->referer()
         ]);
 
         $this->Auth->allow(['display', 'view', 'index']);
@@ -72,4 +71,12 @@ class AppController extends Controller
         //$this->loadComponent('Security');
         //$this->loadComponent('Csrf');
     }
+    public function isAuthorized($user)
+    {
+        // By default deny access.
+        return false;
+    }
+    /*public function beforeFilter() {
+        $this->Auth->allow('index', 'view');
+    }*/
 }

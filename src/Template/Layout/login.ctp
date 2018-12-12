@@ -29,7 +29,7 @@
             </div>
         </div>
         <div class="text-center">
-            <?= $this->Html->link('<i class="fa fa-arrow-left"></i> Home', ['controller' => 'Home', 'action' => 'index'], ['class' => 'btn btn-secondary btn-sm', 'escape' => false]); ?>
+            <?= $this->Html->link('<i class="fa fa-arrow-left"></i> Home', ['controller'=>'pages', 'action'=>'index'], ['class' => 'btn btn-secondary btn-sm', 'escape' => false]); ?>
         </div>
     </div>
 </div>
