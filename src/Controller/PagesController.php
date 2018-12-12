@@ -32,7 +32,7 @@ class PagesController extends AppController
     public function initialize()
     {
         parent::initialize();
-        //$this->Auth->allow(['index']);
+        $this->Auth->allow(['index']);
         $this->viewBuilder()->setLayout('default');
     }
     /**

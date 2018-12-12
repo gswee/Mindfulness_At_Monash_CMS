@@ -128,11 +128,4 @@ class UsersController extends AppController
         $this->Flash->success('You are logged out');
         return $this->redirect($this->Auth->logout());
     }
-    /*
-    public function logout() {
-
-        $this->Flash->success('You are logged out');
-        return $this->redirect($this->Auth->redirectUrl());
-    }
-    */
 }

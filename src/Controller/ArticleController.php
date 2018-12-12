@@ -16,7 +16,7 @@ class ArticleController extends AppController
     public function initialize()
     {
         parent::initialize();
-        //$this->Auth->allow(['view','viewArticleIndex']);
+        $this->Auth->allow(['view','viewArticleIndex']);
         $this->viewBuilder()->setLayout('admin');
     }
     /**
