@@ -29,5 +29,25 @@
     <br>
 
     <h2>Recent Articles</h2>
+    <div class="row">
+        <?php foreach ($recentArticles as $article): ?>
+            <div class="col-xl-4">
+                <div class="card">
+                    <div class="card-header">
+                        <div class="header-block">
+                            <p class="title">
+                                <?= h($article['title']) ?>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="card-block">
+                        <?= h($this->Text->truncate(strip_tags($article['body']), 50, ['exact' => false])) ?>
+                    </div>
+                    <div class="card-footer">
 
+                    </div>
+                </div>
+            </div>
+        <?php endforeach ?>
+    </div>
 </div>

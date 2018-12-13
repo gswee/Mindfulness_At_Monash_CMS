@@ -21,7 +21,7 @@
 </nav>
 -->
 <div class="article form large-9 medium-8 columns content">
-    <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"button.disabled = true; return true;"]) ?>
+    <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"getElementFromId('save').disabled = true; return true;"]) ?>
     <fieldset>
         <legend><?= __('Edit Article') ?></legend>
         <?php
@@ -39,9 +39,9 @@ echo "<br>";
     </fieldset>
     <br>
     <?php if ($article->status == 'published' or $article->status == 'archived') { ?>
-        <?= $this->Form->button(__('Save')) ?>
+        <?= $this->Form->button(__('Save'),['id'=>'save']) ?>
     <?php } else if ($article->status == 'draft') { ?>
-        <?= $this->Form->button(__('Save Draft')) ?>
+        <?= $this->Form->button(__('Save Draft'),['id'=>'save']) ?>
     <?php } ?>
     <?= $this->Form->end() ?>
 </div>

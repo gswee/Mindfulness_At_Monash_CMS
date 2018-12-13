@@ -3,6 +3,8 @@ namespace App\Controller;
 
 use App\Controller\AppController;
 use Cake\Utility\Text;
+use Cake\Network\Exception\NotFoundException;
+
 /**
  * Article Controller
  *
@@ -16,6 +18,7 @@ class ArticleController extends AppController
     public function initialize()
     {
         parent::initialize();
+        //$this->loadModel('User');
         $this->Auth->allow(['view','viewArticleIndex']);
         $this->viewBuilder()->setLayout('admin');
     }
@@ -57,9 +60,21 @@ class ArticleController extends AppController
         $article = $this->Article->get($id, [
             'contain' => ['Category']
         ]);
+        if ($article->get('status') == 'draft' or 'archived')
+        {
+            if (is_null($this->request->session()->read('Auth.User.username'))) {
+                //$this->Flash->error();
+                throw new NotFoundException(__('Article not found'));
+            } else {
+                $this->set('article', $article);
+                $this->viewBuilder()->setLayout('article');
+            }
 
-        $this->set('article', $article);
-        $this->viewBuilder()->setLayout('article');
+        } else {
+            $this->set('article', $article);
+            $this->viewBuilder()->setLayout('article');
+        }
+
     }
     public function viewArticleIndex($id = null)
     {
@@ -88,13 +103,14 @@ class ArticleController extends AppController
      */
     public function add()
     {
+
         $article = $this->Article->newEntity();
         if ($this->request->is('post')) {
             $article = $this->Article->patchEntity($article, $this->request->getData());
             if ($this->Article->save($article)) {
                 $this->Flash->success(__('The article has been saved.'));
 
-                return $this->redirect($this->referer());
+                return $this->redirect(['action'=>'index']);
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
         }

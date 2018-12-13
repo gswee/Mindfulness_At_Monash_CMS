@@ -80,7 +80,7 @@
             <?php endif; ?>
             <?php endforeach; ?>
         </table>
-
+            <?= $this->element('admin/sortBarArticle') ?>
         <?php endif; ?>
     </div>
 </div>

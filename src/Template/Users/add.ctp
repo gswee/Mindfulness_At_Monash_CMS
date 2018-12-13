@@ -6,7 +6,7 @@
 ?>
 
 <div class="users form large-9 medium-8 columns content">
-    <?= $this->Form->create($user) ?>
+    <?= $this->Form->create($user, ['onsubmit'=>"document.getElementById('save').disabled = true; return true;"]) ?>
     <fieldset>
         <legend><?= __('Add User') ?></legend>
         <?php
@@ -14,6 +14,6 @@
             echo $this->Form->control('password');
         ?>
     </fieldset>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Add User'), ['id'=>'save']) ?>
     <?= $this->Form->end() ?>
 </div>

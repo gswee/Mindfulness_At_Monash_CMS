@@ -78,7 +78,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     /*
      * Home page of admin
      * */
-    $routes->connect('/admin', ['controller' => 'Pages', 'action' => 'admin_home']);
+    $routes->connect('/admin', ['controller' => 'Users', 'action' => 'admin_home']);
 });
 
 /**

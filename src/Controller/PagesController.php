@@ -99,11 +99,6 @@ class PagesController extends AppController
         }
     }
     
-    // Edit static pages
-    public function adminHome()
-    {
-        $this->viewBuilder()->setLayout('admin');
-        //$this->set(compact('homeElements'));
-        $this->render('adminHome');
-    }
+
+
 }

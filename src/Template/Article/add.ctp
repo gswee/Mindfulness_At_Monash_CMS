@@ -4,18 +4,8 @@
  * @var \App\Model\Entity\Article $article
  */
 ?>
-<!--
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('List Article'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Category'), ['controller' => 'Category', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
--->
 <div class="article form large-9 medium-8 columns content">
-    <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"button.disabled = true; return true;"]) ?>
+    <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"document.getElementById('save').disabled = true; return true;"]) ?>
     <fieldset>
         <legend><?= __('Add Article') ?></legend>
         <?php
@@ -28,7 +18,7 @@ echo "<br>";
         ?>
     </fieldset>
     <br>
-    <?= $this->Form->button(__('Save As Draft')) ?>
+    <?= $this->Form->button(__('Save As Draft'), ['id'=>'save']) ?>
     <?= $this->Form->end() ?>
 </div>
 
