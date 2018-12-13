@@ -60,10 +60,10 @@ class ArticleController extends AppController
         $article = $this->Article->get($id, [
             'contain' => ['Category']
         ]);
-        if ($article->get('status') == 'draft' or 'archived')
+        // If the article is a draft or archived - throw exception
+        if ($article->get('status') == 'draft' or $article->get('status') == 'archived')
         {
             if (is_null($this->request->session()->read('Auth.User.username'))) {
-                //$this->Flash->error();
                 throw new NotFoundException(__('Article not found'));
             } else {
                 $this->set('article', $article);
@@ -81,18 +81,38 @@ class ArticleController extends AppController
         $article = $this->Article->get($id, [
             'contain' => ['Category']
         ]);
-        $articles = $this->Article->find();
-        $category_id = $article->category_id;
-        $articleIndexSettings = array();
-        $content = $this->loadModel('Settings');
-        $articleIndexSettings [$content->get(11)->settingsKey]=$content->get(11)->settingsValue;
-        $articleIndexSettings [$content->get(12)->settingsKey]=$content->get(12)->settingsValue;
-        
-        $this->set('article', $article);
-        $this->set('articles', $articles);
-        $this->set('category_id', $category_id);
-        $this->set('articleIndexSettings', $articleIndexSettings);
-        $this->viewBuilder()->setLayout('article');
+        // If the article is a draft or archived - throw exception
+        if ($article->get('status') == 'draft' or $article->get('status') == 'archived') {
+            if (is_null($this->request->session()->read('Auth.User.username'))) {
+                throw new NotFoundException(__('Article not found'));
+            } else {
+                $articles = $this->Article->find();
+                $category_id = $article->category_id;
+                $articleIndexSettings = array();
+                $content = $this->loadModel('Settings');
+                $articleIndexSettings [$content->get(11)->settingsKey] = $content->get(11)->settingsValue;
+                $articleIndexSettings [$content->get(12)->settingsKey] = $content->get(12)->settingsValue;
+
+                $this->set('article', $article);
+                $this->set('articles', $articles);
+                $this->set('category_id', $category_id);
+                $this->set('articleIndexSettings', $articleIndexSettings);
+                $this->viewBuilder()->setLayout('article');
+            }
+        } else {
+            $articles = $this->Article->find();
+            $category_id = $article->category_id;
+            $articleIndexSettings = array();
+            $content = $this->loadModel('Settings');
+            $articleIndexSettings [$content->get(11)->settingsKey] = $content->get(11)->settingsValue;
+            $articleIndexSettings [$content->get(12)->settingsKey] = $content->get(12)->settingsValue;
+
+            $this->set('article', $article);
+            $this->set('articles', $articles);
+            $this->set('category_id', $category_id);
+            $this->set('articleIndexSettings', $articleIndexSettings);
+            $this->viewBuilder()->setLayout('article');
+        }
     }
     
 
@@ -114,8 +134,8 @@ class ArticleController extends AppController
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
         }
-        $category = $this->Article->Category->find('list', ['limit' => 200]);
-        $this->set(compact('article', 'category'));
+        $categories = $this->Article->Category->find('list', ['limit' => 200]);
+        $this->set(compact('article', 'categories'));
     }
 
     /**
@@ -135,12 +155,12 @@ class ArticleController extends AppController
             if ($this->Article->save($article)) {
                 $this->Flash->success(__('The article has been saved.'));
 
-                return $this->redirect($this->referer());
+                return $this->redirect(['action'=>'index']);
             }
             $this->Flash->error(__('The article could not be saved. Please, try again.'));
         }
-        $category = $this->Article->Category->find('list', ['limit' => 200]);
-        $this->set(compact('article', 'category'));
+        $categories = $this->Article->Category->find('list', ['limit' => 200]);
+        $this->set(compact('article', 'categories'));
     }
 
     /**
@@ -226,12 +246,5 @@ class ArticleController extends AppController
         return $this->redirect($this->referer());
     }
 
-    public function isAuthorized($user)
-    {
-        $action = $this->request->getParam('action');
-        // The add and tags actions are always allowed to logged in users.
-        if (in_array($action, ['add', 'edit'])) {
-            return true;
-        }
-    }
+
 }

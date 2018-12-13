@@ -14,7 +14,7 @@
 echo "<br>";
             echo $this->Form->control('body');
 echo "<br>";
-            echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
+            echo $this->Form->control('category_id', ['options' => $categories, 'empty' => false]);
         ?>
     </fieldset>
     <br>

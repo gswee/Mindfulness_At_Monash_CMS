@@ -4,35 +4,11 @@
  * @var \App\Model\Entity\Category $category
  */
 ?>  
-<!--
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Html->link(__('Edit Category'), ['action' => 'edit', $category->id]) ?> </li>
-        <li><?= $this->Form->postLink(__('Delete Category'), ['action' => 'delete', $category->id], ['confirm' => __('Are you sure you want to delete # {0}?', $category->id)]) ?> </li>
-        <li><?= $this->Html->link(__('List Category'), ['action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Category'), ['action' => 'add']) ?> </li>
-        <li><?= $this->Html->link(__('List Article'), ['controller' => 'Article', 'action' => 'index']) ?> </li>
-        <li><?= $this->Html->link(__('New Article'), ['controller' => 'Article', 'action' => 'add']) ?> </li>
-    </ul>
-</nav>
--->
+
 <div class="category view large-9 medium-8 columns content">
     <h3><?= h($category->category) ?> Articles</h3>
-    <!--
-    <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
-
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Category') ?></th>
-            <td><?= h($category->category) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($category->id) ?></td>
-        </tr>
-    </table>
-    -->
+    <?= $this->Html->link(__('New Article'), ['controller'=>'article','action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
+    <br>
     <br>
     <div class="related">
         <?php if (!empty($category->article)): ?>
@@ -80,7 +56,25 @@
             <?php endif; ?>
             <?php endforeach; ?>
         </table>
-            <?= $this->element('admin/sortBarArticle') ?>
+            <div class="btn-toolbar">
+                <table>
+                    <td>
+                        <h4>Sort By: </h4>
+                    </td>
+                    <td>
+                        <div class="btn-group mr-2">
+                            <?= $this->Html->link(__('Title'), ['controller' => 'Category', 'action' => 'view', '?' => ['direction'=>'asc', 'sort'=>'title']], ['class'=>"btn btn-outline-primary"]) ?>
+                        </div>
+                        <div class="btn-group mr-2">
+                            <?= $this->Html->link(__('Date Created'), ['controller' => 'Category', 'action' => 'view', '?' => ['direction'=>'asc', 'sort'=>'created']], ['class'=>"btn btn-outline-primary"]) ?>
+                            <?= $this->Html->link(__('Date Modified'), ['controller' => 'Category', 'action' => 'view', '?' => ['direction'=>'asc', 'sort'=>'modified']], ['class'=>"btn btn-outline-primary"]) ?>
+                        </div>
+                        <div class="btn-group mr-2">
+                            <?= $this->Html->link(__('Category Name'), ['controller' => 'Category', 'action' => 'view', '?' => ['direction'=>'asc', 'sort'=>'category+name']],['class'=>"btn btn-outline-primary"]) ?>
+                        </div>
+                    </td>
+                </table>
+            </div>
         <?php endif; ?>
     </div>
 </div>

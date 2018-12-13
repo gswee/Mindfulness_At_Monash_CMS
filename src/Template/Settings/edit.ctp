@@ -18,6 +18,9 @@
         ?>
     </fieldset>
 
+        <!-- Participant view -->
+
+
     <?php } ?>
     <?= $this->Form->button(__('Submit')) ?>
     <?= $this->Form->end() ?>

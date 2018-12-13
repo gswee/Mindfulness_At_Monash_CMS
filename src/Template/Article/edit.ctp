@@ -4,24 +4,8 @@
  * @var \App\Model\Entity\Article $article
  */
 ?>
-<!--
-<nav class="large-3 medium-4 columns" id="actions-sidebar">
-    <ul class="side-nav">
-        <li class="heading"><?= __('Actions') ?></li>
-        <li><?= $this->Form->postLink(
-                __('Delete'),
-                ['action' => 'delete', $article->id],
-                ['confirm' => __('Are you sure you want to delete # {0}?', $article->id)]
-            )
-        ?></li>
-        <li><?= $this->Html->link(__('List Article'), ['action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('List Category'), ['controller' => 'Category', 'action' => 'index']) ?></li>
-        <li><?= $this->Html->link(__('New Category'), ['controller' => 'Category', 'action' => 'add']) ?></li>
-    </ul>
-</nav>
--->
 <div class="article form large-9 medium-8 columns content">
-    <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"getElementFromId('save').disabled = true; return true;"]) ?>
+    <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"getElementById('save').disabled = true; return true;"]) ?>
     <fieldset>
         <legend><?= __('Edit Article') ?></legend>
         <?php
@@ -31,7 +15,7 @@
             echo $this->Form->control('body');
 echo "<br>";
             if ($article->id != '1' or '2') {
-                echo $this->Form->control('category_id', ['options' => $category, 'empty' => false]);
+                echo $this->Form->control('category_id', ['options' => $categories, 'empty' => false]);
 
             }
         //echo $article->id;
