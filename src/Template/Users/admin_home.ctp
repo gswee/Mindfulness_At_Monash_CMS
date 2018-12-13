@@ -27,7 +27,7 @@
     </div>
     <br>
     <br>
-
+<!--
     <h2>Recent Articles</h2>
     <div class="row">
         <?php foreach ($recentArticles as $article): ?>
@@ -50,4 +50,5 @@
             </div>
         <?php endforeach ?>
     </div>
+    -->
 </div>

@@ -21,7 +21,7 @@
                         <div class="col-md">
                             <span class="subheading" style="text-align: left; line-height: 1.5">
                                 <?= $homePageSettings['Who Are We Section Staff(1) Name'] ?> <br>
-                                Email: <a href=<?= $homePageSettings['Who Are We Section Staff(1) Email'] ?> id="email"><?= $homePageSettings['Who Are We Section Staff(1) Email']?></a><br>
+                                Email: <a href="mailto:<?= $homePageSettings['Who Are We Section Staff(1) Email'] ?>" id="email"><?= $homePageSettings['Who Are We Section Staff(1) Email']?></a><br>
                                 <span class="subheading" id="contactdesc">
                                     <?= $homePageSettings['Who Are We Section Staff(1) Description'] ?>
                                 </span>

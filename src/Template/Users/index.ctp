@@ -7,7 +7,7 @@
 <div class="users index large-9 medium-8 columns content">
     <h1><?= __('Users') ?></h1>
     <br>
-    <?= $this->Html->link(__('New User'),['controller'=>'users','action'=>'add'],['class'=>'btn btn-primary']) ?>
+    <?= $this->Html->link(__('New User'),['controller'=>'users','action'=>'add'],['class'=>'btn btn-outline-primary']) ?>
     <br>
     <br>
     <table cellpadding="0" cellspacing="0">
@@ -24,8 +24,8 @@
                 <td><?= $this->Number->format($user->id) ?></td>
                 <td><?= h($user->username) ?></td>
                 <td class="actions">
-                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id]) ?>
-                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['confirm' => __('Are you sure you want to delete user "'.$user->username.'"?')]) ?>
+                    <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id],['class'=>'btn btn-outline-secondary btn-sm']) ?>
+                    <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class'=>'btn btn-danger btn-sm'], ['confirm' => __('Are you sure you want to delete user "'.$user->username.'"?')]) ?>
                 </td>
             </tr>
             <?php endforeach; ?>
