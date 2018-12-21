@@ -1,21 +1,22 @@
 
 
-INSERT INTO category (category) VALUES (Student), (Educator);
+INSERT INTO category (category) VALUES ('Student'), ('Educator'), ('Both');
 
+ALTER TABLE settings AUTO_INCREMENT = 1;
 INSERT INTO settings (settingsKey, settingsValue)
 VALUES
-  ('welcomeTitle','Are you in touch with yourself?'),
-  ('welcomeSubtitle','Find out with Mindfulness at Monash.'),
-  ('welcomeBg', 'https://i.imgur.com/lECJEId.jpg'),
-  ('contactusTitle','Who Are We?'),
-  ('contactusSubtitle','We are a professionally and academically-experienced team of Mindfulness experts & researchers willing to help you understand better how your brain works.<br><br>Give us a call or send us an email if you have any queries about Mindfulness at Monash.'),
-  ('contactusBg','https://i.imgur.com/5JJENWA.jpg'),
-  ('contactusStaff1_name','Dr. Richard Chambers (Facilitator) '),
-  ('contactusStaff1_email','richard.chambers@monash.edu'),
-  ('contactusStaff1_desc','Richard is a clinical psychologist specialising in mindfulness-based therapies. He is involved in mindfulness research, has published peer-reviewed journal articles and is co-author of Mindful Learning along with Dr Craig Hassed. Also, Richard was involved in the development of Smiling Mind, a free mindfulness app and not-for-profit aiming to get mindfulness into the Australian school curriculum by 2020. He works with a number of educational institutions and businesses interested in using mindfulness to improve wellbeing and performance.'),
-  ('contactusStaff1_photo', 'https://i.imgur.com/peN3Gbb.jpg'),
-  ('forStudentBg','https://i.imgur.com/hI6nuXo.jpg'),
-  ('forEducatorsBg','https://i.imgur.com/Gpm44o1.jpg');
+  ('Welcome Section Title','Are you in touch with yourself?'),
+  ('Welcome Section Subtitle','Find out with Mindfulness at Monash.'),
+  ('Welcome Section Masthead', 'https://i.imgur.com/lECJEId.jpg'),
+  ('Who Are We Section Title','Who Are We?'),
+  ('Who Are We Section Subtitle','We are a professionally and academically-experienced team of Mindfulness experts & researchers willing to help you understand better how your brain works.<br><br>Give us a call or send us an email if you have any queries about Mindfulness at Monash.'),
+  ('Who Are We Section Masthead','https://i.imgur.com/5JJENWA.jpg'),
+  ('Who Are We Section Staff(1) Name','Dr. Richard Chambers (Facilitator) '),
+  ('Who Are We Section Staff(1) Email','richard.chambers@monash.edu'),
+  ('Who Are We Section Staff(1) Description','Richard is a clinical psychologist specialising in mindfulness-based therapies. He is involved in mindfulness research, has published peer-reviewed journal articles and is co-author of Mindful Learning along with Dr Craig Hassed. Also, Richard was involved in the development of Smiling Mind, a free mindfulness app and not-for-profit aiming to get mindfulness into the Australian school curriculum by 2020. He works with a number of educational institutions and businesses interested in using mindfulness to improve wellbeing and performance.'),
+  ('Who Are We Section Staff(1) Photo', 'https://i.imgur.com/peN3Gbb.jpg'),
+  ('For Students Masthead','https://i.imgur.com/hI6nuXo.jpg'),
+  ('For Educators Masthead','https://i.imgur.com/Gpm44o1.jpg');
   
 INSERT INTO article (title, description, body, created, modified, category_id, status)
 VALUES 
@@ -60,3 +61,4 @@ VALUES
 <h3><strong>Contact for enquiries</strong></h3>
 <p>Telephone: 9905 2981<br />Email:&nbsp;<a href="mailto:mentalhealth@monash.edu?subject=Train%20the%20trainer">mentalhealth@monash.edu</a></p>', sysdate(), sysdate(), 2, 'draft');
 
+INSERT INTO users (username, password) values ('test', 'test');
