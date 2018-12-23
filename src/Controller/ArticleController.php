@@ -4,6 +4,7 @@ namespace App\Controller;
 use App\Controller\AppController;
 use Cake\Utility\Text;
 use Cake\Network\Exception\NotFoundException;
+use Cake\Routing\Router;
 
 /**
  * Article Controller
@@ -200,7 +201,11 @@ class ArticleController extends AppController
         } else {
             $this->Flash->error(__('The article could not be published. Please, try again.'));
         }
-        
+        /*if (Router::url( $this->here, true ) ==
+            Router::url(['action'=>'login', 'redirect'=>['controller'=>'article', 'action'=>'archive', 'id'=>'']]) ) //'login?redirect=%2Farticle%2Farchive%2F{0}'
+        {
+
+        }*/
         return $this->redirect($this->referer());
     }
     

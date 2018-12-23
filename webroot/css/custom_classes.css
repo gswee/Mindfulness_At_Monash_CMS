@@ -1,10 +1,10 @@
 body {
-    background-color: burlywood;
-    font-family: 'Patrick Hand', cursive;
+    background-color: ghostwhite;
+    font-family: 'Raleway', sans-serif;
 }
 h2.post-title {
     font-size: 3em;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Raleway', sans-serif;
 }
 .nav-link {
     color:white;
@@ -14,7 +14,10 @@ h2.post-title {
     opacity: 0.8;
 }
 .overlay img {
-    opacity:0.6
+    opacity:0.6;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
 }
 
 /* Main Title Masthead */
@@ -47,17 +50,17 @@ a {
     transition: all 0.2s;
 }
 a#title_home {
-    font-size: 30px;
+    font-size: 1.75rem;
     margin-top: 30px;
     margin-bottom: 10px;
     
-    font-weight: 500;
+    font-weight: bold;
     text-decoration: none;
     
-    color: #297729;
+    color: black;
 }
 a#title_home:focus, a#title_home:hover {
-    color: #3ca035;
+    opacity: 0.5;
 }
 
 /* Subtitle for Home Page */
@@ -65,20 +68,20 @@ a#subtitle_home {
     display: block;
     font-size: 1.75rem;
     
-    font-weight: 300;
+    font-weight: 100;
     text-decoration: none;
     
-    color: #297729;
+    color: black;
     -webkit-transition: all 0.2s;
     transition: all 0.2s;
 }
 a#subtitle_home:focus, a#subtitle_home:hover {
-  color: #3ca035;
+    opacity: 0.5;
 }
 .btn-primary {
     border:none;
-    background-color: #297729;
-    font-family: 'Patrick Hand', cursive;
+    background-color: darkblue;
+    font-family: 'Raleway', sans-serif;
 }
 
 /*container for article pages - no margin, sidebar on the right*/
@@ -130,7 +133,7 @@ span#desc{
     transition: left 0.3s ease;
     z-index: 1;
     overflow-x: hidden;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Raleway', sans-serif;
 
 }
 .sidebar-wrapper a {
@@ -186,14 +189,13 @@ a#email:hover {
 }
 img#whoAreWe {
     display: inline;
-    margin: 10 auto;
     height: 100%;
     width: auto;
 }
 
 /* Footer - ask how to make it change color on hover. No answer online. */
 .fas {
-    color: green;
+    color: #3b5998;
 }
 .fas.fa-bars {
     color: white;
@@ -205,5 +207,5 @@ a#footlink:hover {
 /* Error Messages */
 h1#message {
     font-size: 3em;
-    font-family: 'Gloria Hallelujah', cursive;
+    font-family: 'Raleway', sans-serif;
 }

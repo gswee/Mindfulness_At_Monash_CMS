@@ -5,7 +5,7 @@ $this->layout = false;
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Courgette|Leckerli+One|Pacifico" rel="stylesheet">
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -120,8 +120,8 @@ $this->layout = false;
                                     </div>
                                     <div class="col-md">
                             <span class="subheading" style="text-align: left; line-height: 1.5">
-                                <?= $homePageSettings['Who Are We Section Staff(1) Name'] ?> <br>
-                                Email: <a href="mailto:<?= $homePageSettings['Who Are We Section Staff(1) Email'] ?>" id="email"><?= $homePageSettings['Who Are We Section Staff(1) Email']?></a><br>
+                                <p style="font-weight: bold"><?= $homePageSettings['Who Are We Section Staff(1) Name'] ?><br>
+                                Email: <a href="mailto:<?= $homePageSettings['Who Are We Section Staff(1) Email'] ?>" id="email"><?= $homePageSettings['Who Are We Section Staff(1) Email']?></a></p>
                                 <span class="subheading" id="contactdesc">
                                     <?= $homePageSettings['Who Are We Section Staff(1) Description'] ?>
                                 </span>
