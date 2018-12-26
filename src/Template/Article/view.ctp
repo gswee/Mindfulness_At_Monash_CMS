@@ -29,7 +29,7 @@
     <div class="overlay"></div>
     <div class="container"><!-- Navigation -->
         <div class="row">
-            
+
             <div class="site-heading">
                 <span class="subheading" id="desc"><?= $this->Text->autoParagraph($article->description); ?></span>
                 <p><?= $this->Text->autoParagraph($article->body); ?></p>
