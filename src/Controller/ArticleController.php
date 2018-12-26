@@ -68,12 +68,12 @@ class ArticleController extends AppController
                 throw new NotFoundException(__('Article not found'));
             } else {
                 $this->set('article', $article);
-                $this->viewBuilder()->setLayout('article');
+                $this->viewBuilder()->setLayout('default');
             }
 
         } else {
             $this->set('article', $article);
-            $this->viewBuilder()->setLayout('article');
+            $this->viewBuilder()->setLayout('default');
         }
 
     }
@@ -98,7 +98,7 @@ class ArticleController extends AppController
                 $this->set('articles', $articles);
                 $this->set('category_id', $category_id);
                 $this->set('articleIndexSettings', $articleIndexSettings);
-                $this->viewBuilder()->setLayout('article');
+                $this->viewBuilder()->setLayout('default');
             }
         } else {
             $articles = $this->Article->find();
@@ -112,7 +112,7 @@ class ArticleController extends AppController
             $this->set('articles', $articles);
             $this->set('category_id', $category_id);
             $this->set('articleIndexSettings', $articleIndexSettings);
-            $this->viewBuilder()->setLayout('article');
+            $this->viewBuilder()->setLayout('default');
         }
     }
     

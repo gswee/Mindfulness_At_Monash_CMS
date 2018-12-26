@@ -5,45 +5,46 @@
  */
 ?>
 
-<!-- Page Sidebar -->
-<?= $this->element('article/article-sidebar') ?>
+<!-- Page Header -->
+<header class="masthead" id="banner">
+    <div class="overlay">
+        <?= $this->Html->image('for_students.jpg', ['class' => 'img-responsive'], ['alt' => 'A student hard at work on the bed.']); ?>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 col-md-10 mx-auto">
+                <div class="site-heading">
+                    <h1><?= h($article->title) ?></h1>
+                    <span class="subheading">Posted under <?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Category', 'action' => 'viewArticleIndex', $article->category->id], ['id' => 'category']) : '' ?>, <?= h($article->created) ?></span>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
 
 <!-- Article Page -->
-<div class="container" id="article">
-    
-<!-- Page Header -->
-<?php echo $this->element('article\article-header') ?>
-    
-    <!--<h3><?= h($article->title) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($article->title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Category') ?></th>
-            <td><?= $article->has('category') ? $this->Html->link($article->category->id, ['controller' => 'Category', 'action' => 'view', $article->category->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($article->id) ?></td>
-        </tr>
-    </table>-->
-    
+<div class="container clearfix" id="article">
+
     <!-- Page Body -->
-    <div class="row">
-        <?php echo $this->element('article\article-body') ?>
+    <div class="overlay"></div>
+    <div class="container"><!-- Navigation -->
+        <div class="row">
+            
+            <div class="site-heading">
+                <span class="subheading" id="desc"><?= $this->Text->autoParagraph($article->description); ?></span>
+                <p><?= $this->Text->autoParagraph($article->body); ?></p>
+                <p><?= __('Originally Posted: ') ?><?= h($article->created) ?></p>
+                <?php
+                // displays last date/time article was modified
+                if (h($article->modified != null))
+                { ?>
+                    <p><?= __('Last Modified: ')?><?php h($article->modified) ?></p>
+                    <?php
+                } ?>
+            </div>
+
+        </div>
     </div>
-    
-    <!-- To be added if custom 'Related Articles' list creation is implemented
-    <h2>More Articles</h2>
-    <?php 
-    foreach ($articles as $article) { 
-        echo $this->element('article\article-more', ['article'=>$article]); 
-    }
-    ?>
-    -->
-    
-    <?php echo $this->element('footer') ?>
+
     
 </div>

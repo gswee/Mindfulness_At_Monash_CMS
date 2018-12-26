@@ -80,6 +80,7 @@ Router::scope('/', function (RouteBuilder $routes) {
      * */
     $routes->connect('/admin', ['controller' => 'Users', 'action' => 'admin_home']);
     $routes->connect('/articles', ['controller' => 'Article', 'action' => 'index']);
+    $routes->connect('/article/view/*',['controller' => 'Article', 'action' => 'view']);
 });
 
 /**

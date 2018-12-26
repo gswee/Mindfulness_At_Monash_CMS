@@ -1,6 +1,8 @@
 body {
     background-color: ghostwhite;
     font-family: 'Raleway', sans-serif;
+    margin-left: 0px;
+    font-size:1.2rem;
 }
 h2.post-title {
     font-size: 3em;
@@ -85,12 +87,7 @@ a#subtitle_home:focus, a#subtitle_home:hover {
 }
 
 /*container for article pages - no margin, sidebar on the right*/
-.container#article {
-    padding: 0px;
-    width: 80%;
-    margin-left:0px;
-    margin-right:20%;
-}
+
 .container#article_masthead {
     width: 100%;
 }
@@ -117,7 +114,18 @@ span#desc{
     text-align: center;
     font-style: italic;
 }
-
+/* Article Hub */
+a.card {
+    text-decoration: none;
+    color: black
+}
+a.card:hover {
+    opacity: 0.5;
+}
+a.card div.card-title {
+    font-weight: bold;
+    font-size: 1.6rem;
+}
 
 /* Client-side Sidebar */
 .sidebar-wrapper {

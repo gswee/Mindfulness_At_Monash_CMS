@@ -18,7 +18,7 @@ $cakeDescription = 'Mindfulness At Monash';
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Courgette" rel="stylesheet">
 
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,17 +28,17 @@ $cakeDescription = 'Mindfulness At Monash';
     </title>
     <?= $this->Html->meta('icon') ?>
     <!-- Replaced default .css with clean-blog template -->
-    <?= $this->Html->css('clean-blog.min') ?>
+    <?= $this->Html->css('clean-blog.css') ?>
     
-    <?= $this->Html->css('bootstrap.min') ?>
-    <?= $this->Html->css('all.min') ?>
+    <?= $this->Html->css('bootstrap.min.css') ?>
+    <?= $this->Html->css('all.min.css') ?>
     <?= $this->Html->css('custom_classes.css') ?>
     
     <?= $this->fetch('meta') ?>
     <?= $this->fetch('css') ?>
     <?= $this->fetch('script') ?>
 </head>
-<body style="margin-left: 0px;">
+<body >
     <!-- Navigation-->
     <?php echo $this->element('top-menu') ?>
     <!--
@@ -57,7 +57,7 @@ $cakeDescription = 'Mindfulness At Monash';
     </nav>
     -->
     <?= $this->Flash->render() ?>
-    <div class="container clearfix">
+    <div>
         <?= $this->fetch('content') ?>
     </div>
     

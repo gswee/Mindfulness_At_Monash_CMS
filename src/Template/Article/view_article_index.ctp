@@ -7,11 +7,7 @@
 ?>
 
 <!-- Page Sidebar -->
-<?= $this->element('article/article-sidebar') ?>
 
-<!-- Article Page -->
-<div class="container" id="article">
-    
 <!-- Page Header -->
 <header class="masthead" id="banner">
 
@@ -28,44 +24,54 @@
         </div>
     </div>
 </header>
-    <!--<h3><?= h($article->title) ?></h3>
-    <table class="vertical-table">
-        <tr>
-            <th scope="row"><?= __('Title') ?></th>
-            <td><?= h($article->title) ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Category') ?></th>
-            <td><?= $article->has('category') ? $this->Html->link($article->category->id, ['controller' => 'Category', 'action' => 'view', $article->category->id]) : '' ?></td>
-        </tr>
-        <tr>
-            <th scope="row"><?= __('Id') ?></th>
-            <td><?= $this->Number->format($article->id) ?></td>
-        </tr>
-    </table>-->
+<!-- Article Page -->
+<div class="container clearfix" id="article">
     
     <!-- Page Body -->
-    <?php echo $this->element('article\article-body') ?>
-    <div class="col-lg-8 col-md-10 mx-auto">
-        <br>
-        <h2>More Articles</h2>
-        <?php 
-        foreach ($articles as $article) { 
-            if ($article->id == 1 or $article->id == 2 or $article->status != 'published'){
+    <div class="overlay"></div>
+    <div class="container"><!-- Navigation -->
+        <div class="row">
 
-            }
-            else {
-                if ($article->category_id == $category_id){
-                    echo $this->Html->link($article->title . '<br>' . $article->description, ['controller'=>'article', 'action'=>'view', $article->id], ['escape' => false]); echo "<br>";
-                    echo "<br>";
-                    echo "<br>";
-                }
+            <div class="site-heading">
+                <span class="subheading" id="desc"><?= $this->Text->autoParagraph($article->description); ?></span>
+                <p><?= $this->Text->autoParagraph($article->body); ?></p>
+                <p><?= __('Originally Posted: ') ?><?= h($article->created) ?></p>
+                <?php
+                // displays last date/time article was modified
+                if (h($article->modified != null))
+                { ?>
+                    <p><?= __('Last Modified: ')?><?php h($article->modified) ?></p>
+                    <?php
+                } ?>
+            </div>
+
+        </div>
+    </div>
+
+    <br>
+    <h2>More Articles</h2>
+    <?php
+    foreach ($articles as $article) {
+        if ($article->id == 1 or $article->id == 2 or $article->status != 'published'){
+
+        }
+        else {
+            if ($article->category_id == $category_id){
+                ?>
+
+                <a class="card" href="../view/<?=$article->id?>">
+                    <div class="card-body">
+                        <div class="card-title"><?=$article->title ?></div>
+                        <div class="card-text"><?=$article->description ?></div>
+                    </div>
+                </a>
+
+
+                <?php
             }
         }
-        ?>
-    </div>
-    
-    <!-- Page Footer -->
-    <?php echo $this->element('footer') ?>
-    
+    }
+    ?>
+
+
 </div>
