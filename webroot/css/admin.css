@@ -102,15 +102,10 @@ div.admin div.category.view.large-9.medium-8.columns.content{
     top: 50%;
     left: 50%;
     -webkit-transform: translateY(-50%) translateX(-50%);
-    transform: translateY(-50%) translateX(-50%); }
-/*.card {
-    background-color: #fff;
-    -webkit-box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
-    box-shadow: 1px 1px 5px rgba(126, 142, 159, 0.1);
-    margin-bottom: 10px;
-    border-radius: 0;
-    border: none;
-}*/
+    transform: translateY(-50%) translateX(-50%);
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
 .auth-container .auth-header {
     text-align: center;
     border-bottom: 1px solid #85CE36; }
@@ -135,4 +130,11 @@ div.admin div.category.view.large-9.medium-8.columns.content{
 .text-center {
     background: white;
     padding: 20px 0px;
+}
+/* custom */
+.auth-container label {
+    font-weight: bold;
+}
+.auth-container h1, .auth-container button {
+    font-family: 'Raleway', sans-serif;
 }

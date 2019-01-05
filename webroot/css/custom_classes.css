@@ -82,7 +82,7 @@ a#subtitle_home:focus, a#subtitle_home:hover {
 }
 .btn-primary {
     border:none;
-    background-color: darkblue;
+    background-color: #5285d8;
     font-family: 'Raleway', sans-serif;
 }
 
@@ -176,7 +176,7 @@ a.card div.card-title {
 
 /*Who Are We*/
 span#contactdesc {
-    font-size: 1rem; line-height: 1;
+    font-size: 1.2rem; line-height: 1.2;
 }
 
 a#email {
