@@ -45,6 +45,9 @@ div#banner {
     margin-right: auto;
     margin-bottom: 50px;
 }
+nav#mainNav i {
+    color: white;
+}
 
 /* For Students, For Educators */
 a {

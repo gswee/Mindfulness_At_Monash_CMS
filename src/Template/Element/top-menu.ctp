@@ -10,21 +10,15 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <!-- To link when static Students page is created
-<?= $this->Html->link('Students', ['controller' => 'Pages', 'action' => 'display', 'students'], ['class'=>'nav-link']) ?>
--->
                 <!-- Students Top bar link -->
-                <?= $this->Html->link('Students', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1'], ['class'=>'nav-link'], ['escape'=>false]) ?>
+                <?= $this->Html->link('<i class="fas fa-pencil-alt"></i>      '.'Students', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1'], ['class'=>'nav-link','escape'=>false]) ?>
             </li>
             <li class="nav-item">
-              <!-- To link when static Educators page is created
-<?= $this->Html->link('Educators', ['controller' => 'Pages', 'action' => 'display', 'educators'], ['class'=>'nav-link'], ['escape'=>false]) ?>
--->
                 <!-- Educators Top bar link -->
-                <?= $this->Html->link('Educators', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['class'=>'nav-link'], ['escape'=>false]) ?>
+                <?= $this->Html->link('<i class="fas fa-book"></i>      '.'Educators', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['class'=>'nav-link', 'escape'=>false]) ?>
             </li>
             <li class="nav-item">
-                <?= $this->Html->link('Contact Us', ['controller' => 'Pages', 'action' => 'index', "#" => "contact_us"], ['class'=>'nav-link'], ['escape'=>false]) ?>
+                <?= $this->Html->link('<i class="fas fa-phone"></i>      '.'Contact Us', ['controller' => 'Pages', 'action' => 'index', "#" => "contact_us"], ['class'=>'nav-link', 'escape'=>false]) ?>
             </li>
           </ul>
         </div>
