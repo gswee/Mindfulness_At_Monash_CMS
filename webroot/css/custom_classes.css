@@ -22,6 +22,11 @@ h2.post-title {
     height: 100%;
 }
 
+/*Top Bar*/
+#navbarResponsive li.nav-item i {
+    font-size: 1.5em
+}
+
 /* Main Title Masthead */
 div.site-heading.home 
 {
@@ -67,6 +72,26 @@ a#title_home {
 a#title_home:focus, a#title_home:hover {
     opacity: 0.5;
 }
+#homepage_col span.fa-stack {
+    height: 5em;
+    right: 1em;
+}
+#homepage_col span.fa-stack i.fa-circle {
+    font-size: 4em;
+    color: #5285d8;
+}
+#homepage_col span.fa-stack i.fa-pencil-alt {
+    font-size: 2.5em;
+    left: 0.3em;
+    bottom: 0.7em;
+    color: white;
+}
+#homepage_col span.fa-stack i.fa-book {
+    font-size: 2.5em;
+    left: 0.35em;
+    bottom: 0.65em;
+    color: white;
+}
 
 /* Subtitle for Home Page */
 a#subtitle_home {
@@ -89,7 +114,7 @@ a#subtitle_home:focus, a#subtitle_home:hover {
     font-family: 'Raleway', sans-serif;
 }
 
-/*container for article pages - no margin, sidebar on the right*/
+/*container for article pages - no margin*/
 
 .container#article_masthead {
     width: 100%;

@@ -59,6 +59,9 @@ $this->layout = false;
                         <h2 class="post-title">
                             <?= $this->Html->link('For Students', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1'], ['id'=>'title_home']) ?>
                         </h2>
+                        <span class="fa-stack fa-lg">
+                            <?= $this->Html->link('<i class="fas fa-circle fa-stack-2x"></i>'.'<i class="fas fa-pencil-alt fa-stack-1x fa-inverse"></i>', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1'], ['id'=>'title_home','escape'=>false]) ?>
+                        </span>
                         <h3 class="post-subtitle">
                             <?= $this->Html->link('Mindfulness helps to improve mental health, improve academic performance and best of all - it\'s easy! Find out how you can get back in touch with your mind.', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1'], ['id'=>'subtitle_home']) ?>
 
@@ -79,6 +82,9 @@ $this->layout = false;
                         <h2 class="post-title">
                             <?= $this->Html->link('For Educators', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['id'=>'title_home']) ?>
                         </h2>
+                        <span class="fa-stack fa-lg">
+                            <?= $this->Html->link('<i class="fas fa-circle fa-stack-2x"></i>'.'<i class="fas fa-book fa-stack-1x fa-inverse"></i>', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['id'=>'title_home','escape'=>false]) ?>
+                        </span>
                         <h3 class="post-subtitle">
                             <?= $this->Html->link('Mindfulness is beneficial for your students\' wellbeing - as well as yours. Find out how you can impart the benefits of mindfulness to your students.', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['id'=>'subtitle_home']) ?>
                         </h3>
