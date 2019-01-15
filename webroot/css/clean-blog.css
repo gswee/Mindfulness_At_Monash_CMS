@@ -214,12 +214,25 @@ header.masthead .site-heading {
   padding: 200px 0 150px;
   color: white;
 }
+#contact_us header.masthead .page-heading,
+#contact_us header.masthead .post-heading,
+#contact_us header.masthead .site-heading {
+  padding: 0px;
+  color: white;
+}
 
 @media only screen and (min-width: 768px) {
   header.masthead .page-heading,
   header.masthead .post-heading,
   header.masthead .site-heading {
     padding: 200px 0;
+  }
+}
+@media only screen and (min-width: 768px) {
+  #contact_us header.masthead .page-heading,
+  #contact_us header.masthead .post-heading,
+  #contact_us header.masthead .site-heading {
+    padding: 0px;
   }
 }
 

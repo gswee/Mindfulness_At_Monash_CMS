@@ -5,7 +5,7 @@ $this->layout = false;
 <!DOCTYPE html>
 <html>
 <head>
-    <link href="https://fonts.googleapis.com/css?family=Raleway|Courgette|Leckerli+One|Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway|Courgette" rel="stylesheet">
     
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -23,9 +23,7 @@ $this->layout = false;
     <?= $this->Html->css('bootstrap.min.css') ?>
     <?= $this->Html->css('all.min.css') ?>
     <?= $this->Html->css('custom_classes.css') ?>
-    
-    <!--<link href="https://fonts.googleapis.com/css?family=Raleway:500i|Roboto:300,400,700|Roboto+Mono" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+
 </head>
 <body>
     
@@ -109,36 +107,40 @@ $this->layout = false;
                 <?= $this->Html->image($homePageSettings['Who Are We Section Masthead'], ['alt' => 'A serene water droplet ripple, captured in mid splash']); ?>
             </div>
 
-            <div class="container">
+            <div class="container" id="contact_us">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
                         <div class="site-heading">
                             <h1><?= $homePageSettings['Who Are We Section Title'] ?></h1>
                             <span class="subheading">
-                    <?= $homePageSettings['Who Are We Section Subtitle'] ?>
-                </span>
-                            <br>
-                            <div class="container">
-                                <div class="row d-flex justify-content-center">
-                                    <div class="col-auto">
-                                        <div class="image-cropper">
-                                            <?= $this->Html->image($homePageSettings['Who Are We Section Staff(1) Photo'], ['alt' => 'Dr Richard Chambers', 'id'=>'whoAreWe']) ?>
-                                        </div>
-                                    </div>
-                                    <div class="col-md">
-                            <span class="subheading" style="text-align: left; line-height: 1.5">
-                                <p style="font-weight: bold"><?= $homePageSettings['Who Are We Section Staff(1) Name'] ?><br>
-                                Email: <a href="mailto:<?= $homePageSettings['Who Are We Section Staff(1) Email'] ?>" id="email"><?= $homePageSettings['Who Are We Section Staff(1) Email']?></a></p>
-                                <span class="subheading" id="contactdesc">
-                                    <?= $homePageSettings['Who Are We Section Staff(1) Description'] ?>
-                                </span>
+                                <?= $homePageSettings['Who Are We Section Subtitle'] ?>
                             </span>
-                                    </div>
+                            <br>
+                        </div>
+                    </div>
+                    <div class="container" id="contacts">
+                        <div class="row d-flex justify-content-center">
+                            <div class="col-auto">
+                                <div class="image-cropper">
+                                    <?= $this->Html->image($homePageSettings['Who Are We Section Staff(1) Photo'], ['alt' => 'Dr Richard Chambers', 'id'=>'whoAreWe']) ?>
                                 </div>
                             </div>
-                        </div>
+                            <div class="col-sm" style="padding-left:60px; padding-right:0px; border-right: 1px solid white;">
+                                <span class="subheading" style="text-align: left; line-height: 1.5">
+                                    <p style="font-weight: bold"><?= $homePageSettings['Who Are We Section Staff(1) Name'] ?><br>
+                                    Email: <a href="mailto:<?= $homePageSettings['Who Are We Section Staff(1) Email'] ?>" id="email"><?= $homePageSettings['Who Are We Section Staff(1) Email']?></a></p>
 
+                                </span>
+                            </div>
+                            <div class="col-sm" style="margin-left: 40px">
+                                <span class="subheading" id="contactdesc">
+                                        <?= $homePageSettings['Who Are We Section Staff(1) Description'] ?>
+                                    </span>
+                            </div>
+                        </div>
                     </div>
+
+
                 </div>
             </div>
         </header>

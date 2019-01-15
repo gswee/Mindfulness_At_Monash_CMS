@@ -1,14 +1,14 @@
 <div style="padding-left:20px">
-    <h1> Admin Home </h1>
+    <h1> <i class="fas fa-home"></i> Admin Home </h1>
     <br>
 
-    <div class="btn-group btn-group-lg" role="group" aria-label="...">
-        <?= $this->Html->link(__('Edit Home Page'), ['controller' => 'Settings', 'action' => 'edit', '1'], ['class'=>"btn btn-outline-primary", 'id'=>'bigbutton']) ?>
+    <div class="btn-group btn-group-lg" role="group">
+        <?= $this->Html->link(''.'Edit Home Page', ['controller' => 'Settings', 'action' => 'edit', '1'], ['class'=>"btn btn-outline-primary", 'id'=>'bigbutton', 'escape'=>false]) ?>
     </div>
-    <div class="btn-group btn-group-lg" role="group" aria-label="...">
+    <div class="btn-group btn-group-lg" role="group">
         <?= $this->Html->link(__('Edit "For Student" Page'), ['controller' => 'Article', 'action' => 'edit', '1'], ['class'=>"btn btn-outline-primary", 'id'=>'bigbutton']) ?>
     </div>
-    <div class="btn-group btn-group-lg" role="group" aria-label="...">
+    <div class="btn-group btn-group-lg" role="group">
         <?= $this->Html->link(__('Edit "For Educators" Page'), ['controller' => 'Article', 'action' => 'edit', '2'], ['class'=>"btn btn-outline-primary", 'id'=>'bigbutton']) ?>
     </div>
     <br>

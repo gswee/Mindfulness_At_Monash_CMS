@@ -154,6 +154,10 @@ a.card div.card-title {
     font-weight: bold;
     font-size: 1.6rem;
 }
+div#article div.dates {
+    font-size: 0.8em;
+}
+
 
 /* Client-side Sidebar */
 .sidebar-wrapper {
@@ -203,6 +207,10 @@ a.card div.card-title {
 
 
 /*Who Are We*/
+div.container#contact_us {
+    padding: 100px 0px;
+    color: white;
+}
 span#contactdesc {
     font-size: 1.2rem; line-height: 1.2;
 }
@@ -228,8 +236,11 @@ img#whoAreWe {
     height: 100%;
     width: auto;
 }
+footer div.container #contacts {
+    padding-bottom: 100px;
+}
 
-/* Footer - ask how to make it change color on hover. No answer online. */
+/* Footer */
 .fas {
     color: #3b5998;
 }
@@ -238,6 +249,9 @@ img#whoAreWe {
 }
 a#footlink:hover {
     opacity: 0.8;
+}
+footer .fa-circle {
+    color: #1e6abc;
 }
 
 /* Error Messages */

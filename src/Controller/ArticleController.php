@@ -15,7 +15,7 @@ use Cake\Routing\Router;
  */
 class ArticleController extends AppController
 {
-    
+
     public function initialize()
     {
         parent::initialize();
@@ -31,7 +31,8 @@ class ArticleController extends AppController
     public function index()
     {
         $this->paginate = [
-            'contain' => ['Category']
+            'contain' => ['Category'],
+            'order' => ['Article.modified' => 'desc']
         ];
         $article = $this->paginate($this->Article);
 
