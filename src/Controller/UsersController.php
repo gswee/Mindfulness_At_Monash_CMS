@@ -143,7 +143,9 @@ class UsersController extends AppController
         $recentArticles = $query->select([
             'id' => 'Article.id',
             'description' => 'Article.description',
-            'title' => 'Article.title'
+            'title' => 'Article.title',
+            'modified'=>'Article.modified',
+            'status'=>'Article.status'
         ])
             ->order('modified DESC')
             ->limit(3);

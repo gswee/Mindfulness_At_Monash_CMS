@@ -100,14 +100,14 @@ $this->layout = false;
     </div>
     <br>
     <br>
-    <!-- Contact Us -->
-    <div id="contact_us">
+    <!-- Who Are We? -->
+    <div id="whoAreWe">
         <header class="masthead" id="banner">
             <div class="overlay">
                 <?= $this->Html->image($homePageSettings['Who Are We Section Masthead'], ['alt' => 'A serene water droplet ripple, captured in mid splash']); ?>
             </div>
 
-            <div class="container" id="contact_us">
+            <div class="container" id="whoAreWe">
                 <div class="row">
                     <div class="col-lg-8 col-md-10 mx-auto">
                         <div class="site-heading">
@@ -145,7 +145,27 @@ $this->layout = false;
             </div>
         </header>
     </div>
-    
+
+    <!-- Contact Us
+    <div id="contact_us">
+
+
+            <div class="container" id="contact_us">
+                <?= $this->Form->create($user, ['onsubmit'=>"document.getElementById('save').disabled = true; return true;"]) ?>
+                <fieldset>
+                    <legend>Contact Us</legend>
+                    <?php
+                    echo $this->Form->control('username');
+                    echo $this->Form->control('password');
+                    echo $this->Form->control('email');
+                    ?>
+                </fieldset>
+                <?= $this->Form->button(__('Send Enquiry'), ['id'=>'save']) ?>
+                <?= $this->Form->end() ?>
+            </div>
+
+    </div>
+-->
     <?php echo $this->element('footer') ?>
     
 </body>

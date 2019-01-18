@@ -9,7 +9,7 @@
 
     <div class="card-deck">
         <div class="card">
-            <?=$this->Html->image('thumbnail.png', ['class'=>"card-img-top", 'alt'=>"Card image cap"])?>
+            <?=$this->Html->image('https://imgur.com/YZTU3aL.png', ['class'=>"card-img-top", 'alt'=>"Card image cap"])?>
             <div class="card-body">
                 <h5 class="card-title">Home Page</h5>
                 <p class="card-text">Edit the welcome masthead and the contact information.</p>
@@ -17,7 +17,7 @@
             </div>
         </div>
         <div class="card">
-            <?=$this->Html->image('thumbnail2.png', ['class'=>"card-img-top", 'alt'=>"Card image cap"])?>
+            <?=$this->Html->image('https://i.imgur.com/sb0ZF8V.png', ['class'=>"card-img-top", 'alt'=>"Card image cap"])?>
             <div class="card-body">
                 <h5 class="card-title">For Students Article Index</h5>
                 <p class="card-text">Edit the title masthead and the introduction.</p>
@@ -25,7 +25,7 @@
             </div>
         </div>
         <div class="card">
-            <?=$this->Html->image('thumbnail3.png', ['class'=>"card-img-top", 'alt'=>"Card image cap"])?>
+            <?=$this->Html->image('https://i.imgur.com/9wNwpzD.png', ['class'=>"card-img-top", 'alt'=>"Card image cap"])?>
             <div class="card-body">
                 <h5 class="card-title">For Educators Article Index</h5>
                 <p class="card-text">Edit the title masthead and the introduction.</p>

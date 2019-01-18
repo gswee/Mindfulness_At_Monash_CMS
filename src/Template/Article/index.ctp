@@ -39,7 +39,7 @@
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
 
                 <?php if ($article->status == 'published')
-                { 
+                {
                     echo $this->Html->link(__('Un-Publish '), ['action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-publish article "'. $article->title).'"?']);
                 }
                 elseif ($article->status != 'archived')

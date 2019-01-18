@@ -87,7 +87,7 @@ $cakeDescription = 'Mindfulness At Monash Admin'
             <li><?= $this->Html->link(__('Users'), ['controller'=>'Users', 'action' => 'index']) ?></li>
         </ul>
     </nav>
-    
+
     <div class="admin">
         <?= $this->Flash->render() ?>
         <?= $this->fetch('content') ?>

@@ -17,6 +17,9 @@
                 <!-- Educators Top bar link -->
                 <?= $this->Html->link('<i class="fas fa-book"></i>      '.'Educators', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['class'=>'nav-link', 'escape'=>false]) ?>
             </li>
+              <li class="nav-item">
+                  <?= $this->Html->link('<i class="fas fa-user"></i>      '.'Who Are We?', ['controller' => 'Pages', 'action' => 'index', "#" => "whoAreWe"], ['class'=>'nav-link', 'escape'=>false]) ?>
+              </li>
             <li class="nav-item">
                 <?= $this->Html->link('<i class="fas fa-phone"></i>      '.'Contact Us', ['controller' => 'Pages', 'action' => 'index', "#" => "contact_us"], ['class'=>'nav-link', 'escape'=>false]) ?>
             </li>

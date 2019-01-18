@@ -207,7 +207,7 @@ div#article div.dates {
 
 
 /*Who Are We*/
-div.container#contact_us {
+div.container#whoAreWe {
     padding: 100px 0px;
     color: white;
 }
@@ -258,4 +258,10 @@ footer .fa-circle {
 h1#message {
     font-size: 3em;
     font-family: 'Raleway', sans-serif;
+}
+
+/* Date for cards */
+.card-text._date {
+    font-size: 0.8em;
+    color: gray;
 }

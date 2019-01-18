@@ -27,7 +27,7 @@
     </div>
     <br>
     <br>
-<!--
+
     <h2>Recent Articles</h2>
     <div class="row">
         <?php foreach ($recentArticles as $article): ?>
@@ -35,20 +35,42 @@
                 <div class="card">
                     <div class="card-header">
                         <div class="header-block">
-                            <p class="title">
-                                <?= h($article['title']) ?>
-                            </p>
+                            <div class="card-title">
+                                <?= $this->Html->link(h($article['title']),['controller'=>'article','action'=>'view', $article->id]) ?>
+                            </div>
+                            <div class="card-text">
+                                <?= $this->Html->link(h($article['description']),['controller'=>'article','action'=>'view', $article->id],['escape'=>false]) ?>
+                            </div>
+                            <br>
+                            <div class="card-text _date">Last Edit: <?=h($article['modified']) ?></div>
                         </div>
                     </div>
-                    <div class="card-block">
-                        <?= h($this->Text->truncate(strip_tags($article['body']), 50, ['exact' => false])) ?>
-                    </div>
-                    <div class="card-footer">
+                </div>
+                <div class="card-block">
+                    <?= h($this->Text->truncate(strip_tags($article['body']), 50, ['exact' => false])) ?>
+                </div>
+                <div class="card-footer">
+                    <?= $this->Html->link(__('View'), ['controller'=>'article','action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
+                    <?= $this->Html->link(__('Edit'), ['controller'=>'article','action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
+                    <?php if ($article->status == 'published')
+                    {
+                        echo $this->Html->link(__('Un-Publish '), ['controller'=>'article','action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-publish article "'. $article->title).'"?']);
+                    }
+                    elseif ($article->status != 'archived')
+                    {
 
-                    </div>
+                        echo " ".$this->Html->link(__('Publish '), ['controller'=>'article','action' => 'publish', $article->id], ['class'=>'btn btn-success btn-sm', 'confirm' => __('Are you sure you want to publish article "'. $article->title).'"?']);
+                        echo " ".$this->Html->link(__('Archive'), ['controller'=>'article','action' => 'archive', $article->id], ['class'=>'btn btn-info btn-sm', 'confirm' => __('Are you sure you want to archive article "'. $article->title).'"?']);
+                    }
+                    else
+                    {
+                        echo $this->Html->link(__('Un-Archive '), ['controller'=>'article','action' => 'saveAsDraft', $article->id], ['class'=>'btn btn-warning btn-sm', 'confirm' => __('Are you sure you want to un-archive article "'. $article->title).'"?']);
+                        echo " ".$this->Form->postLink('Delete', ['controller'=>'article','action' => 'delete', $article->id], ['class'=>'btn btn-danger btn-sm', 'confirm' => __('Are you sure you want to delete article "'. $article->title).'"?']);
+                    }
+                    ?>
                 </div>
             </div>
         <?php endforeach ?>
     </div>
-    -->
+
 </div>

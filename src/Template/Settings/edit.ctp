@@ -12,7 +12,7 @@
         <legend><?= __($setting->settingsKey) ?></legend>
         <?php
 
-            echo $this->Form->control('settingsValue',['label' => false, 'id'=>"cct_embed_input_text"]);
+            echo $this->Form->control('settingsValue',['label' => false, 'id'=>"input"]);
             echo "<br>";
 
         ?>

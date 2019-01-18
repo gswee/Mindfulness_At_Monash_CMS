@@ -57,6 +57,7 @@
                     <div class="card-body">
                         <div class="card-title"><?=$article->title ?></div>
                         <div class="card-text"><?=$article->description ?></div>
+                        <div class="card-text _date">Posted: <?=$article->created ?></div>
                     </div>
                 </a>
 

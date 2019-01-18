@@ -214,9 +214,9 @@ header.masthead .site-heading {
   padding: 200px 0 150px;
   color: white;
 }
-#contact_us header.masthead .page-heading,
-#contact_us header.masthead .post-heading,
-#contact_us header.masthead .site-heading {
+#whoAreWe header.masthead .page-heading,
+#whoAreWe header.masthead .post-heading,
+#whoAreWe header.masthead .site-heading {
   padding: 0px;
   color: white;
 }
@@ -229,9 +229,9 @@ header.masthead .site-heading {
   }
 }
 @media only screen and (min-width: 768px) {
-  #contact_us header.masthead .page-heading,
-  #contact_us header.masthead .post-heading,
-  #contact_us header.masthead .site-heading {
+  #whoAreWe header.masthead .page-heading,
+  #whoAreWe header.masthead .post-heading,
+  #whoAreWe header.masthead .site-heading {
     padding: 0px;
   }
 }
