@@ -77,11 +77,11 @@ $cakeDescription = 'Mindfulness At Monash Admin'
             <li>
                 <ul class="side-nav sub-menu">
                     <li><?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?></li>
-                    <li><?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1']) ?></li>
-                    <li><?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2']) ?></li>
-                    <li><?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived','?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
-                    <li><?= $this->Html->link(__('View Published Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'published','?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
-                    <li><?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft','?' => ['direction'=>'asc', 'sort'=>'created']]) ?></li>
+                    <li><?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
+                    <li><?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
+                    <li><?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
+                    <li><?= $this->Html->link(__('View Published Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'published','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
+                    <li><?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
                 </ul>
             </li>
             <li><?= $this->Html->link(__('Users'), ['controller'=>'Users', 'action' => 'index']) ?></li>

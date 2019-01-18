@@ -15,7 +15,7 @@
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h1><?= h($article->title) ?></h1>
-                    <span class="subheading">Posted under <?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Category', 'action' => 'viewArticleIndex', $article->category->id], ['id' => 'category']) : '' ?>, <?= h($article->created) ?></span>
+                    <span class="subheading">Posted under <?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Article', 'action' => 'viewArticleIndex', $article->category->id], ['id' => 'category']) : '' ?>, <?= h($article->created) ?></span>
                 </div>
             </div>
         </div>

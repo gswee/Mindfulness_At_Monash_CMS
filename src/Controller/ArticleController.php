@@ -61,6 +61,7 @@ class ArticleController extends AppController
     {
         $article = $this->Article->get($id, [
             'contain' => ['Category']
+
         ]);
         // If the article is a draft or archived - throw exception
         if ($article->get('status') == 'draft' or $article->get('status') == 'archived')

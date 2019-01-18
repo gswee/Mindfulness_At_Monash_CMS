@@ -14,7 +14,7 @@ use Cake\Auth\DefaultPasswordHasher;
         <?php
             echo $this->Form->control('username');
             echo $this->Form->control('email');
-            echo "Reset Password";
+            echo $this->Form->control('password');
             //echo $this->Form->control('password',['password'=>(new DefaultPasswordHasher)->hash('password')]);
             // Admin enters email
 
