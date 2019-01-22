@@ -207,7 +207,7 @@ class UsersController extends AppController
             if ($user) {
                 if (!empty($this->request->data)) {
                     // Clear passkey and timeout
-                    $this->request->data['passkey'] = null;
+                    $this->request->data['passkey'] = 0;
                     $this->request->data['timeout'] = null;
                     $user = $this->Users->patchEntity($user, $this->request->data);
                     if ($this->Users->save($user)) {
