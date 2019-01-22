@@ -43,30 +43,31 @@
     </div>
 
     <br>
-    <h2>More Articles</h2>
-    <?php
-    foreach ($articles as $article) {
-        if ($article->id == 1 or $article->id == 2 or $article->status != 'published'){
+    <div id="moreArticles">
+        <h2>More Articles</h2>
+        <?php
+        foreach ($articles as $article) {
+            if ($article->id == 1 or $article->id == 2 or $article->status != 'published'){
 
-        }
-        else {
-            if ($article->category_id == $category_id){
-                ?>
+            }
+            else {
+                if ($article->category_id == $category_id){
+                    ?>
 
-                <a class="card" href="../view/<?=$article->id?>">
-                    <div class="card-body">
-                        <div class="card-title"><?=$article->title ?></div>
-                        <div class="card-text"><?=$article->description ?></div>
-                        <div class="card-text _date">Posted: <?=$article->created ?></div>
-                    </div>
-                </a>
+                    <a class="card" href="article/view/<?=$article->id?>">
+                        <div class="card-body">
+                            <div class="card-title"><?=$article->title ?></div>
+                            <div class="card-text"><?=$article->description ?></div>
+                            <div class="card-text _date">Posted: <?=$article->created ?></div>
+                        </div>
+                    </a>
 
 
-                <?php
+                    <?php
+                }
             }
         }
-    }
-    ?>
-
+        ?>
+    </div>
 
 </div>

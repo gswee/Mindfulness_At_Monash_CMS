@@ -14,17 +14,11 @@ use Cake\Auth\DefaultPasswordHasher;
         <?php
             echo $this->Form->control('username');
             echo $this->Form->control('email');
-            echo $this->Form->control('password');
-            //echo $this->Form->control('password',['password'=>(new DefaultPasswordHasher)->hash('password')]);
-            // Admin enters email
-
-            // Email is checked with db
-
-            // Enter new password
-            //echo $this->Form->control();
-            //Confirm new password
-
+            echo $this->Html->link('Reset Password', ['controller'=>'users', 'action'=>'password'],['class'=>'btn btn-warning'])
         ?>
+        <br>
+        <br>
+
 
     </fieldset>
     <?= $this->Form->button(__('Save'), ['id'=>'save']) ?>

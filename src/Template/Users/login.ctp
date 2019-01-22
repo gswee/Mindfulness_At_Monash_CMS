@@ -3,4 +3,6 @@
 <?= $this->Form->control('username') ?>
 <?= $this->Form->control('password') ?>
 <?= $this->Form->button('Login',['id'=>'login']) ?>
+<br>
+<?= $this->Html->link('Forgot Password?',['action'=>'password']) ?>
 <?= $this->Form->end() ?>

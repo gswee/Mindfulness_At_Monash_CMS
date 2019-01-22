@@ -8,14 +8,20 @@
 <!-- Page Header -->
 <header class="masthead" id="banner">
     <div class="overlay">
-        <?= $this->Html->image('for_students.jpg', ['class' => 'img-responsive'], ['alt' => 'A student hard at work on the bed.']); ?>
+        <?php
+        if ($article->category_id == 1) {
+            echo $this->Html->image('https://i.imgur.com/hI6nuXo.jpg', ['class' => 'img-responsive'], ['alt' => 'A student hard at work on the bed.']);
+        } else if ($article->category_id == 2) {
+            echo $this->Html->image('https://i.imgur.com/Gpm44o1.jpg', ['class' => 'img-responsive'], ['alt' => 'Writing notes on a wooden desk.']);
+        }
+        ?>
     </div>
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
                     <h1><?= h($article->title) ?></h1>
-                    <span class="subheading">Posted under <?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Article', 'action' => 'viewArticleIndex', $article->category->id], ['id' => 'category']) : '' ?>, <?= h($article->created) ?></span>
+                    <span class="subheading">Posted under <?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Article', 'action' => 'viewArticleIndex', $article->category->id, '#'=>'moreArticles'], ['id' => 'category']) : '' ?>, <?= h($article->created) ?></span>
                 </div>
             </div>
         </div>

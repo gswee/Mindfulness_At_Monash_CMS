@@ -10,6 +10,9 @@ use Cake\Auth\DefaultPasswordHasher;
  * @property int $id
  * @property string $username
  * @property string $password
+ * @property string $email
+ * @property string $passkey
+ * @property \Cake\I18n\FrozenTime $timeout
  */
 class User extends Entity
 {
@@ -26,7 +29,9 @@ class User extends Entity
     protected $_accessible = [
         'username' => true,
         'password' => true,
-        'email' => true
+        'email' => true,
+        'passkey' => true,
+        'timeout' => true
     ];
 
     /**
@@ -41,5 +46,4 @@ class User extends Entity
     protected function _setPassword($password) {
         return (new DefaultPasswordHasher)->hash($password);
     }
-
 }

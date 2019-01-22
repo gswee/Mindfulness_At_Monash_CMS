@@ -81,6 +81,8 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/admin', ['controller' => 'Users', 'action' => 'admin_home']);
     $routes->connect('/articles', ['controller' => 'Article', 'action' => 'index']);
     $routes->connect('/article/view/*',['controller' => 'Article', 'action' => 'view']);
+    $routes->connect('/students', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1']);
+    $routes->connect('/educators', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2']);
 });
 
 /**

@@ -44,6 +44,8 @@ create table users
 	username varchar(30) not null,
 	password text not null,
 	email varchar(50) not null,
+	passkey varchar(13) COLLATE utf8mb4_unicode_ci NOT NULL,
+	timeout timestamp NULL DEFAULT NULL,
 	constraint users_username_uindex
 		unique (username)
 )
