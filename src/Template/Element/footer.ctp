@@ -18,7 +18,7 @@
               <br>
             <p class="copyright text-muted">Copyright &copy; Mindfulness at Monash 2018</p>
               <br>
-              <p class="copyright text-muted">Made with blood, sweat and tears by Gideon Swee</p>
+              <p class="copyright text-muted">Made by Team 121</p>
           </div>
         </div>
       </div>

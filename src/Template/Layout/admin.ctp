@@ -57,6 +57,7 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     <nav class="navbar navbar-expand-md fixed-top bg-dark">
         <h1><?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Users', 'action'=>'admin_home'], ['id'=>'home']); ?></h1>
         <div id="user_section">
+            <!--<h4>Hello, </h4>-->
             <h3><?= $this->Html->link('Logout',['controller'=>'users','action'=>'logout'], ['id'=>'home']); ?></h3>
         </div>
     </nav>

@@ -71,7 +71,6 @@ $this->layout = false;
                 <!-- Pager -->
                 <div class="clearfix">
                     <?= $this->Html->link('Find out more', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1'], ['class'=>'btn btn-primary']) ?>
-                    <!--<a class="btn btn-primary" href="#">Find out more &rarr;</a>-->
                 </div>
             </div>
             <!-- Educator Article Index -->
@@ -92,7 +91,6 @@ $this->layout = false;
                     <!-- Pager -->
                     <div class="clearfix">
                         <?= $this->Html->link('Find out more', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2'], ['class'=>'btn btn-primary']) ?>
-                        <!--<a class="btn btn-primary" href="#">Older Posts &rarr;</a>-->
                     </div>
                 </div>
             </div>
