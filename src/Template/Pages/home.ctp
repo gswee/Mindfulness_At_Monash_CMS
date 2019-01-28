@@ -49,8 +49,9 @@ $this->layout = false;
 
     <!-- Main Content -->
     <div class="container">
-        <!-- Sandwich rows between 2 columns? -->
+
         <div class="row">
+            <!-- Student Article Index -->
             <div class="col-6 mx-auto" id="homepage_col" style="border-right: 1px solid gray">
                 <div class="post-preview">
                     <a href="post.html">
@@ -73,7 +74,7 @@ $this->layout = false;
                     <!--<a class="btn btn-primary" href="#">Find out more &rarr;</a>-->
                 </div>
             </div>
-
+            <!-- Educator Article Index -->
             <div class="col-6 mx-auto" id="homepage_col">
                 <div class="post-preview">
                     <a href="post.html">
