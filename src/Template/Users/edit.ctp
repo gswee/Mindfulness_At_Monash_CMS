@@ -11,9 +11,12 @@ use Cake\Auth\DefaultPasswordHasher;
     <?= $this->Form->create($user, ['onsubmit'=>"document.getElementById('save').disabled = true; return true;"] ) ?>
     <fieldset>
         <legend><?= __('Edit User') ?></legend>
+        <p>Fields marked with <b style="color:red">*</b> are compulsory.</p>
         <?php
-            echo $this->Form->control('username');
-            echo $this->Form->control('email');
+            echo $this->Form->control('username',
+                ['label'=>'Username<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
+            echo $this->Form->control('email',
+                ['label'=>'Email<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
             echo $this->Html->link('Reset Password', ['controller'=>'users', 'action'=>'password'],['class'=>'btn btn-warning'])
         ?>
         <br>

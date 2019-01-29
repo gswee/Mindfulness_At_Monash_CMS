@@ -9,13 +9,26 @@
     <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"document.getElementById('save').disabled = true; return true;"]) ?>
     <fieldset>
         <legend><?= __('Add Article') ?></legend>
-        <p>Fields marked with <b>*</b> are compulsory.</p>
-        <?= $this->Form->control('title', ['label'=>'Title<span style="color:red;white-space: nowrap">*</span>', 'escape'=>false]); ?>
-        <?= $this->Form->control('description');?>
+        <p>Fields marked with <b style="color:red">*</b> are compulsory.</p>
+        <?= $this->Form->control(
+                'title',
+                ['label'=>'Title<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]
+        ); ?>
+        <?= $this->Form->control(
+                'description',
+                ['label'=>'Description<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]
+        );?>
         <br>
-        <?= $this->Form->control('body'); ?>
+        <?= $this->Form->control(
+                'body',
+                ['label'=>'Body<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]
+        ); ?>
         <br>
-        <?= $this->Form->control('category_id', ['options' => $categories, 'empty' => false]);?>
+        <?= $this->Form->control(
+                'category_id',
+                ['label'=>'Category<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false],
+                ['options' => $categories, 'empty' => false]
+        );?>
 
     </fieldset>
     <br>

@@ -9,10 +9,13 @@
     <fieldset>
         <legend><?= __('Edit Article') ?></legend>
         <?php
-            echo $this->Form->control('title');
-            echo $this->Form->control('description');
+            echo $this->Form->control('title',
+                ['label'=>'Title<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
+            echo $this->Form->control('description',
+                ['label'=>'Description<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
 
-            echo $this->Form->control('body');
+            echo $this->Form->control('body',
+                ['label'=>'Body<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
 echo "<br>";
             if ($article->id != '1' or '2') {
                 echo $this->Form->control('category_id', ['options' => $categories, 'empty' => false]);
