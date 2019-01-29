@@ -138,3 +138,8 @@ div.admin div.category.view.large-9.medium-8.columns.content{
 .auth-container h1, .auth-container button {
     font-family: 'Raleway', sans-serif;
 }
+
+/*current sidebar section*/
+.side-nav li ul li.current{
+    background-color: darkgray;
+}

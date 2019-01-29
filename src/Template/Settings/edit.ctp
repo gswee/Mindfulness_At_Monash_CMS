@@ -3,6 +3,8 @@
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Setting $setting
  */
+
+
 ?>
 <div class="settings form large-9 medium-8 columns content">
     <?php foreach($settings as $setting) { ?>

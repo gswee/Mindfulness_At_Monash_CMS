@@ -13,7 +13,10 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'Mindfulness At Monash Admin'
+//$user = $session->read('Auth');
+$cakeDescription = 'Mindfulness At Monash Admin';
+//debug($this->request->params);
+//exit;
 ?>
 <!DOCTYPE html>
 <html>
@@ -57,7 +60,7 @@ $cakeDescription = 'Mindfulness At Monash Admin'
     <nav class="navbar navbar-expand-md fixed-top bg-dark">
         <h1><?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Users', 'action'=>'admin_home'], ['id'=>'home']); ?></h1>
         <div id="user_section">
-            <!--<h4>Hello, </h4>-->
+
             <h3><?= $this->Html->link('Logout',['controller'=>'users','action'=>'logout'], ['id'=>'home']); ?></h3>
         </div>
     </nav>
@@ -68,9 +71,17 @@ $cakeDescription = 'Mindfulness At Monash Admin'
             <li><?= $this->Html->link(__('Edit Pages'), ['controller'=>'Settings', 'action' => 'index']) ?></li>
             <li>
                 <ul class="side-nav sub-menu">
-                    <li><?= $this->Html->link(__('Home Page'), ['controller' => 'Settings', 'action' => 'edit', '1']) ?></li>
-                    <li><?= $this->Html->link(__('For Students'), ['controller' => 'Article', 'action' => 'edit', '1']) ?></li>
-                    <li><?= $this->Html->link(__('For Educators'), ['controller' => 'Article', 'action' => 'edit', '2']) ?></li>
+                    <li <?php if($this->request->params['controller'] == 'Settings' && $this->request->params['action'] == 'edit') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('Home Page'), ['controller' => 'Settings', 'action' => 'edit', '1']) ?>
+                    </li>
+
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'edit' && $this->request->params['pass'][0] == '1') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('For Students'), ['controller' => 'Article', 'action' => 'edit', '1']) ?>
+                    </li>
+
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'edit' && $this->request->params['pass'][0] == '2') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('For Educators'), ['controller' => 'Article', 'action' => 'edit', '2']) ?>
+                    </li>
                 </ul>
             </li>
             
@@ -86,6 +97,11 @@ $cakeDescription = 'Mindfulness At Monash Admin'
                 </ul>
             </li>
             <li><?= $this->Html->link(__('Users'), ['controller'=>'Users', 'action' => 'index']) ?></li>
+            <li>
+                <ul class="side-nav sub-menu">
+                    <li><?= $this->Html->link(__('Add User'), ['controller'=>'Users', 'action' => 'add']) ?></li>
+                </ul>
+            </li>
         </ul>
     </nav>
 
