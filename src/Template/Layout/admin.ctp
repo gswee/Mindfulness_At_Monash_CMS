@@ -68,7 +68,9 @@ $cakeDescription = 'Mindfulness At Monash Admin';
     <div class="row" id="body-row">
     <nav class="sidebar">
         <ul class="side-nav">
-            <li><?= $this->Html->link(__('Edit Pages'), ['controller'=>'Settings', 'action' => 'index']) ?></li>
+            <li  <?php if($this->request->params['controller'] == 'Settings' && $this->request->params['action'] == 'index') {echo 'class="current"';} ?>>
+                <?= $this->Html->link(__('Edit Pages'), ['controller'=>'Settings', 'action' => 'index']) ?>
+            </li>
             <li>
                 <ul class="side-nav sub-menu">
                     <li <?php if($this->request->params['controller'] == 'Settings' && $this->request->params['action'] == 'edit') {echo 'class="current"';} ?>>
@@ -85,21 +87,39 @@ $cakeDescription = 'Mindfulness At Monash Admin';
                 </ul>
             </li>
             
-            <li><?= $this->Html->link(__('Articles'), ['controller'=>'Article', 'action' => 'index']) ?></li>
+            <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'index') {echo 'class="current"';} ?>>
+                <?= $this->Html->link(__('Articles'), ['controller'=>'Article', 'action' => 'index']) ?>
+            </li>
             <li>
                 <ul class="side-nav sub-menu">
-                    <li><?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?></li>
-                    <li><?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
-                    <li><?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
-                    <li><?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
-                    <li><?= $this->Html->link(__('View Published Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'published','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
-                    <li><?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?></li>
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'add') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?>
+                    </li>
+                    <li <?php if($this->request->params['controller'] == 'Category' && $this->request->params['action'] == 'view' && $this->request->params['pass'][0] == '1') {echo 'class="current"';}?>>
+                        <?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                    </li>
+                    <li <?php if($this->request->params['controller'] == 'Category' && $this->request->params['action'] == 'view' && $this->request->params['pass'][0] == '2') {echo 'class="current"';}?>>
+                        <?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                    </li>
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByStatus' && $this->request->params['pass'][0] == 'archived') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                    </li>
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByStatus' && $this->request->params['pass'][0] == 'published') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('View Published Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'published','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                    </li>
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByStatus' && $this->request->params['pass'][0] == 'draft') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                    </li>
                 </ul>
             </li>
-            <li><?= $this->Html->link(__('Users'), ['controller'=>'Users', 'action' => 'index']) ?></li>
+            <li <?php if($this->request->params['controller'] == 'Users' && $this->request->params['action'] == 'index') {echo 'class="current"';} ?>>
+                <?= $this->Html->link(__('Users'), ['controller'=>'Users', 'action' => 'index']) ?>
+            </li>
             <li>
                 <ul class="side-nav sub-menu">
-                    <li><?= $this->Html->link(__('Add User'), ['controller'=>'Users', 'action' => 'add']) ?></li>
+                    <li <?php if($this->request->params['controller'] == 'Users' && $this->request->params['action'] == 'add') {echo 'class="current"';} ?>>
+                        <?= $this->Html->link(__('Add User'), ['controller'=>'Users', 'action' => 'add']) ?>
+                    </li>
                 </ul>
             </li>
         </ul>

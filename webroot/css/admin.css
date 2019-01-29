@@ -140,6 +140,6 @@ div.admin div.category.view.large-9.medium-8.columns.content{
 }
 
 /*current sidebar section*/
-.side-nav li ul li.current{
+.side-nav li.current, .side-nav li ul li.current{
     background-color: darkgray;
 }
