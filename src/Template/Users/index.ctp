@@ -23,6 +23,7 @@
         <tbody>
             <?php foreach ($users as $user): ?>
             <tr>
+                <?php if($user->id != 1) { ?>
                 <td><?= $this->Number->format($user->id) ?></td>
                 <td><?= h($user->username) ?></td>
                 <td><?= h($user->email) ?></td>
@@ -30,6 +31,7 @@
                     <?= $this->Html->link(__('Edit'), ['action' => 'edit', $user->id],['class'=>'btn btn-outline-secondary btn-sm']) ?>
                     <?= $this->Form->postLink(__('Delete'), ['action' => 'delete', $user->id], ['class'=>'btn btn-danger btn-sm', 'confirm' => __('Are you sure you want to delete user "'.$user->username.'"?')]) ?>
                 </td>
+                <?php } ?>
             </tr>
             <?php endforeach; ?>
         </tbody>

@@ -15,11 +15,13 @@
                     'username',
                 ['label'=>'Username<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
             echo $this->Form->control(
-                    'password',
-                ['label'=>'Password<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
-            echo $this->Form->control(
                     'email',
                 ['label'=>'Email<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
+            echo $this->Form->control(
+                'password',
+                ['label'=>'Password<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
+            echo $this->Form->control(
+                'confirm_password', ['type' => 'password', 'required' => true]);
         ?>
     </fieldset>
     <?= $this->Form->button(__('Add User'), ['id'=>'save']) ?>

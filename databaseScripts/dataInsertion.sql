@@ -61,4 +61,5 @@ VALUES
 <h3><strong>Contact for enquiries</strong></h3>
 <p>Telephone: 9905 2981<br />Email:&nbsp;<a href="mailto:mentalhealth@monash.edu?subject=Train%20the%20trainer">mentalhealth@monash.edu</a></p>', sysdate(), sysdate(), 2, 'draft');
 
-INSERT INTO users (username, password) values ('test', 'test');
+INSERT INTO users (username, password, email, passkey) values ('admin', '$2y$10$Y3uXuRDr3fybr6sNT0GmrOFLmjbOrxWFQjsWWJs/ndzl7VDZ/wbK.', 'mindfulnessatmonash@gmail.com', 0);
+/*password, when dehashed, is 'test'*/

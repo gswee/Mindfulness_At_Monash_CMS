@@ -58,6 +58,8 @@ class UsersTable extends Table
             ->scalar('password')
             ->requirePresence('password', 'create')
             ->notEmpty('password');
+        $validator
+            ->sameAs('confirm_password','password', 'Passwords do not match!');
 
         $validator
             ->email('email')

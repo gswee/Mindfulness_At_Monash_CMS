@@ -109,8 +109,12 @@ class UsersController extends AppController
     {
         $this->request->allowMethod(['post', 'delete']);
         $user = $this->Users->get($id);
-        if ($this->Users->delete($user)) {
-            $this->Flash->success(__('The user has been deleted.'));
+        if ($id != 1) {
+            if ($this->Users->delete($user)) {
+                $this->Flash->success(__('The user has been deleted.'));
+            } else {
+                $this->Flash->error(__('The user could not be deleted. Please, try again.'));
+            }
         } else {
             $this->Flash->error(__('The user could not be deleted. Please, try again.'));
         }
@@ -209,6 +213,7 @@ class UsersController extends AppController
                     // Clear passkey and timeout
                     $this->request->data['passkey'] = 0;
                     $this->request->data['timeout'] = null;
+                    //TODO: check password repeat here before save to db
                     $user = $this->Users->patchEntity($user, $this->request->data);
                     if ($this->Users->save($user)) {
                         $this->Flash->set(__('Your password has been updated.'));
