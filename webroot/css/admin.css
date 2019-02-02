@@ -50,9 +50,22 @@ nav.top-bar.expanded {
     position:absolute;
     right:0;
     margin-right: 20px;
+    width: 25%;
+}
+.col-sm-8.user,.col-sm-4.logout {
+    color: white;
+}
+.col-sm-8.user {
+    font-size: 1em;
+    padding-top:15px;
+}
+.col-sm-4.logout {
+    font-size: 2em;
+    font-weight: bold;
 }
 
-/* Flash message */
+
+    /* Flash message */
 div#success, div#error {
     padding-left: 15px;
     padding-top: 15px;

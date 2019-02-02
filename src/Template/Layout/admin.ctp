@@ -17,6 +17,7 @@
 $cakeDescription = 'Mindfulness At Monash Admin';
 //debug($this->request->params);
 //exit;
+$loguser = $this->request->session()->read('Auth.User');
 ?>
 <!DOCTYPE html>
 <html>
@@ -60,8 +61,14 @@ $cakeDescription = 'Mindfulness At Monash Admin';
     <nav class="navbar navbar-expand-md fixed-top bg-dark">
         <h1><?= $this->Html->link(__('Mindfulness At Monash Admin'), ['controller'=>'Users', 'action'=>'admin_home'], ['id'=>'home']); ?></h1>
         <div id="user_section">
-
-            <h3><?= $this->Html->link('Logout',['controller'=>'users','action'=>'logout'], ['id'=>'home']); ?></h3>
+            <div class="row">
+                <div class="col-sm-8 user">
+                    Welcome, <b><?= $loguser['username'] ?></b>
+                </div>
+                <div class="col-sm-4 logout">
+                    <?= $this->Html->link('Logout',['controller'=>'users','action'=>'logout'], ['id'=>'home']); ?>
+                </div>
+            </div>
         </div>
     </nav>
 
