@@ -6,7 +6,7 @@
 ?>
 
 <div class="category view large-9 medium-8 columns content">
-<h2><?= ucfirst($this_status).__(' Articles') ?></h2>
+<h2><?= ucfirst($status).__(' Articles') ?></h2>
     <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
     <br>
     <br>
@@ -18,7 +18,7 @@
             <th scope="col"><?= $this->Paginator->sort('title') ?></th>
             <th scope="col"><?= $this->Paginator->sort('created') ?></th>
             <th scope="col"><?= $this->Paginator->sort('modified') ?></th>
-            <th scope="col"><?= $this->Paginator->sort('category name') ?></th>
+            <th scope="col"><?= $this->Paginator->sort('category_id') ?></th>
 
             <th scope="col" class="actions"><?= __('Actions') ?></th>
         </tr>
@@ -71,9 +71,27 @@
     <p><?= $this->Paginator->counter(['format' => __('Page {{page}} of {{pages}}, showing {{current}} record(s) out of {{count}} total')]) ?></p>
 </div>
 <div class="btn-toolbar">
-    <div class="btn-group mr-2">
-
-    </div>
+    <table>
+        <td>
+            <h4>Sort By: </h4>
+        </td>
+        <td>
+            <div class="row">
+                <div class="col-md-auto">
+                    <?= $this->Paginator->sort('title', 'Title'); ?>
+                </div>
+                <div class="col-md-auto">
+                    <?= $this->Paginator->sort('created', 'Date Created'); ?>
+                </div>
+                <div class="col-md-auto">
+                    <?= $this->Paginator->sort('modified', 'Date Modified'); ?>
+                </div>
+                <div class="col-md-auto">
+                    <?= $this->Paginator->sort('category_id', 'Category Name'); ?>
+                </div>
+            </div>
+        </td>
+    </table>
 </div>
 <br> 
 <!--<?= $this->element('admin/sortBarArticle_status') ?>-->

@@ -156,3 +156,10 @@ div.admin div.category.view.large-9.medium-8.columns.content{
 .side-nav li.current, .side-nav li ul li.current{
     background-color: darkgray;
 }
+
+/*sortbar*/
+.btn-toolbar .row .col-md-auto a {
+
+    font-weight: 400;
+    font-size: 1.2em;
+}

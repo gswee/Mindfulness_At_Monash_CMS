@@ -102,11 +102,11 @@ $loguser = $this->request->session()->read('Auth.User');
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'add') {echo 'class="current"';} ?>>
                         <?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?>
                     </li>
-                    <li <?php if($this->request->params['controller'] == 'Category' && $this->request->params['action'] == 'view' && $this->request->params['pass'][0] == '1') {echo 'class="current"';}?>>
-                        <?= $this->Html->link(__('Student Articles'), ['controller' => 'Category', 'action' => 'view', '1', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByCategory' && $this->request->params['pass'][0] == '1') {echo 'class="current"';}?>>
+                        <?= $this->Html->link(__('Student Articles'), ['controller' => 'Article', 'action' => 'searchByCategory', '1', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
                     </li>
-                    <li <?php if($this->request->params['controller'] == 'Category' && $this->request->params['action'] == 'view' && $this->request->params['pass'][0] == '2') {echo 'class="current"';}?>>
-                        <?= $this->Html->link(__('Educator Articles'), ['controller' => 'Category', 'action' => 'view', '2', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                    <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByCategory' && $this->request->params['pass'][0] == '2') {echo 'class="current"';}?>>
+                        <?= $this->Html->link(__('Educator Articles'), ['controller' => 'Article', 'action' => 'searchByCategory', '2', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
                     </li>
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByStatus' && $this->request->params['pass'][0] == 'archived') {echo 'class="current"';} ?>>
                         <?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>

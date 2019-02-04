@@ -56,25 +56,6 @@
             <?php endif; ?>
             <?php endforeach; ?>
         </table>
-            <div class="btn-toolbar">
-                <table>
-                    <td>
-                        <h4>Sort By: </h4>
-                    </td>
-                    <td>
-                        <div class="btn-group mr-2">
-                            <?= $this->Html->link(__('Title'), ['controller' => 'Category', 'action' => 'view', $article->category_id, '?' => ['direction'=>'asc', 'sort'=>'title']], ['class'=>"btn btn-outline-primary"]) ?>
-                        </div>
-                        <div class="btn-group mr-2">
-                            <?= $this->Html->link(__('Date Created'), ['controller' => 'Category', 'action' => 'view', $article->category_id, '?' => ['direction'=>'asc', 'sort'=>'created']], ['class'=>"btn btn-outline-primary"]) ?>
-                            <?= $this->Html->link(__('Date Modified'), ['controller' => 'Category', 'action' => 'view', $article->category_id, '?' => ['direction'=>'asc', 'sort'=>'modified']], ['class'=>"btn btn-outline-primary"]) ?>
-                        </div>
-                        <div class="btn-group mr-2">
-                            <?= $this->Html->link(__('Category Name'), ['controller' => 'Category', 'action' => 'view', $article->category_id, '?' => ['direction'=>'asc', 'sort'=>'category+name']],['class'=>"btn btn-outline-primary"]) ?>
-                        </div>
-                    </td>
-                </table>
-            </div>
         <?php endif; ?>
     </div>
 </div>

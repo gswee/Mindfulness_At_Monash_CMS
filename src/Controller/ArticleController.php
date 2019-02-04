@@ -40,7 +40,6 @@ class ArticleController extends AppController
     }
     public function searchByStatus($status = null) 
     {
-        $this_status = $status;
         $this->paginate = [
             'contain' => ['Category'],
             'order' => ['Article.modified' => 'desc']
@@ -50,7 +49,23 @@ class ArticleController extends AppController
 
         $articles = $this->paginate($this->Article->find()->where(['Article.status'=>$status]));
         $this->set(compact('articles'));
-        $this->set(compact('this_status'));
+        $this->set(compact('status', $status));
+        //debug($articles);
+        //exit; //forcably stop the code right here so we can see the debug information.
+    }
+    public function searchByCategory($category_id = null)
+    {
+        $this->paginate = [
+            'contain' => ['Category'],
+            'order' => ['Article.modified' => 'desc']
+        ];
+        //debug($articles->toArray());
+        //toArray() is used to execute sql query. Ususally you don't need this since set(compact) will do it for you.
+
+        $articles = $this->paginate($this->Article->find()->where(['Article.category_id'=>$category_id]));
+        $category = $this->Article->Category->get($category_id);
+        $this->set(compact('articles'));
+        $this->set(compact('category', $category));
         //debug($articles);
         //exit; //forcably stop the code right here so we can see the debug information.
     }
