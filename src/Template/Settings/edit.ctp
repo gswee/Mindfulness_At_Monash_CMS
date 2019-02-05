@@ -10,11 +10,11 @@
     <h1><?= __('Edit Home Page') ?></h1>
     <?php foreach($settings as $setting) { ?>
 
-    <?= $this->Form->create($setting) ?>
+    <?= $this->Form->create($setting, ['onsubmit'=>"document.getElementById('save').disabled = true; return true;"]) ?>
     <fieldset>
         <legend><?= __($setting->settingsKey) ?></legend>
         <?php
-            echo $this->Form->control('settingsValue',['label' => false, 'id'=>"input".$setting->id]);
+            echo $this->Form->control('settingsValue',['label' => false, 'name' => $setting->id, 'id'=>"input".$setting->id]);
             if(strpos($setting->settingsKey, 'Masthead') or strpos($setting->settingsKey, 'Photo')) { ?>
                 <br>
                 <a class="btn btn-outline-primary btn-sm openImage" onclick="openImage(<?= $setting->id ?>)">View Image</a>
@@ -29,7 +29,7 @@
 
 
     <?php } ?>
-    <?= $this->Form->button(__('Submit')) ?>
+    <?= $this->Form->button(__('Submit'), ['id'=>'save']) ?>
     <?= $this->Form->end() ?>
 </div>
 

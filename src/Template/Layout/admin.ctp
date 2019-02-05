@@ -62,7 +62,7 @@ $loguser = $this->request->session()->read('Auth.User');
         <div id="user_section">
             <div class="row">
                 <div class="col-sm-8 user">
-                    Welcome, <b><?= $loguser['username'] ?></b>
+                    Welcome, <b><?= $this->Html->link($loguser['username'],['controller'=>'users', 'action'=>'view', $loguser['id']], ['id'=>'username', 'escape'=>false]) ?></b>
                 </div>
                 <div class="col-sm-4 logout">
                     <?= $this->Html->link('Logout',['controller'=>'users','action'=>'logout'], ['id'=>'home']); ?>
@@ -80,7 +80,7 @@ $loguser = $this->request->session()->read('Auth.User');
             <li>
                 <ul class="side-nav sub-menu">
                     <li <?php if($this->request->params['controller'] == 'Settings' && $this->request->params['action'] == 'edit') {echo 'class="current"';} ?>>
-                        <?= $this->Html->link(__('Home Page'), ['controller' => 'Settings', 'action' => 'edit', '1']) ?>
+                        <?= $this->Html->link(__('Home Page'), ['controller' => 'Settings', 'action' => 'edit']) ?>
                     </li>
 
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'edit' && $this->request->params['pass'][0] == '1') {echo 'class="current"';} ?>>

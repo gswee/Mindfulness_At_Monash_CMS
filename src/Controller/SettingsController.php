@@ -71,26 +71,35 @@ class SettingsController extends AppController
     /**
      * Edit method
      *
-     * @param string|null $id Setting id.
      * @return \Cake\Http\Response|null Redirects on successful edit, renders view otherwise.
      * @throws \Cake\Network\Exception\NotFoundException When record not found.
      */
-    public function edit($id = null)
+    public function edit()
     {
-        $setting = $this->Settings->get($id, [
-            'contain' => []
-        ]);
-        $settings = $this->Settings->find()->where(['Settings.id >=' => 1, 'Settings.id <=' => 10]);
-        if ($this->request->is(['patch', 'post', 'put'])) {
-            $setting = $this->Settings->patchEntity($setting, $this->request->getData());
-            if ($this->Settings->save($setting)) {
-                $this->Flash->success(__('The setting(s) have been saved.'));
 
+        $settings = $this->Settings->find()->where(['Settings.id >=' => 1, 'Settings.id <=' => 10]);
+
+        if ($this->request->is(['patch', 'post', 'put'])) {
+            $failed = false;
+            foreach ($settings as $setting) {
+
+                $setting->settingsValue = $this->request->getData($setting->id);
+
+                if (!$this->Settings->save($setting)) {
+                    $failed = true;
+                    break;
+                }
+
+            }
+
+            if ($failed) {
+                $this->Flash->error(__('The setting could not be saved. Please, try again.'));
+            } else {
+                $this->Flash->success(__('The setting(s) have been saved.'));
                 return $this->redirect(['action' => 'index']);
             }
-            $this->Flash->error(__('The setting could not be saved. Please, try again.'));
         }
-        $this->set(compact('setting'));
+
         $this->set(compact('settings'));
     }
 

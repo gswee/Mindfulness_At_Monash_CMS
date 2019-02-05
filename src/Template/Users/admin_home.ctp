@@ -3,7 +3,7 @@
     <br>
 
     <div class="btn-group btn-group-lg" role="group">
-        <?= $this->Html->link(''.'Edit Home Page', ['controller' => 'Settings', 'action' => 'edit', '1'], ['class'=>"btn btn-outline-primary", 'id'=>'bigbutton', 'escape'=>false]) ?>
+        <?= $this->Html->link(''.'Edit Home Page', ['controller' => 'Settings', 'action' => 'edit'], ['class'=>"btn btn-outline-primary", 'id'=>'bigbutton', 'escape'=>false]) ?>
     </div>
     <div class="btn-group btn-group-lg" role="group">
         <?= $this->Html->link(__('Edit "For Student" Page'), ['controller' => 'Article', 'action' => 'edit', '1'], ['class'=>"btn btn-outline-primary", 'id'=>'bigbutton']) ?>
