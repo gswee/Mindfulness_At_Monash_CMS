@@ -16,8 +16,8 @@
 
     <div class="btn-group btn-group-lg" role="group" aria-label="...">
         <?= $this->Html->link(__('View All Articles'), ['controller' => 'Article', 'action' => 'index', '?' => ['direction'=>'asc', 'sort'=>'title']], ['class'=>"btn btn-outline-primary"]) ?>
-        <?= $this->Html->link(__('By Student'), ['controller' => 'Category', 'action' => 'view', '1', '?' => ['direction'=>'asc', 'sort'=>'category+name']],['class'=>"btn btn-outline-primary"]) ?>
-        <?= $this->Html->link(__('By Educator'), ['controller' => 'Category', 'action' => 'view', '2', '?' => ['direction'=>'asc', 'sort'=>'category+name']],['class'=>"btn btn-outline-primary"]) ?>
+        <?= $this->Html->link(__('By Student'), ['controller' => 'Article', 'action' => 'searchByCategory', '1'],['class'=>"btn btn-outline-primary"]) ?>
+        <?= $this->Html->link(__('By Educator'), ['controller' => 'Article', 'action' => 'searchByCategory', '2'],['class'=>"btn btn-outline-primary"]) ?>
     </div>
     <br>
     <br>

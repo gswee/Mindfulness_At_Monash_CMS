@@ -25,20 +25,19 @@ $loguser = $this->request->session()->read('Auth.User');
     <?= $this->Html->script("tinymce/tinymce.min.js") ?>
     <script type="text/javascript">
         tinymce.init({
-        selector: '#body',
-          plugins: ["advlist autolink lists link image charmap print preview anchor",
-        "searchreplace visualblocks code fullscreen",
-        "insertdatetime media table contextmenu paste autoresize"],
-          //invalid_elements: 'br'
-          toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
+            selector: '#body',
+            plugins: ["advlist autolink lists link image charmap print preview anchor",
+                "searchreplace visualblocks code fullscreen",
+                "insertdatetime media table contextmenu paste autoresize"],
+            toolbar: "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image",
             file_picker_types: 'file image media',
-              force_br_newlines : false,
-              force_p_newlines : false,
+            force_br_newlines : false,
+            force_p_newlines : false,
             forced_root_block: '',
             invalid_elements:"div"
+
       });
     </script>
-    
     <?= $this->Html->charset() ?>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>
@@ -103,19 +102,19 @@ $loguser = $this->request->session()->read('Auth.User');
                         <?= $this->Html->link(__('New Article'), ['controller'=>'Article', 'action' => 'add']) ?>
                     </li>
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByCategory' && $this->request->params['pass'][0] == '1') {echo 'class="current"';}?>>
-                        <?= $this->Html->link(__('Student Articles'), ['controller' => 'Article', 'action' => 'searchByCategory', '1', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                        <?= $this->Html->link(__('Student Articles'), ['controller' => 'Article', 'action' => 'searchByCategory', '1']) ?>
                     </li>
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByCategory' && $this->request->params['pass'][0] == '2') {echo 'class="current"';}?>>
-                        <?= $this->Html->link(__('Educator Articles'), ['controller' => 'Article', 'action' => 'searchByCategory', '2', '?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                        <?= $this->Html->link(__('Educator Articles'), ['controller' => 'Article', 'action' => 'searchByCategory', '2']) ?>
                     </li>
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByStatus' && $this->request->params['pass'][0] == 'archived') {echo 'class="current"';} ?>>
-                        <?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                        <?= $this->Html->link(__('View Archived Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'archived']) ?>
                     </li>
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByStatus' && $this->request->params['pass'][0] == 'published') {echo 'class="current"';} ?>>
-                        <?= $this->Html->link(__('View Published Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'published','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                        <?= $this->Html->link(__('View Published Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'published']) ?>
                     </li>
                     <li <?php if($this->request->params['controller'] == 'Article' && $this->request->params['action'] == 'searchByStatus' && $this->request->params['pass'][0] == 'draft') {echo 'class="current"';} ?>>
-                        <?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft','?' => ['direction'=>'asc', 'sort'=>'modified']]) ?>
+                        <?= $this->Html->link(__('View Draft Articles'), ['controller' => 'Article', 'action' => 'searchByStatus', 'draft']) ?>
                     </li>
                 </ul>
             </li>

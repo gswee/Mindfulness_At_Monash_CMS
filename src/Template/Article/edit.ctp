@@ -7,7 +7,14 @@
 <div class="article form large-9 medium-8 columns content">
     <?= $this->Form->create($article, ['novalidate'=>true, 'onsubmit'=>"getElementById('save').disabled = true; return true;"]) ?>
     <fieldset>
-        <legend><?= __('Edit Article') ?></legend>
+        <?php if($article->id == '1') { ?>
+            <legend><?= __('Edit For Students Page') ?></legend>
+        <?php } elseif ($article->id == '2') { ?>
+            <legend><?= __('Edit For Educators Page') ?></legend>
+        <?php } else { ?>
+            echo "<legend><?= __('Edit Article') ?></legend>";
+        <?php } ?>
+
         <?php
             echo $this->Form->control('title',
                 ['label'=>'Title<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);

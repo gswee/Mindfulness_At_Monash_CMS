@@ -99,11 +99,6 @@
             </td>
         </table>
     </div>
-    <!--<?= $this->element('admin/sortBarArticle') ?>-->
+
 </div>
-
-<script>
-    document.getElementById("p2").style.color = "blue";
-</script>
-
 

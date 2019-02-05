@@ -30,6 +30,12 @@ a#home:hover {
 button:hover {
     color:white;
 }
+.openImage {
+    color: #007bff !important;
+}
+.openImage:hover {
+    color: white !important;
+}
 
 /* Admin Recent Article Cards */
 div.card-text a, div.card-title a{
