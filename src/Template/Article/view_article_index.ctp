@@ -2,7 +2,7 @@
 /**
  * @var \App\View\AppView $this
  * @var \App\Model\Entity\Article[] $articles
- * @var \App\Model\Entity\Article\category_id $category_id
+ * @var \App\Model\Entity\Article[]\category_id $category_id
  */
 ?>
 
@@ -51,7 +51,7 @@
 
             }
             else {
-                if ($article->category_id == $category_id){
+                if ($article->category_id == $category_id or $article->category_id == 3 ){
                     ?>
 
                     <a class="card" href="article/view/<?=$article->id?>">

@@ -33,7 +33,7 @@
             <td><?= h($article->title) ?></td>
             <td><?= h($article->created) ?></td>
             <td><?= h($article->modified) ?></td>
-            <td><?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Category', 'action' => 'view', $article->category->id]) : '' ?></td>
+            <td><?= $article->has('category') ? $article->category->category : '' ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
                 <?= $this->Html->link(__('Edit'), ['action' => 'edit', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']); ?>

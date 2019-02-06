@@ -6,7 +6,9 @@
 ?>
 
 <div class="category view large-9 medium-8 columns content">
-<h2><?= ucfirst($category->category).__(' Articles') ?></h2>
+<h2><?= $category->category == 'Both' ?
+        __(' Student & Educator Articles')
+        : ucfirst($category->category).__(' Articles') ?></h2>
     <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
     <br>
     <br>

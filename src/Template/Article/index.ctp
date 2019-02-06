@@ -6,7 +6,7 @@
 ?>
 
 <div class="category view large-9 medium-8 columns content">
-<h2><?= __('Articles') ?></h2>
+<h2><?= __('All Articles') ?></h2>
     <?= $this->Html->link(__('New Article'), ['action' => 'add'], ['class'=>"btn btn-outline-primary"]) ?>
     <br>
     <br>
@@ -32,7 +32,7 @@
             <td><?= h($article->title) ?></td>
             <td><?= h($article->created) ?></td>
             <td><?= h($article->modified) ?></td>
-            <td><?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Category', 'action' => 'view', $article->category->id]) : '' ?></td>
+            <td><?= $article->has('category') ? $this->Html->link($article->category->category, ['controller' => 'Article', 'action' => 'searchByCategory', $article->category->id]) : '' ?></td>
             <td><?= h($article->status) ?></td>
             <td class="actions">
                 <?= $this->Html->link(__('View'), ['action' => 'view', $article->id], ['class'=>'btn btn-outline-secondary btn-sm']) ?>
