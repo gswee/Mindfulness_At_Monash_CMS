@@ -22,6 +22,15 @@ $loguser = $this->request->session()->read('Auth.User');
 <!DOCTYPE html>
 <html>
 <head>
+    <style>
+        #username {
+            color: white;
+        }
+        #username:hover {
+            text-decoration: none;
+            opacity: 0.8;
+        }
+    </style>
     <?= $this->Html->script("tinymce/tinymce.min.js") ?>
     <script type="text/javascript">
         tinymce.init({

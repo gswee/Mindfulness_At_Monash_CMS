@@ -36,13 +36,13 @@ button:hover {
 .openImage:hover {
     color: white !important;
 }
-#username {
+/*#username {
     color: white;
 }
 #username:hover {
     text-decoration: none;
     opacity: 0.8;
-}
+}*/
 
 /* Admin Recent Article Cards */
 div.card-text a, div.card-title a{

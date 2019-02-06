@@ -83,6 +83,7 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/article/view/*',['controller' => 'Article', 'action' => 'view']);
     $routes->connect('/students', ['controller' => 'Article', 'action' => 'viewArticleIndex', '1']);
     $routes->connect('/educators', ['controller' => 'Article', 'action' => 'viewArticleIndex', '2']);
+    $routes->connect('/login', ['controller' => 'Users', 'action' => 'login']);
 });
 
 /**
