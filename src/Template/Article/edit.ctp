@@ -24,11 +24,12 @@
             echo $this->Form->control('body',
                 ['label'=>'Body<span style="font-weight:bold;color:red;"> *</span>', 'escape'=>false]);
 echo "<br>";
-            if ($article->id != '1' or '2') {
+            if ($article->id == '1' or '2') {
+                
+            } else {
                 echo $this->Form->control('category_id', ['options' => $categories, 'empty' => false]);
-
             }
-        //echo $article->id;
+        
         ?>
     </fieldset>
     <br>
