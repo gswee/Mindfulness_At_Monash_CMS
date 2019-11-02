@@ -1,5 +1,7 @@
 # Final Year Project - Mindfulness At Monash CMS
 
+**THIS IS MEANT TO DEMONSTRATE MY BACHELOR OF IT EXPERTISE AND IS NOT MEANT FOR OPEN SOURCE CONTRIBUTION.
+
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
 [![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
 
@@ -29,7 +31,7 @@ For more information on carrying out certain functionalities and understanding h
 
 ## Files Included 
 
-*\Mindfulness_at_Monash_CMS\..*
+*/Mindfulness_at_Monash_CMS/..*
 
 Folders that are relevant to the scope of this application are marked with an asterisk (\*). Do not change any files in irrelevant folders and only make changes specified in the Documentations to files in the relevant folders.
 
@@ -44,11 +46,11 @@ Folders that are relevant to the scope of this application are marked with an as
 
 **DO NOT EDIT THE OTHER FILES IN THE FOLDER.
 
-*\Mindfulness_at_Monash_CMS\src\..*
+*/Mindfulness_at_Monash_CMS/src/..*
 
 Contains all files required for CakePHP functionality to be properly executed. 
 
-*\Mindfulness_at_Monash_CMS\webroot\..*
+*/Mindfulness_at_Monash_CMS/webroot/..*
 
 Contains images, JavaScript, CSS & other files which increase the number of options provided for designing CakePHP layouts.
 
@@ -59,12 +61,17 @@ Contains images, JavaScript, CSS & other files which increase the number of opti
 
 ## Instructions before running
 
-1. Navigate to root folder ``
+1. Navigate to root folder 
+
+```bash
+/Mindfulness_at_Monash_CMS
+```
+
 2. Enter `composer self-update` in command line.
 3. Start up the built-in webserver with:
 
 ```bash
-bin/cake server
+/Mindfulness_at_Monash_CMS/bin/cake server
 ```
 
 3. Visit `http://localhost:8765` to see the welcome page.
@@ -78,8 +85,3 @@ You have to update manually.
 Read and edit `config/app.php` and setup the `'Datasources'` and any other
 configuration relevant for your application.
 
-## Layout
-
-The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
