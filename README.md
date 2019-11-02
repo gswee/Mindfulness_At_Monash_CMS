@@ -1,6 +1,6 @@
 # Final Year Project - Mindfulness At Monash CMS
 
-**THIS IS MEANT TO DEMONSTRATE MY BACHELOR OF IT EXPERTISE AND IS NOT MEANT FOR OPEN SOURCE CONTRIBUTION.
+**THIS IS MEANT TO DEMONSTRATE MY BACHELOR OF IT EXPERTISE AND IS NOT MEANT FOR OPEN SOURCE CONTRIBUTION.**
 
 [![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
 [![License](https://img.shields.io/packagist/l/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
@@ -44,7 +44,7 @@ Folders that are relevant to the scope of this application are marked with an as
     ..\plugins   -   should contain 3rd party plugins for the CakePHP application. At the moment, this folder is empty.
     ..\vendor    -   contains 3rd party vendor files
 
-**DO NOT EDIT THE OTHER FILES IN THE FOLDER.
+**DO NOT EDIT THE OTHER FILES IN THE FOLDER.**
 
 */Mindfulness_at_Monash_CMS/src/..*
 
